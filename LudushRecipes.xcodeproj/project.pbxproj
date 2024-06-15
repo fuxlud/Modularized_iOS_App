@@ -30,6 +30,7 @@
 		193887AC2C1E19E900CF2029 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887AB2C1E19E900CF2029 /* Repository.swift */; };
 		193887AE2C1E1AA400CF2029 /* RecipesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887AD2C1E1AA100CF2029 /* RecipesFetcher.swift */; };
 		193887B02C1E1ABD00CF2029 /* RemoteRecipesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887AF2C1E1ABA00CF2029 /* RemoteRecipesFetcher.swift */; };
+		193887B22C1E1CAD00CF2029 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887B12C1E1CAA00CF2029 /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		193887AB2C1E19E900CF2029 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		193887AD2C1E1AA100CF2029 /* RecipesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesFetcher.swift; sourceTree = "<group>"; };
 		193887AF2C1E1ABA00CF2029 /* RemoteRecipesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRecipesFetcher.swift; sourceTree = "<group>"; };
+		193887B12C1E1CAA00CF2029 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 		193887872C1E15D800CF2029 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				193887B12C1E1CAA00CF2029 /* View.swift */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				193887B02C1E1ABD00CF2029 /* RemoteRecipesFetcher.swift in Sources */,
 				193887AE2C1E1AA400CF2029 /* RecipesFetcher.swift in Sources */,
 				193887972C1E163300CF2029 /* QueryValue.swift in Sources */,
+				193887B22C1E1CAD00CF2029 /* View.swift in Sources */,
 				193887982C1E163300CF2029 /* NetworkScheme.swift in Sources */,
 				193887AA2C1E199600CF2029 /* Equipment.swift in Sources */,
 				19268D262C1E07550014E23E /* LudushRecipesApp.swift in Sources */,

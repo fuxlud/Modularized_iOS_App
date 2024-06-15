@@ -4,7 +4,7 @@ struct RecipeResponse: Codable {
     let recipes: [Recipe]
 }
 
-struct Recipe: Codable {
+struct Recipe: Codable, Identifiable {
     let id: Int
     let title: String
     let image: String
@@ -15,3 +15,4 @@ struct Recipe: Codable {
     let nutrition: [Nutrition]?
     let analyzedInstructions: [AnalyzedInstruction]?
 }
+
