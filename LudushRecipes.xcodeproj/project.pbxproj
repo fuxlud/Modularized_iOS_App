@@ -27,6 +27,9 @@
 		193887A62C1E197A00CF2029 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887A52C1E197A00CF2029 /* Step.swift */; };
 		193887A82C1E198800CF2029 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887A72C1E198800CF2029 /* Ingredient.swift */; };
 		193887AA2C1E199600CF2029 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887A92C1E199600CF2029 /* Equipment.swift */; };
+		193887AC2C1E19E900CF2029 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887AB2C1E19E900CF2029 /* Repository.swift */; };
+		193887AE2C1E1AA400CF2029 /* RecipesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887AD2C1E1AA100CF2029 /* RecipesFetcher.swift */; };
+		193887B02C1E1ABD00CF2029 /* RemoteRecipesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887AF2C1E1ABA00CF2029 /* RemoteRecipesFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		193887A52C1E197A00CF2029 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		193887A72C1E198800CF2029 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		193887A92C1E199600CF2029 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
+		193887AB2C1E19E900CF2029 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		193887AD2C1E1AA100CF2029 /* RecipesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesFetcher.swift; sourceTree = "<group>"; };
+		193887AF2C1E1ABA00CF2029 /* RemoteRecipesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRecipesFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				1938879D2C1E17E700CF2029 /* Models */,
+				193887AB2C1E19E900CF2029 /* Repository.swift */,
 			);
 			path = DomainLayer;
 			sourceTree = "<group>";
@@ -173,6 +180,8 @@
 		193887892C1E15EF00CF2029 /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				193887AF2C1E1ABA00CF2029 /* RemoteRecipesFetcher.swift */,
+				193887AD2C1E1AA100CF2029 /* RecipesFetcher.swift */,
 				193887912C1E163300CF2029 /* Networking */,
 			);
 			path = DataLayer;
@@ -351,6 +360,7 @@
 			files = (
 				193887922C1E163300CF2029 /* NetworkHost.swift in Sources */,
 				193887A82C1E198800CF2029 /* Ingredient.swift in Sources */,
+				193887AC2C1E19E900CF2029 /* Repository.swift in Sources */,
 				193887932C1E163300CF2029 /* QueryParameter.swift in Sources */,
 				193887942C1E163300CF2029 /* NetworkError.swift in Sources */,
 				1938879F2C1E183D00CF2029 /* Recipe.swift in Sources */,
@@ -359,6 +369,8 @@
 				193887A42C1E194A00CF2029 /* Nutrition.swift in Sources */,
 				193887962C1E163300CF2029 /* EndPoints.swift in Sources */,
 				193887A12C1E18DF00CF2029 /* AnalyzedInstruction.swift in Sources */,
+				193887B02C1E1ABD00CF2029 /* RemoteRecipesFetcher.swift in Sources */,
+				193887AE2C1E1AA400CF2029 /* RecipesFetcher.swift in Sources */,
 				193887972C1E163300CF2029 /* QueryValue.swift in Sources */,
 				193887982C1E163300CF2029 /* NetworkScheme.swift in Sources */,
 				193887AA2C1E199600CF2029 /* Equipment.swift in Sources */,
