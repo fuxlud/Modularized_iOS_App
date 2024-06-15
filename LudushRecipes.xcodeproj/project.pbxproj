@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		19268D262C1E07550014E23E /* LudushRecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D252C1E07550014E23E /* LudushRecipesApp.swift */; };
-		19268D282C1E07550014E23E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D272C1E07550014E23E /* ContentView.swift */; };
-		19268D2A2C1E07550014E23E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D292C1E07550014E23E /* Item.swift */; };
 		19268D2C2C1E07560014E23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2B2C1E07560014E23E /* Assets.xcassets */; };
 		19268D2F2C1E07560014E23E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2E2C1E07560014E23E /* Preview Assets.xcassets */; };
 		19268D392C1E07560014E23E /* LudushRecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D382C1E07560014E23E /* LudushRecipesTests.swift */; };
 		19268D432C1E07560014E23E /* LudushRecipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D422C1E07560014E23E /* LudushRecipesUITests.swift */; };
 		19268D452C1E07560014E23E /* LudushRecipesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D442C1E07560014E23E /* LudushRecipesUITestsLaunchTests.swift */; };
+		193887922C1E163300CF2029 /* NetworkHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1938878D2C1E163300CF2029 /* NetworkHost.swift */; };
+		193887932C1E163300CF2029 /* QueryParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1938878F2C1E163300CF2029 /* QueryParameter.swift */; };
+		193887942C1E163300CF2029 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1938878C2C1E163300CF2029 /* NetworkError.swift */; };
+		193887952C1E163300CF2029 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1938878B2C1E163300CF2029 /* HTTPMethod.swift */; };
+		193887962C1E163300CF2029 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1938878A2C1E163300CF2029 /* EndPoints.swift */; };
+		193887972C1E163300CF2029 /* QueryValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887902C1E163300CF2029 /* QueryValue.swift */; };
+		193887982C1E163300CF2029 /* NetworkScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1938878E2C1E163300CF2029 /* NetworkScheme.swift */; };
+		1938879B2C1E16D200CF2029 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1938879A2C1E16D200CF2029 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +43,6 @@
 /* Begin PBXFileReference section */
 		19268D222C1E07550014E23E /* LudushRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LudushRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19268D252C1E07550014E23E /* LudushRecipesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LudushRecipesApp.swift; sourceTree = "<group>"; };
-		19268D272C1E07550014E23E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		19268D292C1E07550014E23E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		19268D2B2C1E07560014E23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19268D2E2C1E07560014E23E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		19268D342C1E07560014E23E /* LudushRecipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LudushRecipesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +50,13 @@
 		19268D3E2C1E07560014E23E /* LudushRecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LudushRecipesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19268D422C1E07560014E23E /* LudushRecipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LudushRecipesUITests.swift; sourceTree = "<group>"; };
 		19268D442C1E07560014E23E /* LudushRecipesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LudushRecipesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1938878A2C1E163300CF2029 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		1938878B2C1E163300CF2029 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		1938878C2C1E163300CF2029 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		1938878D2C1E163300CF2029 /* NetworkHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHost.swift; sourceTree = "<group>"; };
+		1938878E2C1E163300CF2029 /* NetworkScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkScheme.swift; sourceTree = "<group>"; };
+		1938878F2C1E163300CF2029 /* QueryParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryParameter.swift; sourceTree = "<group>"; };
+		193887902C1E163300CF2029 /* QueryValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1938879B2C1E16D200CF2029 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,9 +108,10 @@
 		19268D242C1E07550014E23E /* LudushRecipes */ = {
 			isa = PBXGroup;
 			children = (
-				19268D252C1E07550014E23E /* LudushRecipesApp.swift */,
-				19268D272C1E07550014E23E /* ContentView.swift */,
-				19268D292C1E07550014E23E /* Item.swift */,
+				1938879C2C1E170F00CF2029 /* Application */,
+				193887872C1E15D800CF2029 /* PresentationLayer */,
+				193887882C1E15E600CF2029 /* DomainLayer */,
+				193887892C1E15EF00CF2029 /* DataLayer */,
 				19268D2B2C1E07560014E23E /* Assets.xcassets */,
 				19268D2D2C1E07560014E23E /* Preview Content */,
 			);
@@ -130,6 +143,50 @@
 			path = LudushRecipesUITests;
 			sourceTree = "<group>";
 		};
+		193887872C1E15D800CF2029 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		193887882C1E15E600CF2029 /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		193887892C1E15EF00CF2029 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				193887912C1E163300CF2029 /* Networking */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		193887912C1E163300CF2029 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1938878A2C1E163300CF2029 /* EndPoints.swift */,
+				1938878B2C1E163300CF2029 /* HTTPMethod.swift */,
+				1938878C2C1E163300CF2029 /* NetworkError.swift */,
+				1938878D2C1E163300CF2029 /* NetworkHost.swift */,
+				1938878E2C1E163300CF2029 /* NetworkScheme.swift */,
+				1938878F2C1E163300CF2029 /* QueryParameter.swift */,
+				193887902C1E163300CF2029 /* QueryValue.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1938879C2C1E170F00CF2029 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				19268D252C1E07550014E23E /* LudushRecipesApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +203,9 @@
 			dependencies = (
 			);
 			name = LudushRecipes;
+			packageProductDependencies = (
+				1938879A2C1E16D200CF2029 /* Alamofire */,
+			);
 			productName = LudushRecipes;
 			productReference = 19268D222C1E07550014E23E /* LudushRecipes.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +278,9 @@
 				Base,
 			);
 			mainGroup = 19268D192C1E07550014E23E;
+			packageReferences = (
+				193887992C1E16D200CF2029 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 19268D232C1E07550014E23E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,8 +323,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19268D282C1E07550014E23E /* ContentView.swift in Sources */,
-				19268D2A2C1E07550014E23E /* Item.swift in Sources */,
+				193887922C1E163300CF2029 /* NetworkHost.swift in Sources */,
+				193887932C1E163300CF2029 /* QueryParameter.swift in Sources */,
+				193887942C1E163300CF2029 /* NetworkError.swift in Sources */,
+				193887952C1E163300CF2029 /* HTTPMethod.swift in Sources */,
+				193887962C1E163300CF2029 /* EndPoints.swift in Sources */,
+				193887972C1E163300CF2029 /* QueryValue.swift in Sources */,
+				193887982C1E163300CF2029 /* NetworkScheme.swift in Sources */,
 				19268D262C1E07550014E23E /* LudushRecipesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +656,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		193887992C1E16D200CF2029 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1938879A2C1E16D200CF2029 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 193887992C1E16D200CF2029 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 19268D1A2C1E07550014E23E /* Project object */;
 }
