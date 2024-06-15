@@ -11,7 +11,10 @@ import SwiftUI
 struct LudushRecipesApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
+            let mockRecipesFetcher = MockRecipesFetcher()
+            let repository = Repository(recipesFetcher: mockRecipesFetcher)
+            let viewModel = SearchRecipesViewModel(repository: repository)
+            SearchRecipesView(viewModel: viewModel)
         }
     }
 }
