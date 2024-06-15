@@ -21,6 +21,12 @@
 		193887972C1E163300CF2029 /* QueryValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887902C1E163300CF2029 /* QueryValue.swift */; };
 		193887982C1E163300CF2029 /* NetworkScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1938878E2C1E163300CF2029 /* NetworkScheme.swift */; };
 		1938879B2C1E16D200CF2029 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1938879A2C1E16D200CF2029 /* Alamofire */; };
+		1938879F2C1E183D00CF2029 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1938879E2C1E183900CF2029 /* Recipe.swift */; };
+		193887A12C1E18DF00CF2029 /* AnalyzedInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887A02C1E18DB00CF2029 /* AnalyzedInstruction.swift */; };
+		193887A42C1E194A00CF2029 /* Nutrition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887A32C1E194A00CF2029 /* Nutrition.swift */; };
+		193887A62C1E197A00CF2029 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887A52C1E197A00CF2029 /* Step.swift */; };
+		193887A82C1E198800CF2029 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887A72C1E198800CF2029 /* Ingredient.swift */; };
+		193887AA2C1E199600CF2029 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887A92C1E199600CF2029 /* Equipment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,12 @@
 		1938878E2C1E163300CF2029 /* NetworkScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkScheme.swift; sourceTree = "<group>"; };
 		1938878F2C1E163300CF2029 /* QueryParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryParameter.swift; sourceTree = "<group>"; };
 		193887902C1E163300CF2029 /* QueryValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryValue.swift; sourceTree = "<group>"; };
+		1938879E2C1E183900CF2029 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		193887A02C1E18DB00CF2029 /* AnalyzedInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzedInstruction.swift; sourceTree = "<group>"; };
+		193887A32C1E194A00CF2029 /* Nutrition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrition.swift; sourceTree = "<group>"; };
+		193887A52C1E197A00CF2029 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		193887A72C1E198800CF2029 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		193887A92C1E199600CF2029 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +165,7 @@
 		193887882C1E15E600CF2029 /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
+				1938879D2C1E17E700CF2029 /* Models */,
 			);
 			path = DomainLayer;
 			sourceTree = "<group>";
@@ -185,6 +198,19 @@
 				19268D252C1E07550014E23E /* LudushRecipesApp.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		1938879D2C1E17E700CF2029 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				193887A02C1E18DB00CF2029 /* AnalyzedInstruction.swift */,
+				193887A52C1E197A00CF2029 /* Step.swift */,
+				193887A72C1E198800CF2029 /* Ingredient.swift */,
+				193887A92C1E199600CF2029 /* Equipment.swift */,
+				1938879E2C1E183900CF2029 /* Recipe.swift */,
+				193887A32C1E194A00CF2029 /* Nutrition.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,12 +350,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				193887922C1E163300CF2029 /* NetworkHost.swift in Sources */,
+				193887A82C1E198800CF2029 /* Ingredient.swift in Sources */,
 				193887932C1E163300CF2029 /* QueryParameter.swift in Sources */,
 				193887942C1E163300CF2029 /* NetworkError.swift in Sources */,
+				1938879F2C1E183D00CF2029 /* Recipe.swift in Sources */,
 				193887952C1E163300CF2029 /* HTTPMethod.swift in Sources */,
+				193887A62C1E197A00CF2029 /* Step.swift in Sources */,
+				193887A42C1E194A00CF2029 /* Nutrition.swift in Sources */,
 				193887962C1E163300CF2029 /* EndPoints.swift in Sources */,
+				193887A12C1E18DF00CF2029 /* AnalyzedInstruction.swift in Sources */,
 				193887972C1E163300CF2029 /* QueryValue.swift in Sources */,
 				193887982C1E163300CF2029 /* NetworkScheme.swift in Sources */,
+				193887AA2C1E199600CF2029 /* Equipment.swift in Sources */,
 				19268D262C1E07550014E23E /* LudushRecipesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
