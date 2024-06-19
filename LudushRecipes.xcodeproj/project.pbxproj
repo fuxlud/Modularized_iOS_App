@@ -45,7 +45,7 @@
 		19268D3E2C1E07560014E23E /* LudushRecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LudushRecipesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19268D422C1E07560014E23E /* LudushRecipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LudushRecipesUITests.swift; sourceTree = "<group>"; };
 		19268D442C1E07560014E23E /* LudushRecipesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LudushRecipesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		198761822C22E38F00565BB0 /* Submoduls */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Submoduls; path = ../Submoduls; sourceTree = "<group>"; };
+		193AAC232C234D5900E08FBB /* Submoduls */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Submoduls; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 		19268D192C1E07550014E23E = {
 			isa = PBXGroup;
 			children = (
-				198761822C22E38F00565BB0 /* Submoduls */,
+				193AAC232C234D5900E08FBB /* Submoduls */,
 				19268D242C1E07550014E23E /* LudushRecipes */,
 				19268D372C1E07560014E23E /* LudushRecipesTests */,
 				19268D412C1E07560014E23E /* LudushRecipesUITests */,
