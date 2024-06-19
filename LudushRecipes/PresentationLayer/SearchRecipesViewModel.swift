@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 import Models
+import Domain
 
 @MainActor
 class SearchRecipesViewModel: ObservableObject {
