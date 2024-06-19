@@ -13,11 +13,9 @@
 		19268D392C1E07560014E23E /* LudushRecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D382C1E07560014E23E /* LudushRecipesTests.swift */; };
 		19268D432C1E07560014E23E /* LudushRecipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D422C1E07560014E23E /* LudushRecipesUITests.swift */; };
 		19268D452C1E07560014E23E /* LudushRecipesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D442C1E07560014E23E /* LudushRecipesUITestsLaunchTests.swift */; };
-		1938879B2C1E16D200CF2029 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1938879A2C1E16D200CF2029 /* Alamofire */; };
-		198761852C22E48600565BB0 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 198761842C22E48600565BB0 /* Models */; };
-		1987618B2C22EDFD00565BB0 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 1987618A2C22EDFD00565BB0 /* Domain */; };
-		1987618D2C22EE0300565BB0 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 1987618C2C22EE0300565BB0 /* Networking */; };
-		1987618F2C22EF0000565BB0 /* SearchScreenFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 1987618E2C22EF0000565BB0 /* SearchScreenFeature */; };
+		19380A7D2C233838001A4AAE /* SearchScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 19380A7C2C233838001A4AAE /* SearchScreen */; };
+		19380A7F2C233DB2001A4AAE /* DomainMock in Frameworks */ = {isa = PBXBuildFile; productRef = 19380A7E2C233DB2001A4AAE /* DomainMock */; };
+		193AAC222C233FA700E08FBB /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 193AAC212C233FA700E08FBB /* Domain */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,11 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1987618B2C22EDFD00565BB0 /* Domain in Frameworks */,
-				198761852C22E48600565BB0 /* Models in Frameworks */,
-				1987618D2C22EE0300565BB0 /* Networking in Frameworks */,
-				1987618F2C22EF0000565BB0 /* SearchScreenFeature in Frameworks */,
-				1938879B2C1E16D200CF2029 /* Alamofire in Frameworks */,
+				19380A7D2C233838001A4AAE /* SearchScreen in Frameworks */,
+				193AAC222C233FA700E08FBB /* Domain in Frameworks */,
+				19380A7F2C233DB2001A4AAE /* DomainMock in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,11 +165,9 @@
 			);
 			name = LudushRecipes;
 			packageProductDependencies = (
-				1938879A2C1E16D200CF2029 /* Alamofire */,
-				198761842C22E48600565BB0 /* Models */,
-				1987618A2C22EDFD00565BB0 /* Domain */,
-				1987618C2C22EE0300565BB0 /* Networking */,
-				1987618E2C22EF0000565BB0 /* SearchScreenFeature */,
+				19380A7C2C233838001A4AAE /* SearchScreen */,
+				19380A7E2C233DB2001A4AAE /* DomainMock */,
+				193AAC212C233FA700E08FBB /* Domain */,
 			);
 			productName = LudushRecipes;
 			productReference = 19268D222C1E07550014E23E /* LudushRecipes.app */;
@@ -639,26 +633,17 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1938879A2C1E16D200CF2029 /* Alamofire */ = {
+		19380A7C2C233838001A4AAE /* SearchScreen */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 193887992C1E16D200CF2029 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
+			productName = SearchScreen;
 		};
-		198761842C22E48600565BB0 /* Models */ = {
+		19380A7E2C233DB2001A4AAE /* DomainMock */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Models;
+			productName = DomainMock;
 		};
-		1987618A2C22EDFD00565BB0 /* Domain */ = {
+		193AAC212C233FA700E08FBB /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
-		};
-		1987618C2C22EE0300565BB0 /* Networking */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Networking;
-		};
-		1987618E2C22EF0000565BB0 /* SearchScreenFeature */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SearchScreenFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

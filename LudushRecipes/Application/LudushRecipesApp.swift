@@ -1,13 +1,7 @@
-//
-//  LudushRecipesApp.swift
-//  LudushRecipes
-//
-//  Created by Luda Fux on 15/06/2024.
-//
-
 import SwiftUI
+import DomainMock
 import Domain
-import SearchScreenFeature
+import SearchScreen
 
 @main
 struct LudushRecipesApp: App {
