@@ -16,6 +16,8 @@
 		19380A7D2C233838001A4AAE /* SearchScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 19380A7C2C233838001A4AAE /* SearchScreen */; };
 		19380A7F2C233DB2001A4AAE /* DomainMock in Frameworks */ = {isa = PBXBuildFile; productRef = 19380A7E2C233DB2001A4AAE /* DomainMock */; };
 		193AAC222C233FA700E08FBB /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 193AAC212C233FA700E08FBB /* Domain */; };
+		1951EF202C23922100BD3A16 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF1F2C23922100BD3A16 /* Networking */; };
+		1951EF222C23922800BD3A16 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF212C23922800BD3A16 /* Data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 			files = (
 				19380A7D2C233838001A4AAE /* SearchScreen in Frameworks */,
 				193AAC222C233FA700E08FBB /* Domain in Frameworks */,
+				1951EF222C23922800BD3A16 /* Data in Frameworks */,
+				1951EF202C23922100BD3A16 /* Networking in Frameworks */,
 				19380A7F2C233DB2001A4AAE /* DomainMock in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +172,8 @@
 				19380A7C2C233838001A4AAE /* SearchScreen */,
 				19380A7E2C233DB2001A4AAE /* DomainMock */,
 				193AAC212C233FA700E08FBB /* Domain */,
+				1951EF1F2C23922100BD3A16 /* Networking */,
+				1951EF212C23922800BD3A16 /* Data */,
 			);
 			productName = LudushRecipes;
 			productReference = 19268D222C1E07550014E23E /* Recipes.app */;
@@ -644,6 +650,14 @@
 		193AAC212C233FA700E08FBB /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
+		};
+		1951EF1F2C23922100BD3A16 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		1951EF212C23922800BD3A16 /* Data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Data;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

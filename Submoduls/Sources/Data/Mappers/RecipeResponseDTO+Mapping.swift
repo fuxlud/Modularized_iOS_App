@@ -1,5 +1,6 @@
 import Foundation
 import Domain
+import Networking
 
 // Extension to map from RecipeResponseDTO to RecipeResponse entity
 extension RecipeResponseDTO {

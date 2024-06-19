@@ -9,12 +9,14 @@ let package = Package(
         .library(name: "DomainMock", targets: ["DomainMock"]),
         .library(name: "Domain", targets: ["Domain"]),
         .library(name: "Data", targets: ["Data"]),
+        .library(name: "Networking", targets: ["Networking"]),
         .library(name: "SearchScreen", targets: ["SearchScreen"])
     ],
     targets: [
         .target(name: "DomainMock"),
         .target(name: "Domain"),
         .target(name: "Data"),
-        .target(name: "SearchScreen")
+        .target(name: "SearchScreen"),
+        .target(name: "Networking")
     ]
 )
