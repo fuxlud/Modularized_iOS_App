@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Domain
+import SearchScreenFeature
 
 @main
 struct LudushRecipesApp: App {

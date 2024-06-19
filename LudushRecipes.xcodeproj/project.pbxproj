@@ -14,11 +14,10 @@
 		19268D432C1E07560014E23E /* LudushRecipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D422C1E07560014E23E /* LudushRecipesUITests.swift */; };
 		19268D452C1E07560014E23E /* LudushRecipesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D442C1E07560014E23E /* LudushRecipesUITestsLaunchTests.swift */; };
 		1938879B2C1E16D200CF2029 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1938879A2C1E16D200CF2029 /* Alamofire */; };
-		193887B22C1E1CAD00CF2029 /* SearchRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887B12C1E1CAA00CF2029 /* SearchRecipesView.swift */; };
-		193887B62C1E254100CF2029 /* SearchRecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887B52C1E253F00CF2029 /* SearchRecipesViewModel.swift */; };
 		198761852C22E48600565BB0 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 198761842C22E48600565BB0 /* Models */; };
 		1987618B2C22EDFD00565BB0 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 1987618A2C22EDFD00565BB0 /* Domain */; };
 		1987618D2C22EE0300565BB0 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 1987618C2C22EE0300565BB0 /* Networking */; };
+		1987618F2C22EF0000565BB0 /* SearchScreenFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 1987618E2C22EF0000565BB0 /* SearchScreenFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +47,6 @@
 		19268D3E2C1E07560014E23E /* LudushRecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LudushRecipesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19268D422C1E07560014E23E /* LudushRecipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LudushRecipesUITests.swift; sourceTree = "<group>"; };
 		19268D442C1E07560014E23E /* LudushRecipesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LudushRecipesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		193887B12C1E1CAA00CF2029 /* SearchRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipesView.swift; sourceTree = "<group>"; };
-		193887B52C1E253F00CF2029 /* SearchRecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipesViewModel.swift; sourceTree = "<group>"; };
 		198761822C22E38F00565BB0 /* Submoduls */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Submoduls; path = ../Submoduls; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +58,7 @@
 				1987618B2C22EDFD00565BB0 /* Domain in Frameworks */,
 				198761852C22E48600565BB0 /* Models in Frameworks */,
 				1987618D2C22EE0300565BB0 /* Networking in Frameworks */,
+				1987618F2C22EF0000565BB0 /* SearchScreenFeature in Frameworks */,
 				1938879B2C1E16D200CF2029 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				1938879C2C1E170F00CF2029 /* Application */,
-				193887872C1E15D800CF2029 /* PresentationLayer */,
 				19268D2B2C1E07560014E23E /* Assets.xcassets */,
 				19268D2D2C1E07560014E23E /* Preview Content */,
 			);
@@ -138,15 +135,6 @@
 				19268D442C1E07560014E23E /* LudushRecipesUITestsLaunchTests.swift */,
 			);
 			path = LudushRecipesUITests;
-			sourceTree = "<group>";
-		};
-		193887872C1E15D800CF2029 /* PresentationLayer */ = {
-			isa = PBXGroup;
-			children = (
-				193887B12C1E1CAA00CF2029 /* SearchRecipesView.swift */,
-				193887B52C1E253F00CF2029 /* SearchRecipesViewModel.swift */,
-			);
-			path = PresentationLayer;
 			sourceTree = "<group>";
 		};
 		1938879C2C1E170F00CF2029 /* Application */ = {
@@ -185,6 +173,7 @@
 				198761842C22E48600565BB0 /* Models */,
 				1987618A2C22EDFD00565BB0 /* Domain */,
 				1987618C2C22EE0300565BB0 /* Networking */,
+				1987618E2C22EF0000565BB0 /* SearchScreenFeature */,
 			);
 			productName = LudushRecipes;
 			productReference = 19268D222C1E07550014E23E /* LudushRecipes.app */;
@@ -303,8 +292,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				193887B62C1E254100CF2029 /* SearchRecipesViewModel.swift in Sources */,
-				193887B22C1E1CAD00CF2029 /* SearchRecipesView.swift in Sources */,
 				19268D262C1E07550014E23E /* LudushRecipesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,6 +655,10 @@
 		1987618C2C22EE0300565BB0 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
+		};
+		1987618E2C22EF0000565BB0 /* SearchScreenFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SearchScreenFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
