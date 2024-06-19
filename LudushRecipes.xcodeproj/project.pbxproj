@@ -21,18 +21,13 @@
 		193887972C1E163300CF2029 /* QueryValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887902C1E163300CF2029 /* QueryValue.swift */; };
 		193887982C1E163300CF2029 /* NetworkScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1938878E2C1E163300CF2029 /* NetworkScheme.swift */; };
 		1938879B2C1E16D200CF2029 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1938879A2C1E16D200CF2029 /* Alamofire */; };
-		1938879F2C1E183D00CF2029 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1938879E2C1E183900CF2029 /* Recipe.swift */; };
-		193887A12C1E18DF00CF2029 /* AnalyzedInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887A02C1E18DB00CF2029 /* AnalyzedInstruction.swift */; };
-		193887A42C1E194A00CF2029 /* Nutrition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887A32C1E194A00CF2029 /* Nutrition.swift */; };
-		193887A62C1E197A00CF2029 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887A52C1E197A00CF2029 /* Step.swift */; };
-		193887A82C1E198800CF2029 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887A72C1E198800CF2029 /* Ingredient.swift */; };
-		193887AA2C1E199600CF2029 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887A92C1E199600CF2029 /* Equipment.swift */; };
 		193887AC2C1E19E900CF2029 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887AB2C1E19E900CF2029 /* Repository.swift */; };
 		193887AE2C1E1AA400CF2029 /* RecipesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887AD2C1E1AA100CF2029 /* RecipesFetcher.swift */; };
 		193887B02C1E1ABD00CF2029 /* RemoteRecipesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887AF2C1E1ABA00CF2029 /* RemoteRecipesFetcher.swift */; };
 		193887B22C1E1CAD00CF2029 /* SearchRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887B12C1E1CAA00CF2029 /* SearchRecipesView.swift */; };
 		193887B42C1E24AE00CF2029 /* MockRecipesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887B32C1E249800CF2029 /* MockRecipesFetcher.swift */; };
 		193887B62C1E254100CF2029 /* SearchRecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193887B52C1E253F00CF2029 /* SearchRecipesViewModel.swift */; };
+		198761852C22E48600565BB0 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 198761842C22E48600565BB0 /* Models */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,18 +64,13 @@
 		1938878E2C1E163300CF2029 /* NetworkScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkScheme.swift; sourceTree = "<group>"; };
 		1938878F2C1E163300CF2029 /* QueryParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryParameter.swift; sourceTree = "<group>"; };
 		193887902C1E163300CF2029 /* QueryValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryValue.swift; sourceTree = "<group>"; };
-		1938879E2C1E183900CF2029 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		193887A02C1E18DB00CF2029 /* AnalyzedInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzedInstruction.swift; sourceTree = "<group>"; };
-		193887A32C1E194A00CF2029 /* Nutrition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrition.swift; sourceTree = "<group>"; };
-		193887A52C1E197A00CF2029 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
-		193887A72C1E198800CF2029 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
-		193887A92C1E199600CF2029 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
 		193887AB2C1E19E900CF2029 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		193887AD2C1E1AA100CF2029 /* RecipesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesFetcher.swift; sourceTree = "<group>"; };
 		193887AF2C1E1ABA00CF2029 /* RemoteRecipesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRecipesFetcher.swift; sourceTree = "<group>"; };
 		193887B12C1E1CAA00CF2029 /* SearchRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipesView.swift; sourceTree = "<group>"; };
 		193887B32C1E249800CF2029 /* MockRecipesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRecipesFetcher.swift; sourceTree = "<group>"; };
 		193887B52C1E253F00CF2029 /* SearchRecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipesViewModel.swift; sourceTree = "<group>"; };
+		198761822C22E38F00565BB0 /* Submoduls */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Submoduls; path = ../Submoduls; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198761852C22E48600565BB0 /* Models in Frameworks */,
 				1938879B2C1E16D200CF2029 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,10 +103,12 @@
 		19268D192C1E07550014E23E = {
 			isa = PBXGroup;
 			children = (
+				198761822C22E38F00565BB0 /* Submoduls */,
 				19268D242C1E07550014E23E /* LudushRecipes */,
 				19268D372C1E07560014E23E /* LudushRecipesTests */,
 				19268D412C1E07560014E23E /* LudushRecipesUITests */,
 				19268D232C1E07550014E23E /* Products */,
+				198761832C22E48600565BB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,14 +214,15 @@
 		1938879D2C1E17E700CF2029 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				193887A02C1E18DB00CF2029 /* AnalyzedInstruction.swift */,
-				193887A52C1E197A00CF2029 /* Step.swift */,
-				193887A72C1E198800CF2029 /* Ingredient.swift */,
-				193887A92C1E199600CF2029 /* Equipment.swift */,
-				1938879E2C1E183900CF2029 /* Recipe.swift */,
-				193887A32C1E194A00CF2029 /* Nutrition.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		198761832C22E48600565BB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +243,7 @@
 			name = LudushRecipes;
 			packageProductDependencies = (
 				1938879A2C1E16D200CF2029 /* Alamofire */,
+				198761842C22E48600565BB0 /* Models */,
 			);
 			productName = LudushRecipes;
 			productReference = 19268D222C1E07550014E23E /* LudushRecipes.app */;
@@ -369,22 +364,16 @@
 			files = (
 				193887B62C1E254100CF2029 /* SearchRecipesViewModel.swift in Sources */,
 				193887922C1E163300CF2029 /* NetworkHost.swift in Sources */,
-				193887A82C1E198800CF2029 /* Ingredient.swift in Sources */,
 				193887AC2C1E19E900CF2029 /* Repository.swift in Sources */,
 				193887932C1E163300CF2029 /* QueryParameter.swift in Sources */,
 				193887942C1E163300CF2029 /* NetworkError.swift in Sources */,
-				1938879F2C1E183D00CF2029 /* Recipe.swift in Sources */,
 				193887952C1E163300CF2029 /* HTTPMethod.swift in Sources */,
-				193887A62C1E197A00CF2029 /* Step.swift in Sources */,
-				193887A42C1E194A00CF2029 /* Nutrition.swift in Sources */,
 				193887962C1E163300CF2029 /* EndPoints.swift in Sources */,
-				193887A12C1E18DF00CF2029 /* AnalyzedInstruction.swift in Sources */,
 				193887B02C1E1ABD00CF2029 /* RemoteRecipesFetcher.swift in Sources */,
 				193887AE2C1E1AA400CF2029 /* RecipesFetcher.swift in Sources */,
 				193887972C1E163300CF2029 /* QueryValue.swift in Sources */,
 				193887B22C1E1CAD00CF2029 /* SearchRecipesView.swift in Sources */,
 				193887982C1E163300CF2029 /* NetworkScheme.swift in Sources */,
-				193887AA2C1E199600CF2029 /* Equipment.swift in Sources */,
 				193887B42C1E24AE00CF2029 /* MockRecipesFetcher.swift in Sources */,
 				19268D262C1E07550014E23E /* LudushRecipesApp.swift in Sources */,
 			);
@@ -565,9 +554,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.LudaFux.LudushRecipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -594,9 +587,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.LudaFux.LudushRecipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -729,6 +726,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 193887992C1E16D200CF2029 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		198761842C22E48600565BB0 /* Models */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Models;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

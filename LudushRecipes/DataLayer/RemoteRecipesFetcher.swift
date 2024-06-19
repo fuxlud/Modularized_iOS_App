@@ -1,5 +1,6 @@
 import Foundation
 import Alamofire
+import Models
 
 struct RemoteRecipesFetcher: RecipesFetcher {
     

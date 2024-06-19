@@ -1,4 +1,5 @@
 import Foundation
+import Models
 
 class Repository {
     let recipesFetcher: RecipesFetcher
