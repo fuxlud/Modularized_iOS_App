@@ -4,7 +4,7 @@ import Domain
 import SearchScreen
 
 @main
-struct LudushRecipesApp: App {
+struct RecipesApp: App {
     var body: some Scene {
         WindowGroup {
             let mockRecipesFetcher = MockRecipesFetcher()

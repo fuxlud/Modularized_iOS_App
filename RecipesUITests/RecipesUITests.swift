@@ -1,13 +1,6 @@
-//
-//  LudushRecipesUITests.swift
-//  LudushRecipesUITests
-//
-//  Created by Luda Fux on 15/06/2024.
-//
-
 import XCTest
 
-final class LudushRecipesUITests: XCTestCase {
+final class RecipesUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

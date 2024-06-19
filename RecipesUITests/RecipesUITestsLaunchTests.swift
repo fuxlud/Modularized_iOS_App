@@ -1,13 +1,6 @@
-//
-//  LudushRecipesUITestsLaunchTests.swift
-//  LudushRecipesUITests
-//
-//  Created by Luda Fux on 15/06/2024.
-//
-
 import XCTest
 
-final class LudushRecipesUITestsLaunchTests: XCTestCase {
+final class RecipesUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
