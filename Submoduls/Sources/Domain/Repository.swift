@@ -7,7 +7,7 @@ public  class Repository {
         self.recipesFetcher = recipesFetcher
     }
     
-    public func fetchRecipes() async throws -> [Recipe] {
+    public func fetchRecipes() async throws -> [RecipeEntity] {
         let recipes = try await recipesFetcher.fetch()
         return recipes
     }

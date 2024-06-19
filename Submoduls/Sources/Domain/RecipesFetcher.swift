@@ -1,3 +1,3 @@
 public protocol RecipesFetcher {
-    func fetch() async throws -> [Recipe]
+    func fetch() async throws -> [RecipeEntity]
 }

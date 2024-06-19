@@ -57,7 +57,7 @@ public struct SearchRecipesView: View {
 }
 
 struct RecipeCard: View {
-    let recipe: Recipe
+    let recipe: RecipeEntity
 
     var body: some View {
         VStack {

@@ -1,10 +1,6 @@
 import Foundation
 
-public struct RecipeResponse: Codable {
-    public let recipes: [Recipe]
-}
-
-public struct Recipe: Codable, Identifiable {
+public struct RecipeDTO: Codable {
     public let id: Int
     public let title: String
     public let image: String
@@ -12,8 +8,7 @@ public struct Recipe: Codable, Identifiable {
     public let servings: Int
     public let readyInMinutes: Int
     public let sourceUrl: String
-    
-    
+
     public init(id: Int, title: String, image: String, imageType: String, servings: Int, readyInMinutes: Int, sourceUrl: String) {
         self.id = id
         self.title = title

@@ -4,7 +4,7 @@ import Domain
 
 @MainActor
 public class SearchRecipesViewModel: ObservableObject {
-    @Published private(set) var recipes = [Recipe]()
+    @Published private(set) var recipes = [RecipeEntity]()
     private let repository: Repository
     
     public init(repository: Repository) {
