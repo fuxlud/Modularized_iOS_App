@@ -3,4 +3,68 @@
    uuid = "F2F347AE-5B36-44DB-8706-B44CE9F6F07F"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3431AC39-57BE-4E5A-9C43-9BE7DCC41AF4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Submoduls/Sources/Data/Repository/RandomRecipesRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "getRandomRecipes()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3431AC39-57BE-4E5A-9C43-9BE7DCC41AF4 - 780540d79ddf7455"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Data.RandomRecipesRepository.getRandomRecipes() async throws -&gt; Swift.Array&lt;Domain.RecipeEntity&gt;"
+                  moduleName = "Recipes.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fuxlud/Desktop/Recipes/Submoduls/Sources/Data/Repository/RandomRecipesRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18">
+               </Location>
+               <Location
+                  uuid = "3431AC39-57BE-4E5A-9C43-9BE7DCC41AF4 - 7b640585d0a616c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Networking.RecipeDTO) -&gt; Domain.RecipeEntity in Data.RandomRecipesRepository.getRandomRecipes() async throws -&gt; Swift.Array&lt;Domain.RecipeEntity&gt;"
+                  moduleName = "Recipes.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fuxlud/Desktop/Recipes/Submoduls/Sources/Data/Repository/RandomRecipesRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "109A337E-935A-493E-842A-06DC471E7FE8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Submoduls/Sources/Data/Repository/RandomRecipesRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "getRandomRecipes()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -1,13 +1,13 @@
 import SwiftUI
-import DomainMock
 import Domain
 import SearchScreen
-
+import Networking
+import Data
 @main
 struct RecipesApp: App {
     var body: some Scene {
         WindowGroup {
-            let repository = RandomRecipesRepositoryMock()
+            let repository = RandomRecipesRepository(service: NetworkingService())
             let viewModel = SearchRecipesViewModel(repository: repository)
             SearchRecipesView(viewModel: viewModel)
         }

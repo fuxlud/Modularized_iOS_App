@@ -6,9 +6,9 @@ import DomainMock
 @MainActor
 public class SearchRecipesViewModel: ObservableObject {
     @Published private(set) var recipes = [RecipeEntity]()
-    private let repository: RandomRecipesRepositoryMock
+    private let repository: RandomRecipesRepositoryProtocol
     
-    public init(repository: RandomRecipesRepositoryMock) {
+    public init(repository: RandomRecipesRepositoryProtocol) {
         self.repository = repository
     }
 
