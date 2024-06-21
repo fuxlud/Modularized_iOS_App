@@ -3,18 +3,14 @@ import Domain
 import Networking
 
 public struct RandomRecipesRepository: RandomRecipesRepositoryProtocol {
-    private let service: NetworkingService
+    private let service: WebService
 
-    public init(service: NetworkingService) {
+    public init(service: WebService) {
         self.service = service
     }
 
     public func getRandomRecipes() async throws -> [RecipeEntity] {
-        guard let request = GetRandomRecipesRequest().generateURLRequest() else {
-            throw APIError.notFound
-        }
-        
-        let dto: [RecipeDTO] = try await service.send(request)
+        let dto: [RecipeDTO] = try await service.getRandomRecipes(number: 1)
         return dto.map { $0.toRecipeEntity() }
     }
 }

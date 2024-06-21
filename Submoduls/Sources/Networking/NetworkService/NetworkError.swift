@@ -24,6 +24,7 @@ public enum APIError: Error, Equatable {
     case encoding(error: Error)
     case error(error: Error)
     case notFound
+    case invalidURL
 }
 
 public extension Error {
