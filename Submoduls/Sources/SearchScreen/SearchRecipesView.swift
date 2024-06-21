@@ -63,7 +63,7 @@ struct RecipeCard: View {
 
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: "")) { image in
+            AsyncImage(url: URL(string: recipe.image)) { image in
                 image
                     .resizable()
                     .scaledToFill()
@@ -80,7 +80,7 @@ struct RecipeCard: View {
                 Text(recipe.title)
                     .font(.headline)
                     .lineLimit(2)
-                Text("Servings: 10 | Ready in 10 min")
+                Text("Servings: \(recipe.servings) | Ready in \(recipe.readyInMinutes) min")
                     .font(.subheadline)
                     .foregroundColor(.gray)
             }

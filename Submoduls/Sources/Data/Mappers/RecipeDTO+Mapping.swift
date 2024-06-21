@@ -7,7 +7,12 @@ extension RecipeDTO {
     func toRecipeEntity() -> RecipeEntity {
         return RecipeEntity(
             id: self.id,
-            title: self.title
+            title: self.title,
+            image: self.image,
+            imageType: self.imageType,
+            servings: self.servings,
+            readyInMinutes: self.readyInMinutes,
+            sourceUrl: self.sourceUrl
         )
     }
 }
@@ -17,7 +22,12 @@ extension RecipeEntity {
     func toRecipeDTO() -> RecipeDTO {
         return RecipeDTO(
             id: self.id,
-            title: self.title
+            title: self.title,
+            image: self.image,
+            imageType: self.imageType,
+            servings: self.servings,
+            readyInMinutes: self.readyInMinutes,
+            sourceUrl: self.sourceUrl
         )
     }
 }
