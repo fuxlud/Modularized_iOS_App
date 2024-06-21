@@ -1,6 +1,8 @@
 import SwiftUI
 import Domain
 import DomainMock
+import Data
+import Networking
 
 public struct SearchRecipesView: View {
     
@@ -92,9 +94,8 @@ struct RecipeCard: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let mockRecipesFetcher = MockRecipesFetcher()
-        let repository = Repository(recipesFetcher: mockRecipesFetcher)
-        let viewModel = SearchRecipesViewModel(repository: repository)
+        let repositoryMock = RandomRecipesRepositoryMock()
+        let viewModel = SearchRecipesViewModel(repository: repositoryMock)
         SearchRecipesView(viewModel: viewModel)
     }
 }

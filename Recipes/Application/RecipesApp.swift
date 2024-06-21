@@ -7,8 +7,7 @@ import SearchScreen
 struct RecipesApp: App {
     var body: some Scene {
         WindowGroup {
-            let mockRecipesFetcher = MockRecipesFetcher()
-            let repository = Repository(recipesFetcher: mockRecipesFetcher)
+            let repository = RandomRecipesRepositoryMock()
             let viewModel = SearchRecipesViewModel(repository: repository)
             SearchRecipesView(viewModel: viewModel)
         }
