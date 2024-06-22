@@ -5,7 +5,7 @@ import DomainMock
 
 @MainActor
 public class SearchRecipesViewModel: ObservableObject {
-    @Published private(set) var recipes = [RecipeEntity]()
+    @Published private(set) var recipeViewModels = [RecipeViewModel]()
     private let repository: RandomRecipesRepositoryProtocol
     
     public init(repository: RandomRecipesRepositoryProtocol) {
@@ -15,7 +15,7 @@ public class SearchRecipesViewModel: ObservableObject {
     func loadRecipes() async throws {
         do {
             let recipes = try await repository.getRandomRecipes()
-            self.recipes = recipes
+            self.recipeViewModels = recipes.map { RecipeViewModel(recipe: $0) }
         } catch {
             print(error)
         }

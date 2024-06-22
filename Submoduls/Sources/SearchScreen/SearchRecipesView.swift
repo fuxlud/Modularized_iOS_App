@@ -13,105 +13,22 @@ public struct SearchRecipesView: View {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
 
-    @State private var searchText = ""
-
     public var body: some View {
         NavigationView {
-            VStack(alignment: .leading) {
-                HStack {
-                    TextField("Search recipe", text: $searchText)
-                        .padding()
-                        .background(Color(.systemGray6))
-                        .cornerRadius(8)
-                    
-                    Button(action: {
-                        // Filter action
-                    }) {
-                        Image(systemName: "slider.horizontal.3")
-                            .padding()
-                            .background(Color.green)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
+                    ForEach(viewModel.recipeViewModels) { recipeViewModel in
+                        RecipeCard(viewModel: recipeViewModel)
                     }
                 }
                 .padding()
-
-                Text("Recent Search")
-                    .font(.title2)
-                    .bold()
-                    .padding(.horizontal)
-
-                ScrollView {
-                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
-                        ForEach(viewModel.recipes) { recipe in
-                            RecipeCard(recipe: recipe)
-                        }
-                    }
-                    .padding()
-                }
             }
-            .navigationTitle("Search recipes")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Random Recipes")
+            .navigationBarTitleDisplayMode(.large)
             .task {
                 try? await viewModel.loadRecipes()
             }
         }
-    }
-}
-
-struct RecipeCard: View {
-    let recipe: RecipeEntity
-    private let imageWidth = 110.0
-    private let cellHeight = 130.0
-    
-    var body: some View {
-        VStack {
-            CacheAsyncImage(
-                url: URL(string: recipe.image)!
-            ) { phase in
-                switch phase {
-                case .success(let image):
-                    HStack {
-                        image
-                            .resizable()
-                            .scaledToFill()
-//                            .aspectRatio(contentMode: .fit)
-                            .frame(width: imageWidth)
-//                            .padding(.trailing, 10)
-                    }
-                case .failure(let error):
-                    ErrorView(error: error)
-                    Circle()
-                case .empty:
-                    HStack {
-                        ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle(tint: .red))
-                        Spacer()
-                    }
-                @unknown default:
-                    // AsyncImagePhase is not marked as @frozen.
-                    // We need to support new cases in the future.
-                    Image(systemName: "questionmark")
-                }
-            }
-            .frame(maxWidth: .infinity)
-            .frame(height: cellHeight)
-            .padding()
-            .listRowSeparator(.hidden)
-            
-            VStack(alignment: .leading) {
-                Text(recipe.title)
-                    .font(.headline)
-                    .lineLimit(2)
-                Text("Servings: \(recipe.servings) | Ready in \(recipe.readyInMinutes) min")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-            }
-            .padding([.leading, .trailing, .bottom])
-        }
-        .background(Color.white)
-        .cornerRadius(8)
-        .shadow(color: Color(.black).opacity(0.2), radius: 5, x: 0, y: 5)
     }
 }
 
