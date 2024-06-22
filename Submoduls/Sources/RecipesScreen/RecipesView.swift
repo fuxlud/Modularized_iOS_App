@@ -5,11 +5,11 @@ import Data
 import Networking
 import DesignSystem
 
-public struct SearchRecipesView: View {
+public struct RecipesView: View {
     
-    @StateObject var viewModel: SearchRecipesViewModel
+    @StateObject var viewModel: RecipesViewModel
     
-    public init(viewModel: SearchRecipesViewModel) {
+    public init(viewModel: RecipesViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
 
@@ -35,7 +35,7 @@ public struct SearchRecipesView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let repositoryMock = RandomRecipesRepositoryMock()
-        let viewModel = SearchRecipesViewModel(repository: repositoryMock)
-        SearchRecipesView(viewModel: viewModel)
+        let viewModel = RecipesViewModel(repository: repositoryMock)
+        RecipesView(viewModel: viewModel)
     }
 }

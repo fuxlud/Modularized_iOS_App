@@ -1,6 +1,6 @@
 import SwiftUI
 import Domain
-import SearchScreen
+import RecipesScreen
 import Networking
 import Data
 import DomainMock
@@ -11,8 +11,8 @@ struct RecipesApp: App {
         WindowGroup {
             let repository = RandomRecipesRepository(service: WebService())
 //            let repository = RandomRecipesRepositoryMock()
-            let viewModel = SearchRecipesViewModel(repository: repository)
-            SearchRecipesView(viewModel: viewModel)
+            let viewModel = RecipesViewModel(repository: repository)
+            RecipesView(viewModel: viewModel)
         }
     }
 }

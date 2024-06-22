@@ -10,14 +10,14 @@ let package = Package(
         .library(name: "Domain", targets: ["Domain"]),
         .library(name: "Data", targets: ["Data"]),
         .library(name: "Networking", targets: ["Networking"]),
-        .library(name: "SearchScreen", targets: ["SearchScreen"]),
+        .library(name: "RecipesScreen", targets: ["RecipesScreen"]),
         .library(name: "DesignSystem", targets: ["DesignSystem"])
     ],
     targets: [
         .target(name: "DomainMock"),
         .target(name: "Domain"),
         .target(name: "Data"),
-        .target(name: "SearchScreen"),
+        .target(name: "RecipesScreen"),
         .target(name: "Networking"),
         .target(name: "DesignSystem")
     ]

@@ -4,7 +4,7 @@ import Domain
 import DomainMock
 
 @MainActor
-public class SearchRecipesViewModel: ObservableObject {
+public class RecipesViewModel: ObservableObject {
     @Published private(set) var recipeViewModels = [RecipeViewModel]()
     private let repository: RandomRecipesRepositoryProtocol
     
