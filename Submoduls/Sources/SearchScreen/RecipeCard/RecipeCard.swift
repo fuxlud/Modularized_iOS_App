@@ -61,16 +61,10 @@ public struct RecipeCard: View {
 
 struct RecipeCard_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeCard(viewModel: RecipeViewModel(recipe: RecipeEntity(
-            id: 1,
-            title: "Traditional spare ribs baked",
-            image: "https://img.spoonacular.com/recipes/660048-556x370.jpg",
-            imageType: "jpg",
-            servings: 4,
-            readyInMinutes: 120,
-            sourceUrl: "https://example.com/recipe1"
-        )))
-        .previewLayout(.sizeThatFits)
-        .padding()
+        let recipeMock = RecipeEntity.mock.first
+        let viewModel = RecipeViewModel(recipe: recipeMock!)
+        
+        return RecipeCard(viewModel: viewModel)
+            .previewLayout(.sizeThatFits)
     }
 }
