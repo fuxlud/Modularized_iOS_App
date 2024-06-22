@@ -3,6 +3,7 @@ import Domain
 import DomainMock
 import Data
 import Networking
+import DesignSystem
 
 public struct SearchRecipesView: View {
     
@@ -60,21 +61,43 @@ public struct SearchRecipesView: View {
 
 struct RecipeCard: View {
     let recipe: RecipeEntity
-
+    private let imageWidth = 110.0
+    private let cellHeight = 130.0
+    
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: recipe.image)) { image in
-                image
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 150)
-                    .clipped()
-                    .cornerRadius(8)
-            } placeholder: {
-                Color.gray
-                    .frame(height: 150)
-                    .cornerRadius(8)
+            CacheAsyncImage(
+                url: URL(string: recipe.image)!
+            ) { phase in
+                switch phase {
+                case .success(let image):
+                    HStack {
+                        image
+                            .resizable()
+                            .scaledToFill()
+//                            .aspectRatio(contentMode: .fit)
+                            .frame(width: imageWidth)
+//                            .padding(.trailing, 10)
+                    }
+                case .failure(let error):
+                    ErrorView(error: error)
+                    Circle()
+                case .empty:
+                    HStack {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle(tint: .red))
+                        Spacer()
+                    }
+                @unknown default:
+                    // AsyncImagePhase is not marked as @frozen.
+                    // We need to support new cases in the future.
+                    Image(systemName: "questionmark")
+                }
             }
+            .frame(maxWidth: .infinity)
+            .frame(height: cellHeight)
+            .padding()
+            .listRowSeparator(.hidden)
             
             VStack(alignment: .leading) {
                 Text(recipe.title)

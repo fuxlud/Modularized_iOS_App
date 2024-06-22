@@ -18,6 +18,7 @@
 		193AAC222C233FA700E08FBB /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 193AAC212C233FA700E08FBB /* Domain */; };
 		1951EF202C23922100BD3A16 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF1F2C23922100BD3A16 /* Networking */; };
 		1951EF222C23922800BD3A16 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF212C23922800BD3A16 /* Data */; };
+		196E57512C27463C00325FAC /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 196E57502C27463C00325FAC /* DesignSystem */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 				19380A7D2C233838001A4AAE /* SearchScreen in Frameworks */,
 				193AAC222C233FA700E08FBB /* Domain in Frameworks */,
 				1951EF222C23922800BD3A16 /* Data in Frameworks */,
+				196E57512C27463C00325FAC /* DesignSystem in Frameworks */,
 				1951EF202C23922100BD3A16 /* Networking in Frameworks */,
 				19380A7F2C233DB2001A4AAE /* DomainMock in Frameworks */,
 			);
@@ -174,6 +176,7 @@
 				193AAC212C233FA700E08FBB /* Domain */,
 				1951EF1F2C23922100BD3A16 /* Networking */,
 				1951EF212C23922800BD3A16 /* Data */,
+				196E57502C27463C00325FAC /* DesignSystem */,
 			);
 			productName = LudushRecipes;
 			productReference = 19268D222C1E07550014E23E /* Recipes.app */;
@@ -249,6 +252,7 @@
 			mainGroup = 19268D192C1E07550014E23E;
 			packageReferences = (
 				193887992C1E16D200CF2029 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				19848D7A2C2717A100A8DC1C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 19268D232C1E07550014E23E /* Products */;
 			projectDirPath = "";
@@ -636,6 +640,14 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		19848D7A2C2717A100A8DC1C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -658,6 +670,10 @@
 		1951EF212C23922800BD3A16 /* Data */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Data;
+		};
+		196E57502C27463C00325FAC /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
