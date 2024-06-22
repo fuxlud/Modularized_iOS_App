@@ -9,8 +9,8 @@ import DomainMock
 struct RecipesApp: App {
     var body: some Scene {
         WindowGroup {
-//            let repository = RandomRecipesRepository(service: WebService())
-            let repository = RandomRecipesRepositoryMock()
+            let repository = RandomRecipesRepository(service: WebService())
+//            let repository = RandomRecipesRepositoryMock()
             let viewModel = SearchRecipesViewModel(repository: repository)
             SearchRecipesView(viewModel: viewModel)
         }

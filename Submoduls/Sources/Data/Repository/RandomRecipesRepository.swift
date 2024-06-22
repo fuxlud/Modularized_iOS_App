@@ -10,7 +10,7 @@ public struct RandomRecipesRepository: RandomRecipesRepositoryProtocol {
     }
 
     public func getRandomRecipes() async throws -> [RecipeEntity] {
-        let dto: [RecipeDTO] = try await service.getRandomRecipes(number: 10)
+        let dto: [RecipeDTO] = try await service.getRandomRecipes(number: 20)
         return dto.map { $0.toRecipeEntity() }
     }
 }
