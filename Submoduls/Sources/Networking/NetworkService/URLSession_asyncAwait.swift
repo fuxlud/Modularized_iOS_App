@@ -1,7 +1,5 @@
 import Foundation
 
-// www.swiftbysundell.com/articles/making-async-system-apis-backward-compatible/
-@available(iOS, deprecated: 15.0, message: "Use the built-in API instead")
 extension URLSession {
     func data(fromURLRequest urlRequest: URLRequest) async throws -> (Data, URLResponse) {
         try await withCheckedThrowingContinuation { continuation in
