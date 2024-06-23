@@ -1,6 +1,6 @@
 import Foundation
 
-public struct RecipeResponseDTO: Codable {
+public struct RecipeResponseDTO: Decodable {
     public let recipes: [RecipeDTO]
 
     public init(recipes: [RecipeDTO]) {

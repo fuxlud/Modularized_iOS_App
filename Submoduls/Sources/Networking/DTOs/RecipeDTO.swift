@@ -1,6 +1,6 @@
 import Foundation
 
-public struct RecipeDTO: Codable {
+public struct RecipeDTO: Decodable {
     public let id: Int
     public let title: String
     public let image: String
