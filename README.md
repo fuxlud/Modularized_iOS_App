@@ -14,6 +14,7 @@ The app uses the [spoonacular.com](https://spoonacular.com/food-api) REST API to
 * [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) on the Clean Coder Blog
 * [Modularization](https://www.pointfree.co/episodes/ep171-modularization-part-1) by PointFree
 * [MVVM + Clean + Modularized](https://www.aleksasimic.com/product/mvvm-clean-modularized-architecture) by Aleksa Simic
+* [Clean Architecture and MVVM on iOS](https://tech.olx.com/clean-architecture-and-mvvm-on-ios-c9d167d9f5b3) by Oleh Kudinov
 * [How to modularize Monolith iOS App](https://vbat.dev/how-to-modularize-monolith-ios-app) by Vitaly Batrakov
 
 ## Modularization
