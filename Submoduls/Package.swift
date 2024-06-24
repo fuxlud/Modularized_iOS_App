@@ -35,7 +35,7 @@ let package = Package(
         ),
         .target(
             name: "RecipesScreen",
-            dependencies: ["Domain", "DomainMock", "Data", "Networking", "DesignSystem"]
+            dependencies: ["Domain", "DomainMock", "DesignSystem"]
         )
     ]
 )
