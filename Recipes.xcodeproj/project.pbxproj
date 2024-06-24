@@ -168,6 +168,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				19C199CE2C2A01B900F5E184 /* PBXTargetDependency */,
+				19C199D02C2A01C800F5E184 /* PBXTargetDependency */,
+				19C199D22C2A01CC00F5E184 /* PBXTargetDependency */,
+				19C199D42C2A01D600F5E184 /* PBXTargetDependency */,
+				19C199D62C2A01DA00F5E184 /* PBXTargetDependency */,
+				19C199D82C2A01E500F5E184 /* PBXTargetDependency */,
 			);
 			name = Recipes;
 			packageProductDependencies = (
@@ -329,6 +335,30 @@
 			isa = PBXTargetDependency;
 			target = 19268D212C1E07550014E23E /* Recipes */;
 			targetProxy = 19268D3F2C1E07560014E23E /* PBXContainerItemProxy */;
+		};
+		19C199CE2C2A01B900F5E184 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 19C199CD2C2A01B900F5E184 /* Domain */;
+		};
+		19C199D02C2A01C800F5E184 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 19C199CF2C2A01C800F5E184 /* DomainMock */;
+		};
+		19C199D22C2A01CC00F5E184 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 19C199D12C2A01CC00F5E184 /* Networking */;
+		};
+		19C199D42C2A01D600F5E184 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 19C199D32C2A01D600F5E184 /* Data */;
+		};
+		19C199D62C2A01DA00F5E184 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 19C199D52C2A01DA00F5E184 /* DesignSystem */;
+		};
+		19C199D82C2A01E500F5E184 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 19C199D72C2A01E500F5E184 /* RecipesScreen */;
 		};
 /* End PBXTargetDependency section */
 
@@ -670,6 +700,30 @@
 		196E57502C27463C00325FAC /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
+		};
+		19C199CD2C2A01B900F5E184 /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		19C199CF2C2A01C800F5E184 /* DomainMock */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DomainMock;
+		};
+		19C199D12C2A01CC00F5E184 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		19C199D32C2A01D600F5E184 /* Data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Data;
+		};
+		19C199D52C2A01DA00F5E184 /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
+		};
+		19C199D72C2A01E500F5E184 /* RecipesScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RecipesScreen;
 		};
 		19E4588A2C27787C00FD98B4 /* RecipesScreen */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -1,5 +1,4 @@
-// swift-tools-version: 6.0
-
+// swift-tools-version:6.0
 import PackageDescription
 
 let package = Package(
@@ -14,11 +13,29 @@ let package = Package(
         .library(name: "DesignSystem", targets: ["DesignSystem"])
     ],
     targets: [
-        .target(name: "DomainMock"),
-        .target(name: "Domain"),
-        .target(name: "Data"),
-        .target(name: "RecipesScreen"),
-        .target(name: "Networking"),
-        .target(name: "DesignSystem")
+        .target(
+            name: "Domain",
+            dependencies: []
+        ),
+        .target(
+            name: "DomainMock",
+            dependencies: ["Domain"]
+        ),
+        .target(
+            name: "Networking",
+            dependencies: []
+        ),
+        .target(
+            name: "Data",
+            dependencies: ["Domain", "Networking"]
+        ),
+        .target(
+            name: "DesignSystem",
+            dependencies: ["Networking"]
+        ),
+        .target(
+            name: "RecipesScreen",
+            dependencies: ["Domain", "DomainMock", "Data", "Networking", "DesignSystem"]
+        )
     ]
 )
