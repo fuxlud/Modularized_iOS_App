@@ -14,3 +14,4 @@ The app uses the [spoonacular.com]([https://spoonacular.com/](https://spoonacula
 * [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) on the Clean Coder Blog
 * [Modularization](https://www.pointfree.co/episodes/ep171-modularization-part-1) by PointFree
 * [MVVM + Clean + Modularized](https://www.aleksasimic.com/product/mvvm-clean-modularized-architecture) by Aleksa Simic
+* [How to modularize Monolith iOS App](https://vbat.dev/how-to-modularize-monolith-ios-app) by Vitaly Batrakov
