@@ -2,7 +2,7 @@
 
 A demo project showcasing the setup of the SwiftUI app with Clean Architecture.
 
-The app uses the [spoonacular.com]([https://spoonacular.com/](https://spoonacular.com/food-api) REST API to show the list of recipes and details about them.
+The app uses the [spoonacular.com](https://spoonacular.com/food-api) REST API to show the list of recipes and details about them.
 
 ## Key features
 * Vanilla **SwiftUI** implementation
