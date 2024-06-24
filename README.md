@@ -12,3 +12,5 @@ The app uses the [spoonacular.com]([https://spoonacular.com/](https://spoonacula
 
 ## Relevant Articles 
 * [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) on the Clean Coder Blog
+* [Modularization](https://www.pointfree.co/episodes/ep171-modularization-part-1) by PointFree
+* [MVVM + Clean + Modularized](https://www.aleksasimic.com/product/mvvm-clean-modularized-architecture) by Aleksa Simic
