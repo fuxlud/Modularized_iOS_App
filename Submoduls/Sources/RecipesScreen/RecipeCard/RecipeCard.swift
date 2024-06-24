@@ -1,8 +1,6 @@
 import SwiftUI
 import Domain
 import DomainMock
-import Data
-import Networking
 import DesignSystem
 
 public struct RecipeCard: View {
