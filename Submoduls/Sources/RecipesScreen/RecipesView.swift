@@ -29,11 +29,11 @@ public struct RecipesView: View {
         }
     }
 }
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        let repositoryMock = RandomRecipesRepositoryMock()
-        let viewModel = RecipesViewModel(repository: repositoryMock)
-        RecipesView(viewModel: viewModel)
-    }
-}
+//
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let repositoryMock = RandomRecipesRepositoryMock()
+//        let viewModel = RecipesViewModel(repository: repositoryMock)
+//        RecipesView(viewModel: viewModel)
+//    }
+//}

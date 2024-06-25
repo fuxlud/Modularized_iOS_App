@@ -31,11 +31,11 @@ let package = Package(
         ),
         .target(
             name: "DesignSystem",
-            dependencies: ["Networking"]
+            dependencies: []
         ),
         .target(
             name: "RecipesScreen",
-            dependencies: ["Domain", "DomainMock", "DesignSystem"]
+            dependencies: ["Domain", "DesignSystem"]
         )
     ]
 )
