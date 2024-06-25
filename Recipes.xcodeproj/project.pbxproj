@@ -172,9 +172,6 @@
 			dependencies = (
 				191A22D22C2AC8A500D36BD6 /* PBXTargetDependency */,
 				19C199CE2C2A01B900F5E184 /* PBXTargetDependency */,
-				19C199D02C2A01C800F5E184 /* PBXTargetDependency */,
-				19C199D22C2A01CC00F5E184 /* PBXTargetDependency */,
-				19C199D42C2A01D600F5E184 /* PBXTargetDependency */,
 				19C199D62C2A01DA00F5E184 /* PBXTargetDependency */,
 			);
 			name = Recipes;
@@ -346,18 +343,6 @@
 		19C199CE2C2A01B900F5E184 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = 19C199CD2C2A01B900F5E184 /* Domain */;
-		};
-		19C199D02C2A01C800F5E184 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 19C199CF2C2A01C800F5E184 /* DomainMock */;
-		};
-		19C199D22C2A01CC00F5E184 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 19C199D12C2A01CC00F5E184 /* Networking */;
-		};
-		19C199D42C2A01D600F5E184 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 19C199D32C2A01D600F5E184 /* Data */;
 		};
 		19C199D62C2A01DA00F5E184 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -719,18 +704,6 @@
 		19C199CD2C2A01B900F5E184 /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
-		};
-		19C199CF2C2A01C800F5E184 /* DomainMock */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DomainMock;
-		};
-		19C199D12C2A01CC00F5E184 /* Networking */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Networking;
-		};
-		19C199D32C2A01D600F5E184 /* Data */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Data;
 		};
 		19C199D52C2A01DA00F5E184 /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;

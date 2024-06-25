@@ -36,7 +36,7 @@ let package = Package(
         ),
         .target(
             name: "RecipesList_Previews",
-            dependencies: ["DomainMock", "DesignSystem"]
+            dependencies: ["DomainMock", "DesignSystem", "RecipesList"]
         ),
         .target(
             name: "RecipesList",
