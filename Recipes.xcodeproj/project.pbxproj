@@ -257,7 +257,6 @@
 			);
 			mainGroup = 19268D192C1E07550014E23E;
 			packageReferences = (
-				193887992C1E16D200CF2029 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				19848D7A2C2717A100A8DC1C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 19268D232C1E07550014E23E /* Products */;
@@ -650,14 +649,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		193887992C1E16D200CF2029 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.9.1;
-			};
-		};
 		19848D7A2C2717A100A8DC1C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
