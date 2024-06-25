@@ -1,6 +1,5 @@
 import SwiftUI
 import Domain
-import DomainMock
 import DesignSystem
 
 public struct RecipesView: View {
@@ -29,11 +28,3 @@ public struct RecipesView: View {
         }
     }
 }
-//
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let repositoryMock = RandomRecipesRepositoryMock()
-//        let viewModel = RecipesViewModel(repository: repositoryMock)
-//        RecipesView(viewModel: viewModel)
-//    }
-//}

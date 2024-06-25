@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191A22CE2C2AC69800D36BD6 /* RecipesList_Previews in Frameworks */ = {isa = PBXBuildFile; productRef = 191A22CD2C2AC69800D36BD6 /* RecipesList_Previews */; };
 		19268D262C1E07550014E23E /* RecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D252C1E07550014E23E /* RecipesApp.swift */; };
 		19268D2C2C1E07560014E23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2B2C1E07560014E23E /* Assets.xcassets */; };
 		19268D2F2C1E07560014E23E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2E2C1E07560014E23E /* Preview Assets.xcassets */; };
@@ -58,6 +59,7 @@
 			files = (
 				193AAC222C233FA700E08FBB /* Domain in Frameworks */,
 				1951EF222C23922800BD3A16 /* Data in Frameworks */,
+				191A22CE2C2AC69800D36BD6 /* RecipesList_Previews in Frameworks */,
 				196E57512C27463C00325FAC /* DesignSystem in Frameworks */,
 				1951EF202C23922100BD3A16 /* Networking in Frameworks */,
 				19E4588B2C27787C00FD98B4 /* RecipesScreen in Frameworks */,
@@ -183,6 +185,7 @@
 				1951EF212C23922800BD3A16 /* Data */,
 				196E57502C27463C00325FAC /* DesignSystem */,
 				19E4588A2C27787C00FD98B4 /* RecipesScreen */,
+				191A22CD2C2AC69800D36BD6 /* RecipesList_Previews */,
 			);
 			productName = LudushRecipes;
 			productReference = 19268D222C1E07550014E23E /* Recipes.app */;
@@ -681,6 +684,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		191A22CD2C2AC69800D36BD6 /* RecipesList_Previews */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RecipesList_Previews;
+		};
 		19380A7E2C233DB2001A4AAE /* DomainMock */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DomainMock;

@@ -1,7 +1,6 @@
 import Foundation
 import SwiftUI
 import Domain
-import DomainMock
 
 @MainActor
 public class RecipesViewModel: ObservableObject {
