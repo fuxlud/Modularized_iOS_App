@@ -3,7 +3,12 @@ import Domain
 import DesignSystem
 
 public struct RecipeCard: View {
-    @ObservedObject var viewModel: RecipeViewModel
+    @StateObject var viewModel: RecipeViewModel
+    
+    public init(viewModel: RecipeViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     private let imageWidth = 110.0
     private let cellHeight = 130.0
     
@@ -55,13 +60,3 @@ public struct RecipeCard: View {
         .shadow(color: Color(.black).opacity(0.2), radius: 5, x: 0, y: 5)
     }
 }
-//
-//struct RecipeCard_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let recipeMock = RecipeEntity.mock.first
-//        let viewModel = RecipeViewModel(recipe: recipeMock!)
-//        
-//        return RecipeCard(viewModel: viewModel)
-//            .previewLayout(.sizeThatFits)
-//    }
-//}

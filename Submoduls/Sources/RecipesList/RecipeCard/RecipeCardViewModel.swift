@@ -1,11 +1,11 @@
 import Foundation
 import Domain
 
-class RecipeViewModel: ObservableObject, Identifiable {
+public class RecipeViewModel: ObservableObject, Identifiable {
     private let recipe: RecipeEntity
-    let id = UUID() 
+    public let id = UUID() 
     
-    init(recipe: RecipeEntity) {
+    public init(recipe: RecipeEntity) {
         self.recipe = recipe
     }
 
