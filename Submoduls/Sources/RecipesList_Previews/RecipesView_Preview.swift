@@ -1,7 +1,7 @@
 import SwiftUI
 import DomainMock
 import DesignSystem
-import RecipesScreen
+import RecipesList
 
 struct RecipesView_Preview: PreviewProvider {
     static var previews: some View {

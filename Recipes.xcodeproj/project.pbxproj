@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		191A22CE2C2AC69800D36BD6 /* RecipesList_Previews in Frameworks */ = {isa = PBXBuildFile; productRef = 191A22CD2C2AC69800D36BD6 /* RecipesList_Previews */; };
+		191A22D02C2AC88400D36BD6 /* RecipesList in Frameworks */ = {isa = PBXBuildFile; productRef = 191A22CF2C2AC88400D36BD6 /* RecipesList */; };
 		19268D262C1E07550014E23E /* RecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D252C1E07550014E23E /* RecipesApp.swift */; };
 		19268D2C2C1E07560014E23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2B2C1E07560014E23E /* Assets.xcassets */; };
 		19268D2F2C1E07560014E23E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2E2C1E07560014E23E /* Preview Assets.xcassets */; };
@@ -19,7 +20,6 @@
 		1951EF202C23922100BD3A16 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF1F2C23922100BD3A16 /* Networking */; };
 		1951EF222C23922800BD3A16 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF212C23922800BD3A16 /* Data */; };
 		196E57512C27463C00325FAC /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 196E57502C27463C00325FAC /* DesignSystem */; };
-		19E4588B2C27787C00FD98B4 /* RecipesScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 19E4588A2C27787C00FD98B4 /* RecipesScreen */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,12 +57,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				191A22D02C2AC88400D36BD6 /* RecipesList in Frameworks */,
 				193AAC222C233FA700E08FBB /* Domain in Frameworks */,
 				1951EF222C23922800BD3A16 /* Data in Frameworks */,
 				191A22CE2C2AC69800D36BD6 /* RecipesList_Previews in Frameworks */,
 				196E57512C27463C00325FAC /* DesignSystem in Frameworks */,
 				1951EF202C23922100BD3A16 /* Networking in Frameworks */,
-				19E4588B2C27787C00FD98B4 /* RecipesScreen in Frameworks */,
 				19380A7F2C233DB2001A4AAE /* DomainMock in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,12 +170,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				191A22D22C2AC8A500D36BD6 /* PBXTargetDependency */,
 				19C199CE2C2A01B900F5E184 /* PBXTargetDependency */,
 				19C199D02C2A01C800F5E184 /* PBXTargetDependency */,
 				19C199D22C2A01CC00F5E184 /* PBXTargetDependency */,
 				19C199D42C2A01D600F5E184 /* PBXTargetDependency */,
 				19C199D62C2A01DA00F5E184 /* PBXTargetDependency */,
-				19C199D82C2A01E500F5E184 /* PBXTargetDependency */,
 			);
 			name = Recipes;
 			packageProductDependencies = (
@@ -184,8 +184,8 @@
 				1951EF1F2C23922100BD3A16 /* Networking */,
 				1951EF212C23922800BD3A16 /* Data */,
 				196E57502C27463C00325FAC /* DesignSystem */,
-				19E4588A2C27787C00FD98B4 /* RecipesScreen */,
 				191A22CD2C2AC69800D36BD6 /* RecipesList_Previews */,
+				191A22CF2C2AC88400D36BD6 /* RecipesList */,
 			);
 			productName = LudushRecipes;
 			productReference = 19268D222C1E07550014E23E /* Recipes.app */;
@@ -329,6 +329,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		191A22D22C2AC8A500D36BD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 191A22D12C2AC8A500D36BD6 /* RecipesList */;
+		};
 		19268D362C1E07560014E23E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 19268D212C1E07550014E23E /* Recipes */;
@@ -358,10 +362,6 @@
 		19C199D62C2A01DA00F5E184 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = 19C199D52C2A01DA00F5E184 /* DesignSystem */;
-		};
-		19C199D82C2A01E500F5E184 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 19C199D72C2A01E500F5E184 /* RecipesScreen */;
 		};
 /* End PBXTargetDependency section */
 
@@ -688,6 +688,14 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = RecipesList_Previews;
 		};
+		191A22CF2C2AC88400D36BD6 /* RecipesList */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RecipesList;
+		};
+		191A22D12C2AC8A500D36BD6 /* RecipesList */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RecipesList;
+		};
 		19380A7E2C233DB2001A4AAE /* DomainMock */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DomainMock;
@@ -727,14 +735,6 @@
 		19C199D52C2A01DA00F5E184 /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
-		};
-		19C199D72C2A01E500F5E184 /* RecipesScreen */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RecipesScreen;
-		};
-		19E4588A2C27787C00FD98B4 /* RecipesScreen */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RecipesScreen;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -11,7 +11,7 @@ let package = Package(
         .library(name: "Networking", targets: ["Networking"]),
         .library(name: "DesignSystem", targets: ["DesignSystem"]),
         .library(name: "RecipesList_Previews", targets: ["RecipesList_Previews"]),
-        .library(name: "RecipesScreen", targets: ["RecipesScreen"])
+        .library(name: "RecipesList", targets: ["RecipesList"])
     ],
     targets: [
         .target(
@@ -39,7 +39,7 @@ let package = Package(
             dependencies: ["DomainMock", "DesignSystem"]
         ),
         .target(
-            name: "RecipesScreen",
+            name: "RecipesList",
             dependencies: ["Domain", "DesignSystem"]
         )
     ]
