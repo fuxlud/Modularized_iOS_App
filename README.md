@@ -26,6 +26,7 @@ This project utilized the third approach. All the modules described in the Packa
  <img width="281" alt="Screenshot 2024-06-24 at 22 38 10" src="https://github.com/fuxlud/Clean-Architecture-SwiftUI/assets/1950116/056b5ad4-72d9-4b3d-b62f-dba06456c96d">
  <img width="719" alt="Screenshot 2024-06-24 at 22 37 50" src="https://github.com/fuxlud/Clean-Architecture-SwiftUI/assets/1950116/cd416171-3040-4779-ab19-0b3b499d0115">
 
+which technology to use? Yes indeed, in nowadays still the mature applications are written with UI kit, and swiftui. But having a side project is an excellent opportunity to try out new technologies. So in this one I'm gonna work with SwiftUI as opposed to UI kid. Testing is supposed to exit test. And navigation stack as opposed to U I kid container containing and navigating SwiftUI and UI views.
 Use case: orcastrator
 Repository: fetchers
 
