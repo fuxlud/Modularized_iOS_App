@@ -37,3 +37,4 @@ in cases where a state should be accessed in several places in the app, it's a g
 
  90% of the scenarios in the app do not need that kind of complexity and transferring data from the server or persistence to the ViewModel through the repository and use case is enough. Storing it in the repository and utilizing Combine would be overengineering.
 
+why do I have mod protocol? When I was creating the previews module I needed to import only the domain mock. Unfortunately, the entity mock was not recognized without importing domain. I was expecting domain to be recognized without this import, but a unfortunately, expert has troubles cascading import. So in order for me not to import the entire domain into the previews module. I am separating between domain declaration and its implementation. So when I am importing the needed domain, I can import only the domain protocol.
