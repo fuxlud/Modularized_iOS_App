@@ -32,3 +32,8 @@ Repository: fetchers
 Why use case consuming the repository and not web service and persistence directly, so the use case will be agnostic to the implementation of fetching and only repositories will be aware of it. Optimazation of the dependency graph.
 Why do we need Entity and DTO? Entities encapsulate both data and behavior of real-world objects in an application. DTOs are lightweight objects used solely for transferring data from the network and persiastance, without containing behavior.
 
+Should we start with data in repository or in view model?
+in cases where a state should be accessed in several places in the app, it's a good idea to hold it in the repository and let the ViewModel be notified with Combine. This is an important and interesting use case to handle, and I’ll tackle it in this side project
+
+ 90% of the scenarios in the app do not need that kind of complexity and transferring data from the server or persistence to the ViewModel through the repository and use case is enough. Storing it in the repository and utilizing Combine would be overengineering.
+
