@@ -28,3 +28,7 @@ This project utilized the third approach. All the modules described in the Packa
 
 Use case: orcastrator
 Repository: fetchers
+
+Why use case consuming the repository and not web service and persistence directly, so the use case will be agnostic to the implementation of fetching and only repositories will be aware of it. Optimazation of the dependency graph.
+Why do we need Entity and DTO? Entities encapsulate both data and behavior of real-world objects in an application. DTOs are lightweight objects used solely for transferring data from the network and persiastance, without containing behavior.
+
