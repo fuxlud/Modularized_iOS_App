@@ -57,3 +57,12 @@ For states accessed in multiple places in the app, data is stored in the Reposit
 ### Why ModelProtocol package?
 
 While creating the previews module, I intended to import only the DomainMock. However, the EntityMock wasn't recognized without importing the entire Domain. To avoid this, I separated the domain declaration (ModelProtocol) from its implementation. This allows importing only the ModelProtocol needed, without the entire Domain, which might become much bigger down the line.
+
+## Roadmap
+
+1. Testing 
+2. CI/CD 
+3. Detail screen with proper navigation
+4. Add and Edit screen with SwiftData
+5. Search
+6. Filter
