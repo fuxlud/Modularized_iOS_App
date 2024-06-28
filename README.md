@@ -61,8 +61,15 @@ While creating the previews module, I intended to import only the DomainMock. Ho
 ## Roadmap
 
 1. Testing 
-2. CI/CD 
-3. Detail screen with proper navigation
-4. Add and Edit screen with SwiftData
-5. Search
-6. Filter
+2. CI/CD
+3. SwiftFormater, SwiftLint, Danger
+4. OSLog instead of NetworkLogger
+5. Latest Observation (SWiftUI)
+6. Detail screen with proper navigation
+7. Sandbox/Feature app
+8. Dependency Container
+9. Add and Edit screen with SwiftData
+10. Search
+11. Filter
+12. Localization
+13. Cool animations 
