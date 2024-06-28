@@ -54,15 +54,22 @@ UseCase is agnostic to the data fetching implementation. Only the repositories a
 
 For states accessed in multiple places in the app, data is stored in the Repository and the ViewModel is notified using **Combine**. However, 90% of scenarios do not require this complexity. Simple data transfer through the Repository and UsesCases to the ViewModel suffices. Storing data in the Repository and responding to it with Combine for these cases would be overengineering.
 
-### Why ModelProtocol package?
+### Why ModelProtocol package? (Todo, implement down the line)
 
 While creating the previews module, I intended to import only the DomainMock. However, the EntityMock wasn't recognized without importing the entire Domain. To avoid this, I separated the domain declaration (ModelProtocol) from its implementation. This allows importing only the ModelProtocol needed, without the entire Domain, which might become much bigger down the line.
 
 ## Roadmap
 
 1. Testing 
-2. CI/CD 
-3. Detail screen with proper navigation
-4. Add and Edit screen with SwiftData
-5. Search
-6. Filter
+2. CI/CD
+3. SwiftFormater, SwiftLint, Danger
+4. OSLog instead of NetworkLogger
+5. Latest Observation (SWiftUI)
+6. Detail screen with proper navigation
+7. Sandbox/Feature app
+8. Dependency Container
+9. Add and Edit screen with SwiftData
+10. Search
+11. Filter
+12. Localization
+13. Cool animations 
