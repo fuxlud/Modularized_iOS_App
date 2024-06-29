@@ -15,6 +15,7 @@ The app uses the [spoonacular.com](https://spoonacular.com/food-api) REST API to
 
 ## Roadmap
 
+1. More tests, UI tests, snapshot tests
 2. CI/CD
 3. SwiftFormater, SwiftLint, Danger
 4. OSLog instead of NetworkLogger
