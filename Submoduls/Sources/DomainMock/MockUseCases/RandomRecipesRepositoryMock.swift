@@ -1,9 +1,19 @@
 import Domain
 
-public struct RandomRecipesRepositoryMock: RandomRecipesRepositoryProtocol {
+public struct RandomRecipesUseCaseMock: RandomRecipesUseCaseProtocol {
+    
+    let recipes: [Domain.RecipeEntity]
+    let error: Error?
+    
     public func getRandomRecipes() async throws -> [Domain.RecipeEntity] {
-        return RecipeEntity.mock
+        if let error {
+            throw error
+        }
+        return recipes
     }
     
-    public init() {}
+    public init(recipes: [Domain.RecipeEntity], error: Error? = nil) {
+        self.recipes = recipes
+        self.error = error
+    }
 }

@@ -6,8 +6,8 @@ import Domain
 
 struct RecipesView_Preview: PreviewProvider {
     static var previews: some View {
-        let repositoryMock = RandomRecipesRepositoryMock()
-        let useCase = RandomRecipesUseCase(repository: repositoryMock)
+
+        let useCase = RandomRecipesUseCaseMock(recipes: RecipeEntity.mock)
         let viewModel = RecipesViewModel(randomRecipesUseCase: useCase)
 
         RecipesView(viewModel: viewModel)
