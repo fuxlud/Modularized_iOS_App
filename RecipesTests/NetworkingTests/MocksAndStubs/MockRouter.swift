@@ -8,7 +8,7 @@ struct MockRouter: NetworkRouterProtocol, Equatable {
         if let jsonData = jsonStub?.data(using: .utf8, allowLossyConversion: false) {
             return jsonData
         } else {
-            throw NSError(domain: "mock router failure", code: 101, userInfo: nil)
+            throw RequestError.mockRouterFailure
         }
     }
 }

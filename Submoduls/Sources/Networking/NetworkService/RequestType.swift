@@ -2,6 +2,7 @@ import Foundation
 
 public enum RequestError: Swift.Error {
     case badlyFormattedResponse
+    case mockRouterFailure
 }
 
 public protocol RequestTypeProtocol {

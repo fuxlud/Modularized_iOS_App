@@ -53,7 +53,7 @@
 		38AC27D52C2FD562001C43FC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				WeightConverterTest.swift,
+				WeightConverterTests.swift,
 			);
 			target = 38AC27A62C2F633E001C43FC /* RecipesTests */;
 		};
