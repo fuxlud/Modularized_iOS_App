@@ -1,11 +1,11 @@
 import Foundation
 
-enum WeightUnit {
+public enum WeightUnit {
   case gram, ounce, pound
 }
 
-struct WeightConverter {
-  func convert(_ value: Double, from fromUnit: WeightUnit, to toUnit: WeightUnit) -> Double {
+public struct WeightConverter {
+  public func convert(_ value: Double, from fromUnit: WeightUnit, to toUnit: WeightUnit) -> Double {
     switch (fromUnit, toUnit) {
     case (.gram, .ounce):
       return value * 0.03527396

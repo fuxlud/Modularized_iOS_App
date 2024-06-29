@@ -1,47 +1,47 @@
-import XCTest
 import Domain
+import Testing
 
-class WeightConverterTests: XCTestCase {
+class WeightConverterTests {
 
   var converter: WeightConverter!
+//
+//  override func setUp() {
+//    super.setUp()
+//    converter = WeightConverter()
+//  }
+//
+//  override func tearDown() {
+//    converter = nil
+//    super.tearDown()
+//  }
 
-  override func setUp() {
-    super.setUp()
-    converter = WeightConverter()
-  }
+    @Test convertGramToOunce() {
+      let result = converter.convert(100, from: .gram, to: .ounce)
+      #expect(abs(result - 3.527396) < 0.0001)
+    }
 
-  override func tearDown() {
-    converter = nil
-    super.tearDown()
-  }
+    @Test convertGramToPound() {
+      let result = converter.convert(100, from: .gram, to: .pound)
+      #expect(abs(result - 0.220462) < 0.0001)
+    }
 
-  func testGramToOunce() {
-    let result = converter.convert(100, from: .gram, to: .ounce)
-    XCTAssertEqual(result, 3.527396, accuracy: 0.0001)
-  }
+    @Test convertOunceToGram() {
+      let result = converter.convert(3.527396, from: .ounce, to: .gram)
+      #expect(abs(result - 100) < 0.0001)
+    }
 
-  func testGramToPound() {
-    let result = converter.convert(100, from: .gram, to: .pound)
-    XCTAssertEqual(result, 0.220462, accuracy: 0.0001)
-  }
+    @Test convertOunceToPound() {
+      let result = converter.convert(16, from: .ounce, to: .pound)
+      #expect(abs(result - 1) < 0.0001)
+    }
 
-  func testOunceToGram() {
-    let result = converter.convert(3.527396, from: .ounce, to: .gram)
-    XCTAssertEqual(result, 100, accuracy: 0.0001)
-  }
+    @Test convertPoundToGram() {
+      let result = converter.convert(1, from: .pound, to: .gram)
+      #expect(abs(result - 453.592) < 0.001)
+    }
 
-  func testOunceToPound() {
-    let result = converter.convert(16, from: .ounce, to: .pound)
-    XCTAssertEqual(result, 1, accuracy: 0.0001)
-  }
-
-  func testPoundToGram() {
-    let result = converter.convert(1, from: .pound, to: .gram)
-    XCTAssertEqual(result, 453.592, accuracy: 0.001)
-  }
-
-  func testPoundToOunce() {
-    let result = converter.convert(1, from: .pound, to: .ounce)
-    XCTAssertEqual(result, 16, accuracy: 0.0001)
-  }
+    @Test convertPoundToOunce() {
+      let result = converter.convert(1, from: .pound, to: .ounce)
+      #expect(abs(result - 16) < 0.0001)
+    }
 }

@@ -50,11 +50,18 @@
 			);
 			target = 38AC27A62C2F633E001C43FC /* RecipesTests */;
 		};
+		38AC27D52C2FD562001C43FC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				WeightConverterTest.swift,
+			);
+			target = 38AC27A62C2F633E001C43FC /* RecipesTests */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		38AC27B92C2F6ACD001C43FC /* NetworkingTests */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (38AC27C32C2F6ADD001C43FC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = NetworkingTests; sourceTree = "<group>"; };
-		38AC27D02C2F6E30001C43FC /* DomainTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DomainTests; sourceTree = "<group>"; };
+		38AC27D02C2F6E30001C43FC /* DomainTests */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (38AC27D52C2FD562001C43FC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DomainTests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
