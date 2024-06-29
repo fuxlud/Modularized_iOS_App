@@ -9,7 +9,8 @@ struct RecipesApp: App {
     var body: some Scene {
         WindowGroup {
             let repository = RandomRecipesRepository(service: WebService())
-            let viewModel = RecipesViewModel(repository: repository)
+            let useCase = RandomRecipesUseCase(repository: repository)
+            let viewModel = RecipesViewModel(randomRecipesUseCase: useCase)
             RecipesView(viewModel: viewModel)
         }
     }

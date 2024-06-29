@@ -6,9 +6,11 @@ let package = Package(
     platforms: [.iOS(.v15)],
     products: [
         .library(name: "DomainMock", targets: ["DomainMock"]),
-        .library(name: "Domain", targets: ["Domain", "DomainTests"]),
+        .library(name: "Domain", targets: ["Domain"]),
+        .library(name: "DomainTests", targets: ["DomainTests"]),
         .library(name: "Data", targets: ["Data"]),
-        .library(name: "Networking", targets: ["Networking", "NetworkingTests"]),
+        .library(name: "Networking", targets: ["Networking"]),
+        .library(name: "NetworkingTests", targets: ["NetworkingTests"]),
         .library(name: "DesignSystem", targets: ["DesignSystem"]),
         .library(name: "RecipesList_Previews", targets: ["RecipesList_Previews"]),
         .library(name: "RecipesList", targets: ["RecipesList"])
