@@ -1,7 +1,7 @@
 import Foundation
 import Domain
 
-public class RecipeViewModel: ObservableObject, Identifiable {
+public class RecipeViewModel: ObservableObject, Identifiable, Equatable {
     private let recipe: RecipeEntity
     public let id = UUID() 
     
@@ -23,5 +23,9 @@ public class RecipeViewModel: ObservableObject, Identifiable {
 
     var imageUrl: URL? {
         URL(string: recipe.image)
+    }
+    
+    public static func == (lhs: RecipeViewModel, rhs: RecipeViewModel) -> Bool {
+      return lhs.id == rhs.id && lhs.recipe == rhs.recipe
     }
 }

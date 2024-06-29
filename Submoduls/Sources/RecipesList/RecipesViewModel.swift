@@ -13,24 +13,24 @@ public class RecipesViewModel: ObservableObject {
     }
     
     struct State: Equatable {
-        var recipes: [RecipeEntity] = []
+        var recipeViewModels: [RecipeViewModel] = []
         var error: Toast?
         var isLoading = false
     }
-
+    
     enum Action {
         case onAppear
     }
-
+    
     @Published var state: State  = .init()
-
+    
     func dispatch(_ action: Action) async {
         switch action {
         case .onAppear:
             await fetchRecipies()
         }
     }
-
+    
     func fetchRecipies() async {
         do {
             let recipes = try await fetchRecipesRemote()
@@ -51,10 +51,9 @@ public class RecipesViewModel: ObservableObject {
     
     @MainActor
     private func fillRecipes(_ recipes: [RecipeEntity]) {
-//        state.recipeViewModels = recipes.map { RecipeViewModel(recipe: $0) }
-        state.recipes = recipes
+        state.recipeViewModels = recipes.map { RecipeViewModel(recipe: $0) }
     }
-
+    
     @MainActor
     private func handleError(_ error: Error) {
         guard let error = error as? RecipyErrorEntity else {
@@ -63,17 +62,4 @@ public class RecipesViewModel: ObservableObject {
         }
         state.error = .init(style: .error, message: error.description)
     }
-    
-  //not sure i need
-//    @Published private(set) var recipeViewModels = [RecipeViewModel]()
-//
-//
-//    func loadRecipes() async throws {
-//        do {
-//            let recipes = try await randomRecipesUseCase.getRandomRecipes()
-//            self.recipeViewModels = recipes.map { RecipeViewModel(recipe: $0) }
-//        } catch {
-//            print(error)
-//        }
-//    }
 }
