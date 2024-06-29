@@ -26,7 +26,7 @@ public struct RecipesView: View {
             }
             .navigationTitle("Random Recipes")
             .navigationBarTitleDisplayMode(.large)
-//            .toastView(toast: $viewModel.state.error)
+            .toastView(toast: $viewModel.state.error)
             .task {
                 await viewModel.dispatch(.onAppear)
             }
