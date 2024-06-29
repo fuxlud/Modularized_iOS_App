@@ -7,19 +7,20 @@ let package = Package(
     products: [
         .library(name: "DomainMock", targets: ["DomainMock"]),
         .library(name: "Domain", targets: ["Domain"]),
-        .library(name: "DomainTests", targets: ["DomainTests"]),
         .library(name: "Data", targets: ["Data"]),
         .library(name: "Networking", targets: ["Networking"]),
-        .library(name: "NetworkingTests", targets: ["NetworkingTests"]),
         .library(name: "DesignSystem", targets: ["DesignSystem"]),
         .library(name: "RecipesList_Previews", targets: ["RecipesList_Previews"]),
         .library(name: "RecipesList", targets: ["RecipesList"]),
-        .library(name: "RecipesListTests", targets: ["RecipesListTests"])
     ],
     targets: [
         .target(
             name: "Domain",
             dependencies: []
+        ),
+        .testTarget(
+            name: "DomainTests",
+            dependencies: ["Domain", "DomainMock"]
         ),
         .target(
             name: "DomainMock",
@@ -48,10 +49,6 @@ let package = Package(
         .testTarget(
             name: "NetworkingTests",
             dependencies: ["Networking"]
-        ),
-        .testTarget(
-            name: "DomainTests",
-            dependencies: ["Domain", "DomainMock"]
         ),
         .testTarget(
             name: "RecipesListTests",
