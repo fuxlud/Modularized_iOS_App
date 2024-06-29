@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,20 +37,6 @@
 		193AAC232C234D5900E08FBB /* Submoduls */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Submoduls; sourceTree = "<group>"; };
 		38AC27A72C2F633E001C43FC /* RecipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		38AC27D52C2FD562001C43FC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				WeightConverterTests.swift,
-			);
-			target = 38AC27A62C2F633E001C43FC /* RecipesTests */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		38AC27D02C2F6E30001C43FC /* DomainTests */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (38AC27D52C2FD562001C43FC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DomainTests; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		19268D1F2C1E07550014E23E /* Frameworks */ = {
@@ -133,7 +119,6 @@
 		38AC27A82C2F633E001C43FC /* RecipesTests */ = {
 			isa = PBXGroup;
 			children = (
-				38AC27D02C2F6E30001C43FC /* DomainTests */,
 			);
 			path = RecipesTests;
 			sourceTree = "<group>";

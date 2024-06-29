@@ -6,7 +6,7 @@ let package = Package(
     platforms: [.iOS(.v15)],
     products: [
         .library(name: "DomainMock", targets: ["DomainMock"]),
-        .library(name: "Domain", targets: ["Domain"]),
+        .library(name: "Domain", targets: ["Domain", "DomainTests"]),
         .library(name: "Data", targets: ["Data"]),
         .library(name: "Networking", targets: ["Networking", "NetworkingTests"]),
         .library(name: "DesignSystem", targets: ["DesignSystem"]),
@@ -45,6 +45,10 @@ let package = Package(
         .testTarget(
             name: "NetworkingTests",
             dependencies: ["Networking"]
+        ),
+        .testTarget(
+            name: "DomainTests",
+            dependencies: ["Domain"]
         )
     ]
 )
