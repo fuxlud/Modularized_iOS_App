@@ -50,7 +50,6 @@
 			children = (
 				193AAC232C234D5900E08FBB /* Submoduls */,
 				19268D242C1E07550014E23E /* Recipes */,
-				38AC27A82C2F633E001C43FC /* RecipesTests */,
 				19268D232C1E07550014E23E /* Products */,
 				198761832C22E48600565BB0 /* Frameworks */,
 			);
@@ -95,13 +94,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		38AC27A82C2F633E001C43FC /* RecipesTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RecipesTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
