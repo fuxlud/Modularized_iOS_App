@@ -5,11 +5,28 @@ A demo project showcasing the setup of the SwiftUI app with Clean Architecture.
 The app uses the [spoonacular.com](https://spoonacular.com/food-api) REST API to show the list of recipes and details about them.
 
 ## Key features
+
 * Vanilla **SwiftUI** implementation
 * Decoupled **Presentation**, **Business Logic**, and **Data Access** layers
 * **Modularized** with SPM - Designed for scalability. It can be used as a reference for building large production apps
 * Simple yet flexible vanila **Networking Layer** built on Generics
 * Unit Test Coverage with **Swift Testing**
+
+
+## Roadmap
+
+2. CI/CD
+3. SwiftFormater, SwiftLint, Danger
+4. OSLog instead of NetworkLogger
+5. Latest Observation (SWiftUI)
+6. Detail screen with proper navigation
+7. Sandbox/Feature app
+8. Dependency Container
+9. Add and Edit screen with SwiftData
+10. Search
+11. Filter
+12. Localization
+13. Cool animations 
 
 ## Relevant Articles 
 * [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) on the Clean Coder Blog
@@ -58,18 +75,3 @@ For states accessed in multiple places in the app, data is stored in the Reposit
 ### Why ModelProtocol package? (Todo, implement down the line)
 
 While creating the previews module, I intended to import only the DomainMock. However, the EntityMock wasn't recognized without importing the entire Domain. To avoid this, I separated the domain declaration (ModelProtocol) from its implementation. This allows importing only the ModelProtocol needed, without the entire Domain, which might become much bigger down the line.
-
-## Roadmap
-
-2. CI/CD
-3. SwiftFormater, SwiftLint, Danger
-4. OSLog instead of NetworkLogger
-5. Latest Observation (SWiftUI)
-6. Detail screen with proper navigation
-7. Sandbox/Feature app
-8. Dependency Container
-9. Add and Edit screen with SwiftData
-10. Search
-11. Filter
-12. Localization
-13. Cool animations 
