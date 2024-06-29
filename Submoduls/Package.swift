@@ -50,7 +50,7 @@ let package = Package(
         ),
         .testTarget(
             name: "DomainTests",
-            dependencies: ["Domain"]
+            dependencies: ["Domain", "DomainMock"]
         )
     ]
 )
