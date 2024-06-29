@@ -14,16 +14,21 @@ public struct RecipesView: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
-                    ForEach(viewModel.recipeViewModels) { recipeViewModel in
-                        RecipeCard(viewModel: recipeViewModel)
+//                    ForEach(viewModel.recipeViewModels) { recipeViewModel in
+//                        RecipeCard(viewModel: recipeViewModel)
+//                    }
+                    ForEach(viewModel.state.recipes) { recipe in
+                        let viewModel = RecipeViewModel(recipe: recipe)
+                        RecipeCard(viewModel: viewModel)
                     }
                 }
                 .padding()
             }
             .navigationTitle("Random Recipes")
             .navigationBarTitleDisplayMode(.large)
+//            .toastView(toast: $viewModel.state.error)
             .task {
-                try? await viewModel.loadRecipes()
+                await viewModel.dispatch(.onAppear)
             }
         }
     }

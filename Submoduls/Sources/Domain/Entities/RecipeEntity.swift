@@ -21,3 +21,7 @@ public struct RecipeEntity: Codable, Identifiable {
     }
 }
 
+
+extension RecipeEntity: Equatable {
+    
+}
