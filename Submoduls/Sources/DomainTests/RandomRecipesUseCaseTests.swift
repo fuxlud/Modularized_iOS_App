@@ -19,13 +19,13 @@ struct RandomRecipesUseCaseTests {
     }
     
     @Test func whenFetchRecipiesFailure_shouldReturnRecipiesError() async {
-        let sut = RandomRecipesUseCaseMock(error: RecipyErrorEntity.general)
+        let sut = RandomRecipesUseCaseMock(error: RecipeErrorEntity.general)
         
         do {
             let _ = try await sut.getRandomRecipes()
         } catch let error {
-            guard let concreteError = error as? RecipyErrorEntity else { return }
-            #expect(concreteError == RecipyErrorEntity.general)
+            guard let concreteError = error as? RecipeErrorEntity else { return }
+            #expect(concreteError == RecipeErrorEntity.general)
         }
     }
 }

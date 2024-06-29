@@ -1,4 +1,4 @@
-public enum RecipyErrorEntity: Error {
+public enum RecipeErrorEntity: Error {
     case general
 
     public var description: String {

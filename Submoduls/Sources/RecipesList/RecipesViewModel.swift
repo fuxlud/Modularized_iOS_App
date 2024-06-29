@@ -12,19 +12,19 @@ public class RecipesViewModel: ObservableObject {
         self.randomRecipesUseCase = randomRecipesUseCase
     }
     
-    struct State: Equatable {
-        var recipeViewModels: [RecipeViewModel] = []
-        var error: Toast?
-        var isLoading = false
+    public struct State: Equatable {
+        public var recipeViewModels: [RecipeViewModel] = []
+        public var error: Toast?
+        public var isLoading = false
     }
     
-    enum Action {
+    public enum Action {
         case onAppear
     }
     
-    @Published var state: State  = .init()
+    @Published public var state: State  = .init()
     
-    func dispatch(_ action: Action) async {
+    public func dispatch(_ action: Action) async {
         switch action {
         case .onAppear:
             await fetchRecipies()
@@ -56,7 +56,7 @@ public class RecipesViewModel: ObservableObject {
     
     @MainActor
     private func handleError(_ error: Error) {
-        guard let error = error as? RecipyErrorEntity else {
+        guard let error = error as? RecipeErrorEntity else {
             state.error = .init(style: .error, message: error.localizedDescription)
             return
         }

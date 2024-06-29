@@ -9,7 +9,7 @@ public class RecipeViewModel: ObservableObject, Identifiable, Equatable {
         self.recipe = recipe
     }
 
-    var title: String {
+    public var title: String {
         recipe.title
     }
 
