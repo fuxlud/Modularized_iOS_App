@@ -8,7 +8,7 @@ let package = Package(
         .library(name: "DomainMock", targets: ["DomainMock"]),
         .library(name: "Domain", targets: ["Domain"]),
         .library(name: "Data", targets: ["Data"]),
-        .library(name: "Networking", targets: ["Networking"]),
+        .library(name: "Networking", targets: ["Networking", "NetworkingTests"]),
         .library(name: "DesignSystem", targets: ["DesignSystem"]),
         .library(name: "RecipesList_Previews", targets: ["RecipesList_Previews"]),
         .library(name: "RecipesList", targets: ["RecipesList"])
@@ -41,6 +41,10 @@ let package = Package(
         .target(
             name: "RecipesList",
             dependencies: ["Domain", "DesignSystem"]
+        ),
+        .testTarget(
+            name: "NetworkingTests",
+            dependencies: ["Networking"]
         )
     ]
 )

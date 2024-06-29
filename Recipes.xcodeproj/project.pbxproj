@@ -39,17 +39,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		38AC27C32C2F6ADD001C43FC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				MocksAndStubs/MockRouter.swift,
-				MocksAndStubs/MockWebService.swift,
-				MocksAndStubs/RequestTypeProtocolMocks.swift,
-				MocksAndStubs/TestingStub.swift,
-				RequestTypeExecuteTests.swift,
-			);
-			target = 38AC27A62C2F633E001C43FC /* RecipesTests */;
-		};
 		38AC27D52C2FD562001C43FC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -60,7 +49,6 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		38AC27B92C2F6ACD001C43FC /* NetworkingTests */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (38AC27C32C2F6ADD001C43FC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = NetworkingTests; sourceTree = "<group>"; };
 		38AC27D02C2F6E30001C43FC /* DomainTests */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (38AC27D52C2FD562001C43FC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DomainTests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -146,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				38AC27D02C2F6E30001C43FC /* DomainTests */,
-				38AC27B92C2F6ACD001C43FC /* NetworkingTests */,
 			);
 			path = RecipesTests;
 			sourceTree = "<group>";

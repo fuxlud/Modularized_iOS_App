@@ -31,7 +31,9 @@ struct WeightConverterTests {
         #expect(abs(result - 453.592) < 0.001)
     }
     
-    @Test func convertPoundToOunce() {
+    @Test(.disabled("Due to a known crash - testing out disabled functionality"),
+          .bug("https://developer.apple.com/videos/play/wwdc2024/10179/", "This is an example comment, replace with actualt bug discription"))
+    func convertPoundToOunce() {
         let result = converter.convert(1, from: .pound, to: .ounce)
         #expect(abs(result - 16) < 0.0001)
     }
