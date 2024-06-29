@@ -62,11 +62,11 @@ public struct ToastView: View {
     public var body: some View {
         HStack(alignment: .center, spacing: 12) {
             Image(systemName: style.iconFileName)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
 
             Text(message)
                 .font(Font.caption)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
 
             Spacer(minLength: 10)
 
@@ -74,7 +74,7 @@ public struct ToastView: View {
                 onCancelTapped()
             } label: {
                 Image(systemName: "xmark")
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
             }
         }
         .padding()
@@ -90,9 +90,33 @@ public struct ToastView: View {
 }
 
 
-struct Toast_Previews: PreviewProvider {
+struct Info_Preview: PreviewProvider {
     static var previews: some View {
-        ToastView(style: .info, message: "Hello") {
+        ToastView(style: .info, message: "This is an super super very loooooooong info message") {
+            ()
+        }
+    }
+}
+
+struct Error_Preview: PreviewProvider {
+    static var previews: some View {
+        ToastView(style: .error, message: "This is an error message") {
+            ()
+        }
+    }
+}
+
+struct Success_Preview: PreviewProvider {
+    static var previews: some View {
+        ToastView(style: .success, message: "This is an success message") {
+            ()
+        }
+    }
+}
+
+struct Warning_Preview: PreviewProvider {
+    static var previews: some View {
+        ToastView(style: .warning, message: "This is a warning message") {
             ()
         }
     }
