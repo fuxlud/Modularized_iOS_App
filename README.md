@@ -9,6 +9,7 @@ The app uses the [spoonacular.com](https://spoonacular.com/food-api) REST API to
 * Decoupled **Presentation**, **Business Logic**, and **Data Access** layers
 * **Modularized** with SPM - Designed for scalability. It can be used as a reference for building large production apps
 * Simple yet flexible vanila **Networking Layer** built on Generics
+* Unit Test Coverage with Swift Testing
 
 ## Relevant Articles 
 * [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) on the Clean Coder Blog
@@ -60,7 +61,6 @@ While creating the previews module, I intended to import only the DomainMock. Ho
 
 ## Roadmap
 
-1. Testing 
 2. CI/CD
 3. SwiftFormater, SwiftLint, Danger
 4. OSLog instead of NetworkLogger
