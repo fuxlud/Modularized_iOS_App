@@ -54,6 +54,7 @@
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		38AC27B92C2F6ACD001C43FC /* NetworkingTests */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (38AC27C32C2F6ADD001C43FC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = NetworkingTests; sourceTree = "<group>"; };
+		38AC27D02C2F6E30001C43FC /* DomainTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DomainTests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +138,7 @@
 		38AC27A82C2F633E001C43FC /* RecipesTests */ = {
 			isa = PBXGroup;
 			children = (
+				38AC27D02C2F6E30001C43FC /* DomainTests */,
 				38AC27B92C2F6ACD001C43FC /* NetworkingTests */,
 			);
 			path = RecipesTests;
