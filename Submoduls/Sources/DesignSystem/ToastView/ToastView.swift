@@ -39,6 +39,10 @@ extension ToastStyle {
         case .error: return "xmark.circle.fill"
         }
     }
+    
+    var tintColor: Color {
+        return .white
+    }
 }
 
 public struct ToastView: View {
@@ -62,11 +66,11 @@ public struct ToastView: View {
     public var body: some View {
         HStack(alignment: .center, spacing: 12) {
             Image(systemName: style.iconFileName)
-                .foregroundColor(.white)
+                .foregroundColor(style.tintColor)
 
             Text(message)
                 .font(Font.caption)
-                .foregroundColor(.white)
+                .foregroundColor(style.tintColor)
 
             Spacer(minLength: 10)
 
@@ -74,7 +78,7 @@ public struct ToastView: View {
                 onCancelTapped()
             } label: {
                 Image(systemName: "xmark")
-                    .foregroundColor(.white)
+                    .foregroundColor(style.tintColor)
             }
         }
         .padding()
