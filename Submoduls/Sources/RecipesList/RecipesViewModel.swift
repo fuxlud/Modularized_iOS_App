@@ -6,32 +6,26 @@ import DesignSystem
 @MainActor
 public class RecipesViewModel: ObservableObject {
     
+    @Published private(set) var state: ViewState<[RecipeViewModel]> = .idle(data: [])
+    
     private let randomRecipesUseCase: RandomRecipesUseCaseProtocol
     
-    internal init(randomRecipesUseCase: RandomRecipesUseCaseProtocol) {
+    public init(randomRecipesUseCase: RandomRecipesUseCaseProtocol) {
         self.randomRecipesUseCase = randomRecipesUseCase
-    }
-    
-    internal struct State: Equatable {
-        public var recipeViewModels: [RecipeViewModel] = []
-        public var error: Toast?
-        public var isLoading = false
     }
     
     public enum Action {
         case onAppear
     }
     
-    @Published internal var state: State  = .init()
-    
     public func dispatch(_ action: Action) async {
         switch action {
         case .onAppear:
-            await fetchRecipies()
+            await fetchRecipes()
         }
     }
     
-    func fetchRecipies() async {
+    func fetchRecipes() async {
         do {
             let recipes = try await fetchRecipesRemote()
             fillRecipes(recipes)
@@ -46,20 +40,27 @@ public class RecipesViewModel: ObservableObject {
     
     @MainActor
     private func handleLoading(_ isLoading: Bool) {
-        state.isLoading = isLoading
+        if isLoading {
+            state = .loading
+        } else {
+            if let recipeViewModels = state.data {
+                state = .idle(data: recipeViewModels)
+            }
+        }
     }
     
     @MainActor
     private func fillRecipes(_ recipes: [RecipeEntity]) {
-        state.recipeViewModels = recipes.map { RecipeViewModel(recipe: $0) }
+        let recipeViewModels = recipes.map { RecipeViewModel(recipe: $0) }
+        state = .idle(data: recipeViewModels)
     }
     
     @MainActor
     private func handleError(_ error: Error) {
         guard let error = error as? RecipeErrorEntity else {
-            state.error = .init(style: .error, message: error.localizedDescription)
+            state = .error(message: error.localizedDescription)
             return
         }
-        state.error = .init(style: .error, message: error.description)
+        state = .error(message: error.description)
     }
 }
