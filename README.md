@@ -15,19 +15,21 @@ The app uses the [spoonacular.com](https://spoonacular.com/food-api) REST API to
 
 ## Roadmap
 
+1. Dependency Container
+2. CI
+3. Detail screen with navigation (NaviationStack)
+4. Modules Intefrace
 1. More tests, UI tests, snapshot tests
-2. CI/CD
-3. SwiftFormater, SwiftLint, Danger
-4. OSLog instead of NetworkLogger
-5. Latest Observation (SWiftUI)
-6. Detail screen with proper navigation
-7. Sandbox/Feature app
-8. Dependency Container
-9. Add and Edit screen with SwiftData
-10. Search
-11. Filter
-12. Localization
-13. Cool animations 
+1. SwiftFormater, SwiftLint, Danger
+1. OSLog instead of NetworkLogger
+1. Latest Observation (SWiftUI)
+1. Sandbox/Feature app
+1. Add and Edit screen with SwiftData
+1. Search
+1. Filter
+1. Localization
+1. Cool animations
+2. CD
 
 ## Relevant Articles 
 * [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) on the Clean Coder Blog
