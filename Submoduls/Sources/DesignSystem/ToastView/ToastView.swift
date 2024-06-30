@@ -5,7 +5,7 @@ public struct Toast: Equatable {
     public let message: String
     public let duration: Double
     public let width: Double
-
+    
     public init(style: ToastStyle, message: String, duration: Double = 3, width: Double = .infinity) {
         self.style = style
         self.message = message
@@ -30,7 +30,7 @@ extension ToastStyle {
         case .success: return Color.green
         }
     }
-
+    
     var iconFileName: String {
         switch self {
         case .info: return "info.circle.fill"
@@ -48,18 +48,15 @@ extension ToastStyle {
 public struct ToastView: View {
     private let style: ToastStyle
     private let message: String
-    private let width: CGFloat
     private let onCancelTapped: (() -> Void)
 
     public init(
         style: ToastStyle,
         message: String,
-        width: CGFloat = CGFloat.infinity,
         onCancelTapped: @escaping () -> Void
     ) {
         self.style = style
         self.message = message
-        self.width = width
         self.onCancelTapped = onCancelTapped
     }
 
@@ -82,7 +79,7 @@ public struct ToastView: View {
             }
         }
         .padding()
-        .frame(minWidth: 0, maxWidth: width)
+        .frame(minWidth: 0, maxWidth: .infinity)
         .background(style.themeColor)
         .cornerRadius(8)
         .overlay(
@@ -96,32 +93,24 @@ public struct ToastView: View {
 
 struct Info_Preview: PreviewProvider {
     static var previews: some View {
-        ToastView(style: .info, message: "This is an super super very loooooooong info message") {
-            ()
-        }
+        ToastView(style: .info, message: "This is a super long info message") {}
     }
 }
 
 struct Error_Preview: PreviewProvider {
     static var previews: some View {
-        ToastView(style: .error, message: "This is an error message") {
-            ()
-        }
+        ToastView(style: .error, message: "This is an error message") {}
     }
 }
 
 struct Success_Preview: PreviewProvider {
     static var previews: some View {
-        ToastView(style: .success, message: "This is an success message") {
-            ()
-        }
+        ToastView(style: .success, message: "This is a success message") {}
     }
 }
 
 struct Warning_Preview: PreviewProvider {
     static var previews: some View {
-        ToastView(style: .warning, message: "This is a warning message") {
-            ()
-        }
+        ToastView(style: .warning, message: "This is a warning message") {}
     }
 }

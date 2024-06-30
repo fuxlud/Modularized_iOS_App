@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct ToastModifier: ViewModifier {
-    @Binding var toast: Toast?
+    @Binding var message: String?
+    @Binding var style: ToastStyle?
     @State private var workItem: DispatchWorkItem?
 
     func body(content: Content) -> some View {
@@ -11,20 +12,19 @@ struct ToastModifier: ViewModifier {
                 ZStack {
                     mainToastView()
                         .offset(y: 32)
-                }.animation(.spring(), value: toast)
+                }.animation(.spring(), value: message)
             )
-            .onChange(of: toast) { value in
+            .onChange(of: message) { value in
                 showToast()
             }
     }
 
     @ViewBuilder func mainToastView() -> some View {
-        if let toast = toast {
+        if let message = message, let style = style {
             VStack {
                 ToastView(
-                    style: toast.style,
-                    message: toast.message,
-                    width: toast.width
+                    style: style,
+                    message: message
                 ) {
                     dismissToast()
                 }
@@ -34,26 +34,25 @@ struct ToastModifier: ViewModifier {
     }
 
     private func showToast() {
-        guard let toast = toast else { return }
+        guard let _ = message else { return }
 
         UIImpactFeedbackGenerator(style: .light)
             .impactOccurred()
-
-        if toast.duration > 0 {
-            workItem?.cancel()
-
-            let task = DispatchWorkItem {
-                dismissToast()
-            }
-
-            workItem = task
-            DispatchQueue.main.asyncAfter(deadline: .now() + toast.duration, execute: task)
+        
+        workItem?.cancel()
+        
+        let task = DispatchWorkItem {
+            dismissToast()
         }
+        
+        workItem = task
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: task) // Assuming default duration is 3 seconds
     }
 
     private func dismissToast() {
         withAnimation {
-            toast = nil
+            message = nil
+            style = nil
         }
 
         workItem?.cancel()
@@ -61,9 +60,8 @@ struct ToastModifier: ViewModifier {
     }
 }
 
-
 public extension View {
-    func toastView(toast: Binding<Toast?>) -> some View {
-        self.modifier(ToastModifier(toast: toast))
+    func toastView(message: Binding<String?>, style: Binding<ToastStyle?>) -> some View {
+        self.modifier(ToastModifier(message: message, style: style))
     }
 }
