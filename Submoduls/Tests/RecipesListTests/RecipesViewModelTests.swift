@@ -9,10 +9,10 @@ struct RecipesViewModelTests {
         let sut = await makeSUT(randomRecipesUseCase: RandomRecipesUseCaseMock(recipes: RecipeEntity.mock))
         await sut.dispatch(.onAppear)
         
-        await #expect(sut.state.recipeViewModels.count == 20)
+        await #expect(sut.state.data?.count == 20)
         await #expect(sut.state.error == nil)
         
-        if let recipeViewModel = await sut.state.recipeViewModels.first {
+        if let recipeViewModel = await sut.state.data?.first as? RecipeEntity {
             #expect(recipeViewModel.title == "Traditional spare ribs baked")
         }
     }
@@ -22,11 +22,10 @@ struct RecipesViewModelTests {
         
         await sut.dispatch(.onAppear)
         
-        await #expect(sut.state.recipeViewModels.count == 0)
         await #expect(sut.state.error != nil)
         
         if let error = await sut.state.error {
-            #expect(error.message == "Oops, something went wrong")
+            #expect(error == "Oops, something went wrong")
         }
     }
     

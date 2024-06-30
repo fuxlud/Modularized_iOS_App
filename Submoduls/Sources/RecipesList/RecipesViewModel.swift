@@ -6,7 +6,7 @@ import DesignSystem
 @MainActor
 public class RecipesViewModel: ObservableObject {
     
-    @Published private(set) var state: ViewState<[RecipeViewModel]> = .idle(data: [])
+    @Published public var state: ViewState<[RecipeViewModel]> = .idle(data: [])
     
     private let randomRecipesUseCase: RandomRecipesUseCaseProtocol
     
