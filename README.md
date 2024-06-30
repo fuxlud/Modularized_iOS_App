@@ -24,6 +24,8 @@ The app uses the [spoonacular.com](https://spoonacular.com/food-api) REST API to
 1. OSLog instead of NetworkLogger
 1. Latest Observation (SWiftUI)
 1. Sandbox/Feature app
+2. Pagination (triggered when reach the end of the table/collection, loading indicator in the end, handle no more data scenario)
+3. Views adjusted to accesability fonts 
 1. Add and Edit screen with SwiftData
 1. Search
 1. Filter
