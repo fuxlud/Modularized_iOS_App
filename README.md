@@ -53,6 +53,9 @@ Unlike the usual folder separation, when you want to access a class, property, o
 ### Benefits of modularization
 Setting up the modules and adding **public** access modifiers wherever you want to use something from another module will make development a bit slower in the short run. However, it will make it much faster as the app grows due to proper separation of concerns, preventing code from becoming entangled over time. Additionally, each module builds only its dependencies, not the entire codebase, which reduces build time. This is especially beneficial with the introduction of [explicitly built modules](https://developer.apple.com/videos/play/wwdc2024/10171/) that allow parallel builds.
 
+## ViewState
+[Few words on ViewState](https://www.ludafux.com/post/consolidated-viewstate)
+
 ## Project Overview
 
 Mature applications usually developed with UIKit, as this is a pet project, I allow myself to experiment with the latest APIs.
