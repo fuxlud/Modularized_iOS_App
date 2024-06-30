@@ -8,11 +8,11 @@ public class RecipesViewModel: ObservableObject {
     
     private let randomRecipesUseCase: RandomRecipesUseCaseProtocol
     
-    public init(randomRecipesUseCase: RandomRecipesUseCaseProtocol) {
+    internal init(randomRecipesUseCase: RandomRecipesUseCaseProtocol) {
         self.randomRecipesUseCase = randomRecipesUseCase
     }
     
-    public struct State: Equatable {
+    internal struct State: Equatable {
         public var recipeViewModels: [RecipeViewModel] = []
         public var error: Toast?
         public var isLoading = false
@@ -22,7 +22,7 @@ public class RecipesViewModel: ObservableObject {
         case onAppear
     }
     
-    @Published public var state: State  = .init()
+    @Published internal var state: State  = .init()
     
     public func dispatch(_ action: Action) async {
         switch action {
