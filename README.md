@@ -12,7 +12,7 @@ Can be used as a starting point for a project or a home assignment.
 * Simple yet flexible vanila **Networking Layer** built on Generics
 * Unit Test Coverage with **Swift Testing**
 
-## Relevant Articles 
+## Inspiration
 * [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) on the Clean Coder Blog
 * [Modularization](https://www.pointfree.co/episodes/ep171-modularization-part-1) by PointFree
 * [MVVM + Clean + Modularized](https://www.aleksasimic.com/product/mvvm-clean-modularized-architecture) by Aleksa Simic
