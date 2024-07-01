@@ -1,4 +1,4 @@
-# Modulazied tamplate iOS App
+# Modulazied iOS App Tamplate
 
 A demo project showcasing the setup of the SwiftUI app with modularized Clean Architecture.
 Can be used as a starting point for a project.
