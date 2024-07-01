@@ -53,26 +53,3 @@ Mature applications usually developed with UIKit, as this is a pet project, I al
 1. Cool animations
 2. CD
    
-## FAQ
-
-### Why are there UseCase and Repository?
-
-- **UseCase:** Acts as the orchestrator.
-- **Repository:** Handles data fetching.
-
-### Why should the UseCase consume the Repository and not directly the WebService and Persistence directly?
-
-UseCase is agnostic to the data fetching implementation. Only the repositories are aware of the fetching details. Additionally to optimize the dependency graph.
-
-### Why are there Entity and DTO?
-
-- **Entities:** Encapsulate data and behavior through the application.
-- **DTOs:** Lightweight objects used for transferring data from the network and persistence layers without behavior.
-
-### Where should data be stored: in the Repository or ViewModel?
-
-For states accessed in multiple places in the app, data is stored in the Repository and the ViewModel is notified using **Combine**. However, 90% of scenarios do not require this complexity. Simple data transfer through the Repository and UsesCases to the ViewModel suffices. Storing data in the Repository and responding to it with Combine for these cases would be overengineering.
-
-### Why ModelProtocol package? (Todo, implement down the line)
-
-While creating the previews module, I intended to import only the DomainMock. However, the EntityMock wasn't recognized without importing the entire Domain. To avoid this, I separated the domain declaration (ModelProtocol) from its implementation. This allows importing only the ModelProtocol needed, without the entire Domain, which might become much bigger down the line.
