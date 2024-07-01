@@ -1,4 +1,4 @@
-# Template_iOS_App
+# Template iOS App
 
 A demo project showcasing the setup of the SwiftUI app with modularized Clean Architecture.
 Can be used as a starting point for a project or a home assignment.
