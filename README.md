@@ -12,6 +12,26 @@ Can be used as a starting point for a project or a home assignment.
 * Simple yet flexible vanila **Networking Layer** built on Generics
 * Unit Test Coverage with **Swift Testing**
 
+## Relevant Articles 
+* [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) on the Clean Coder Blog
+* [Modularization](https://www.pointfree.co/episodes/ep171-modularization-part-1) by PointFree
+* [MVVM + Clean + Modularized](https://www.aleksasimic.com/product/mvvm-clean-modularized-architecture) by Aleksa Simic
+* [Clean Architecture and MVVM on iOS](https://tech.olx.com/clean-architecture-and-mvvm-on-ios-c9d167d9f5b3) by Oleh Kudinov
+* [How to modularize Monolith iOS App](https://vbat.dev/how-to-modularize-monolith-ios-app) by Vitaly Batrakov
+
+## Modularization
+Few words on the [Benefits of Modularization](https://www.ludafux.com/post/the-benefits-of-modularization)
+
+## ViewState
+Few words on the [Consolidated ViewState](https://www.ludafux.com/post/consolidated-viewstate)
+
+## Technological Stack
+
+Mature applications usually developed with UIKit, as this is a pet project, I allow myself to experiment with the latest APIs.
+- **SwiftUI** as opposed to UIKit.
+- **Swift Testing** as opposed to XCtest.
+- **NavigationStack** to manage and navigate as opposed to UIKit Containers.
+- **async/await + actors** vs delegation and blocks
 
 ## Roadmap
 
@@ -32,28 +52,7 @@ Can be used as a starting point for a project or a home assignment.
 1. Localization
 1. Cool animations
 2. CD
-
-## Relevant Articles 
-* [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) on the Clean Coder Blog
-* [Modularization](https://www.pointfree.co/episodes/ep171-modularization-part-1) by PointFree
-* [MVVM + Clean + Modularized](https://www.aleksasimic.com/product/mvvm-clean-modularized-architecture) by Aleksa Simic
-* [Clean Architecture and MVVM on iOS](https://tech.olx.com/clean-architecture-and-mvvm-on-ios-c9d167d9f5b3) by Oleh Kudinov
-* [How to modularize Monolith iOS App](https://vbat.dev/how-to-modularize-monolith-ios-app) by Vitaly Batrakov
-
-## Modularization
-Few words on the [Benefits of Modularization](https://www.ludafux.com/post/the-benefits-of-modularization)
-
-## ViewState
-Few words on the [Consolidated ViewState](https://www.ludafux.com/post/consolidated-viewstate)
-
-## Project Overview
-
-Mature applications usually developed with UIKit, as this is a pet project, I allow myself to experiment with the latest APIs.
-- **SwiftUI** as opposed to UIKit.
-- **Swift Testing** as opposed to XCtest.
-- **NavigationStack** to manage and navigate as opposed to UIKit Containers.
-- **async/await + actors** vs delegation and blocks
-
+   
 ## FAQ
 
 ### Why are there UseCase and Repository?
