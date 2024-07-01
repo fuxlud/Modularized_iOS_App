@@ -41,22 +41,10 @@ Can be used as a starting point for a project or a home assignment.
 * [How to modularize Monolith iOS App](https://vbat.dev/how-to-modularize-monolith-ios-app) by Vitaly Batrakov
 
 ## Modularization
-There are a few approaches when approaching modularization: 
- - Workspace with multiple projects (usually paired with Tuist)
- - Project with multiple packages
- - Project with one package that describes all the submodules.
-This project utilized the third approach. All the modules described in the Package file and can be used in other parts of the code if imported
- <img width="281" alt="Screenshot 2024-06-24 at 22 38 10" src="https://github.com/fuxlud/Clean-Architecture-SwiftUI/assets/1950116/056b5ad4-72d9-4b3d-b62f-dba06456c96d">
- <img width="719" alt="Screenshot 2024-06-24 at 22 37 50" src="https://github.com/fuxlud/Clean-Architecture-SwiftUI/assets/1950116/cd416171-3040-4779-ab19-0b3b499d0115">
-
-### Access Level when working with packages
-Unlike the usual folder separation, when you want to access a class, property, or method in another package, it needs to be explicitly **public**. Otherwise, they are by default **private**. To access classes, properties, or methods in the same package but in different targets, such as tests, use **internal**. 
-
-### Benefits of modularization
-Setting up the modules and adding **public** access modifiers wherever you want to use something from another module will make development a bit slower in the short run. However, it will make it much faster as the app grows due to proper separation of concerns, preventing code from becoming entangled over time. Additionally, each module builds only its dependencies, not the entire codebase, which reduces build time. This is especially beneficial with the introduction of [explicitly built modules](https://developer.apple.com/videos/play/wwdc2024/10171/) that allow parallel builds.
+Few words on the [Benefits of Modularization](https://www.ludafux.com/post/the-benefits-of-modularization)
 
 ## ViewState
-[Few words on ViewState](https://www.ludafux.com/post/consolidated-viewstate)
+Few words on the [Consolidated ViewState](https://www.ludafux.com/post/consolidated-viewstate)
 
 ## Project Overview
 
