@@ -33,23 +33,4 @@ Mature applications usually developed with UIKit, as this is a pet project, I al
 - **NavigationStack** to manage and navigate as opposed to UIKit Containers.
 - **async/await + actors** vs delegation and blocks
 
-## Roadmap
 
-1. Dependency Container
-2. CI
-3. Detail screen with navigation (NaviationStack)
-4. Modules Intefrace
-1. More tests, UI tests, snapshot tests
-1. SwiftFormater, SwiftLint, Danger
-1. OSLog instead of NetworkLogger
-1. Latest Observation (SWiftUI)
-1. Sandbox/Feature app
-2. Pagination (triggered when reach the end of the table/collection, loading indicator in the end, handle no more data scenario)
-3. Views adjusted to accesability fonts 
-1. Add and Edit screen with SwiftData
-1. Search
-1. Filter
-1. Localization
-1. Cool animations
-2. CD
-   
