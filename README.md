@@ -25,7 +25,7 @@ Few words on the [Benefits of Modularization](https://www.ludafux.com/post/the-b
 ## ViewState
 Few words on the [Consolidated ViewState](https://www.ludafux.com/post/consolidated-viewstate)
 
-## Technological Stack
+## Tech Stack
 
 Mature applications usually developed with UIKit, as this is a pet project, I allow myself to experiment with the latest APIs.
 - **SwiftUI** as opposed to UIKit.
