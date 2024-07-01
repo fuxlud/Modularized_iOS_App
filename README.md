@@ -13,7 +13,7 @@ Can be used as a starting point for a project.
 * Unit Test Coverage with **Swift Testing**
 
 ## Modularization
-Few words on the [Benefits of Modularization](https://www.ludafux.com/post/the-benefits-of-modularization)
+Few words on the [Benefits of Modularization](https://www.ludafux.com/post/the-benefits-of-modularization) on my blog.
 
 ## ViewState
-Few words on the [Consolidated ViewState](https://www.ludafux.com/post/consolidated-viewstate)
+Few words on the [Consolidated ViewState](https://www.ludafux.com/post/consolidated-viewstate) on my blog.
