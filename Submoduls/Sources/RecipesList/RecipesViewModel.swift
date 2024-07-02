@@ -3,10 +3,9 @@ import SwiftUI
 import Domain
 import DesignSystem
 
-@MainActor
-public class RecipesViewModel: ObservableObject {
+@Observable public class RecipesViewModel {
     
-    @Published public var state: ViewState<[RecipeViewModel]> = .idle(data: [])
+    public var state: ViewState<[RecipeViewModel]> = .idle(data: [])
     
     private let randomRecipesUseCase: RandomRecipesUseCaseProtocol
     
@@ -28,9 +27,9 @@ public class RecipesViewModel: ObservableObject {
     func fetchRecipes() async {
         do {
             let recipes = try await fetchRecipesRemote()
-            fillRecipes(recipes)
+            await fillRecipes(recipes)
         } catch let error {
-            handleError(error)
+            await handleError(error)
         }
     }
     

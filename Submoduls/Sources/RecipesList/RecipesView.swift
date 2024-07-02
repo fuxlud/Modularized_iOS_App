@@ -4,10 +4,10 @@ import DesignSystem
 
 public struct RecipesView: View {
     
-    @StateObject var viewModel: RecipesViewModel
+    var viewModel: RecipesViewModel
     
     public init(viewModel: RecipesViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel)
+        self.viewModel = viewModel
     }
     
     public var body: some View {

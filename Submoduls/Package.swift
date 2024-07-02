@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "Submodules",
-    platforms: [.iOS(.v15)],
+    platforms: [.iOS(.v17)],
     products: [
         .library(name: "DomainMock", targets: ["DomainMock"]),
         .library(name: "Domain", targets: ["Domain"]),
