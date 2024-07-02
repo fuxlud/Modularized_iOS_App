@@ -1,6 +1,5 @@
 import RecipesList
 import SwiftUI
-import DomainMock
 import Domain
 
 @main

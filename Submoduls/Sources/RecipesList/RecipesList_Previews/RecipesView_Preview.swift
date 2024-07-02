@@ -1,7 +1,6 @@
 import SwiftUI
 import DesignSystem
 import RecipesList
-import DomainMock
 import Domain
 
 struct RecipesViewWithData_Preview: PreviewProvider {

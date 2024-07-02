@@ -1,5 +1,4 @@
 import SwiftUI
-import DomainMock
 import DesignSystem
 import RecipesList
 import Domain

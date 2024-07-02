@@ -1,6 +1,5 @@
 import Testing
 import Domain
-import DomainMock
 import RecipesList
 
 struct RecipesViewModelTests {

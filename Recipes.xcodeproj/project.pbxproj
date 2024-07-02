@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		191A22CE2C2AC69800D36BD6 /* RecipesList_Previews in Frameworks */ = {isa = PBXBuildFile; productRef = 191A22CD2C2AC69800D36BD6 /* RecipesList_Previews */; };
 		191A22D02C2AC88400D36BD6 /* RecipesList in Frameworks */ = {isa = PBXBuildFile; productRef = 191A22CF2C2AC88400D36BD6 /* RecipesList */; };
 		19268D262C1E07550014E23E /* RecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D252C1E07550014E23E /* RecipesApp.swift */; };
 		19268D2C2C1E07560014E23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2B2C1E07560014E23E /* Assets.xcassets */; };
 		19268D2F2C1E07560014E23E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2E2C1E07560014E23E /* Preview Assets.xcassets */; };
-		19380A7F2C233DB2001A4AAE /* DomainMock in Frameworks */ = {isa = PBXBuildFile; productRef = 19380A7E2C233DB2001A4AAE /* DomainMock */; };
 		193AAC222C233FA700E08FBB /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 193AAC212C233FA700E08FBB /* Domain */; };
 		1951EF202C23922100BD3A16 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF1F2C23922100BD3A16 /* Networking */; };
 		1951EF222C23922800BD3A16 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF212C23922800BD3A16 /* Data */; };
@@ -20,7 +18,6 @@
 		384B66FA2C342C3A00E8CE68 /* RecipeCardPreviewAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B66F92C342C3A00E8CE68 /* RecipeCardPreviewAppApp.swift */; };
 		384B66FE2C342C3F00E8CE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B66FD2C342C3F00E8CE68 /* Assets.xcassets */; };
 		384B67012C342C3F00E8CE68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B67002C342C3F00E8CE68 /* Preview Assets.xcassets */; };
-		384B67262C34303C00E8CE68 /* DomainMock in Frameworks */ = {isa = PBXBuildFile; productRef = 384B67252C34303C00E8CE68 /* DomainMock */; };
 		384B67282C34304100E8CE68 /* RecipesList in Frameworks */ = {isa = PBXBuildFile; productRef = 384B67272C34304100E8CE68 /* RecipesList */; };
 /* End PBXBuildFile section */
 
@@ -63,10 +60,8 @@
 				191A22D02C2AC88400D36BD6 /* RecipesList in Frameworks */,
 				193AAC222C233FA700E08FBB /* Domain in Frameworks */,
 				1951EF222C23922800BD3A16 /* Data in Frameworks */,
-				191A22CE2C2AC69800D36BD6 /* RecipesList_Previews in Frameworks */,
 				196E57512C27463C00325FAC /* DesignSystem in Frameworks */,
 				1951EF202C23922100BD3A16 /* Networking in Frameworks */,
-				19380A7F2C233DB2001A4AAE /* DomainMock in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +70,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				384B67282C34304100E8CE68 /* RecipesList in Frameworks */,
-				384B67262C34303C00E8CE68 /* DomainMock in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,12 +183,10 @@
 			);
 			name = Recipes;
 			packageProductDependencies = (
-				19380A7E2C233DB2001A4AAE /* DomainMock */,
 				193AAC212C233FA700E08FBB /* Domain */,
 				1951EF1F2C23922100BD3A16 /* Networking */,
 				1951EF212C23922800BD3A16 /* Data */,
 				196E57502C27463C00325FAC /* DesignSystem */,
-				191A22CD2C2AC69800D36BD6 /* RecipesList_Previews */,
 				191A22CF2C2AC88400D36BD6 /* RecipesList */,
 			);
 			productName = LudushRecipes;
@@ -215,7 +207,6 @@
 			);
 			name = RecipeCardPreviewApp;
 			packageProductDependencies = (
-				384B67252C34303C00E8CE68 /* DomainMock */,
 				384B67272C34304100E8CE68 /* RecipesList */,
 			);
 			productName = RecipeCardPreviewApp;
@@ -765,10 +756,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		191A22CD2C2AC69800D36BD6 /* RecipesList_Previews */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RecipesList_Previews;
-		};
 		191A22CF2C2AC88400D36BD6 /* RecipesList */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RecipesList;
@@ -776,10 +763,6 @@
 		191A22D12C2AC8A500D36BD6 /* RecipesList */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RecipesList;
-		};
-		19380A7E2C233DB2001A4AAE /* DomainMock */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DomainMock;
 		};
 		193AAC212C233FA700E08FBB /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -804,10 +787,6 @@
 		19C199D52C2A01DA00F5E184 /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
-		};
-		384B67252C34303C00E8CE68 /* DomainMock */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DomainMock;
 		};
 		384B67272C34304100E8CE68 /* RecipesList */ = {
 			isa = XCSwiftPackageProductDependency;
