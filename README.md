@@ -1,7 +1,8 @@
 # Modulazied iOS App Tamplate
 
-A demo project showcasing the setup of the SwiftUI app with modularized Clean Architecture.
-Can be used as a starting point for a project.
+A demo for trying out new APIs and iOS ideas.
+This project showcases the setup of a SwiftUI app with modularized Clean Architecture.
+It can be used as a starting point for a project. Simply delete unneeded targets/packages and rename entities as needed.
 
 ## Key features
 
