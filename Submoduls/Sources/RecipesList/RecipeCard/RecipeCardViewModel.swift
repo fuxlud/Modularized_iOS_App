@@ -1,7 +1,7 @@
 import Foundation
 import Domain
 
-public class RecipeViewModel: ObservableObject, Identifiable, Equatable {
+@Observable public class RecipeViewModel: ObservableObject, Identifiable, Equatable {
     private let recipe: RecipeEntity
     public let id = UUID() 
     

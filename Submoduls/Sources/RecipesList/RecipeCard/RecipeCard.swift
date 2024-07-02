@@ -3,10 +3,10 @@ import Domain
 import DesignSystem
 
 public struct RecipeCard: View {
-    @StateObject var viewModel: RecipeViewModel
+    var viewModel: RecipeViewModel
     
     public init(viewModel: RecipeViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel)
+        self.viewModel = viewModel
     }
     
     private let imageWidth = 110.0

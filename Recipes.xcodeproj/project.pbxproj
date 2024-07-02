@@ -17,7 +17,29 @@
 		1951EF202C23922100BD3A16 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF1F2C23922100BD3A16 /* Networking */; };
 		1951EF222C23922800BD3A16 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF212C23922800BD3A16 /* Data */; };
 		196E57512C27463C00325FAC /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 196E57502C27463C00325FAC /* DesignSystem */; };
+		384B66FA2C342C3A00E8CE68 /* RecipeCardPreviewAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B66F92C342C3A00E8CE68 /* RecipeCardPreviewAppApp.swift */; };
+		384B66FE2C342C3F00E8CE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B66FD2C342C3F00E8CE68 /* Assets.xcassets */; };
+		384B67012C342C3F00E8CE68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B67002C342C3F00E8CE68 /* Preview Assets.xcassets */; };
+		384B67262C34303C00E8CE68 /* DomainMock in Frameworks */ = {isa = PBXBuildFile; productRef = 384B67252C34303C00E8CE68 /* DomainMock */; };
+		384B67282C34304100E8CE68 /* RecipesList in Frameworks */ = {isa = PBXBuildFile; productRef = 384B67272C34304100E8CE68 /* RecipesList */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		384B67072C342C4000E8CE68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19268D1A2C1E07550014E23E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 384B66F62C342C3900E8CE68;
+			remoteInfo = RecipeCardPreviewApp;
+		};
+		384B67112C342C4000E8CE68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19268D1A2C1E07550014E23E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 384B66F62C342C3900E8CE68;
+			remoteInfo = RecipeCardPreviewApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		19268D222C1E07550014E23E /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +47,12 @@
 		19268D2B2C1E07560014E23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19268D2E2C1E07560014E23E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		193AAC232C234D5900E08FBB /* Submoduls */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Submoduls; sourceTree = "<group>"; };
+		384B66F72C342C3900E8CE68 /* RecipeCardPreviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeCardPreviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		384B66F92C342C3A00E8CE68 /* RecipeCardPreviewAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardPreviewAppApp.swift; sourceTree = "<group>"; };
+		384B66FD2C342C3F00E8CE68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		384B67002C342C3F00E8CE68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		384B67062C342C4000E8CE68 /* RecipeCardPreviewAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeCardPreviewAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		384B67102C342C4000E8CE68 /* RecipeCardPreviewAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeCardPreviewAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +70,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		384B66F42C342C3900E8CE68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				384B67282C34304100E8CE68 /* RecipesList in Frameworks */,
+				384B67262C34303C00E8CE68 /* DomainMock in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		384B67032C342C4000E8CE68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		384B670D2C342C4000E8CE68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -50,6 +101,7 @@
 			children = (
 				193AAC232C234D5900E08FBB /* Submoduls */,
 				19268D242C1E07550014E23E /* Recipes */,
+				384B66F82C342C3900E8CE68 /* RecipeCardPreviewApp */,
 				19268D232C1E07550014E23E /* Products */,
 				198761832C22E48600565BB0 /* Frameworks */,
 			);
@@ -59,6 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				19268D222C1E07550014E23E /* Recipes.app */,
+				384B66F72C342C3900E8CE68 /* RecipeCardPreviewApp.app */,
+				384B67062C342C4000E8CE68 /* RecipeCardPreviewAppTests.xctest */,
+				384B67102C342C4000E8CE68 /* RecipeCardPreviewAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +151,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		384B66F82C342C3900E8CE68 /* RecipeCardPreviewApp */ = {
+			isa = PBXGroup;
+			children = (
+				384B66F92C342C3A00E8CE68 /* RecipeCardPreviewAppApp.swift */,
+				384B66FD2C342C3F00E8CE68 /* Assets.xcassets */,
+				384B66FF2C342C3F00E8CE68 /* Preview Content */,
+			);
+			path = RecipeCardPreviewApp;
+			sourceTree = "<group>";
+		};
+		384B66FF2C342C3F00E8CE68 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				384B67002C342C3F00E8CE68 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,6 +201,65 @@
 			productReference = 19268D222C1E07550014E23E /* Recipes.app */;
 			productType = "com.apple.product-type.application";
 		};
+		384B66F62C342C3900E8CE68 /* RecipeCardPreviewApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 384B67182C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "RecipeCardPreviewApp" */;
+			buildPhases = (
+				384B66F32C342C3900E8CE68 /* Sources */,
+				384B66F42C342C3900E8CE68 /* Frameworks */,
+				384B66F52C342C3900E8CE68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RecipeCardPreviewApp;
+			packageProductDependencies = (
+				384B67252C34303C00E8CE68 /* DomainMock */,
+				384B67272C34304100E8CE68 /* RecipesList */,
+			);
+			productName = RecipeCardPreviewApp;
+			productReference = 384B66F72C342C3900E8CE68 /* RecipeCardPreviewApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		384B67052C342C4000E8CE68 /* RecipeCardPreviewAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 384B671B2C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "RecipeCardPreviewAppTests" */;
+			buildPhases = (
+				384B67022C342C4000E8CE68 /* Sources */,
+				384B67032C342C4000E8CE68 /* Frameworks */,
+				384B67042C342C4000E8CE68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				384B67082C342C4000E8CE68 /* PBXTargetDependency */,
+			);
+			name = RecipeCardPreviewAppTests;
+			productName = RecipeCardPreviewAppTests;
+			productReference = 384B67062C342C4000E8CE68 /* RecipeCardPreviewAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		384B670F2C342C4000E8CE68 /* RecipeCardPreviewAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 384B671E2C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "RecipeCardPreviewAppUITests" */;
+			buildPhases = (
+				384B670C2C342C4000E8CE68 /* Sources */,
+				384B670D2C342C4000E8CE68 /* Frameworks */,
+				384B670E2C342C4000E8CE68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				384B67122C342C4000E8CE68 /* PBXTargetDependency */,
+			);
+			name = RecipeCardPreviewAppUITests;
+			packageProductDependencies = (
+			);
+			productName = RecipeCardPreviewAppUITests;
+			productReference = 384B67102C342C4000E8CE68 /* RecipeCardPreviewAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -140,6 +272,17 @@
 				TargetAttributes = {
 					19268D212C1E07550014E23E = {
 						CreatedOnToolsVersion = 16.0;
+					};
+					384B66F62C342C3900E8CE68 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					384B67052C342C4000E8CE68 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 384B66F62C342C3900E8CE68;
+					};
+					384B670F2C342C4000E8CE68 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 384B66F62C342C3900E8CE68;
 					};
 				};
 			};
@@ -159,6 +302,9 @@
 			projectRoot = "";
 			targets = (
 				19268D212C1E07550014E23E /* Recipes */,
+				384B66F62C342C3900E8CE68 /* RecipeCardPreviewApp */,
+				384B67052C342C4000E8CE68 /* RecipeCardPreviewAppTests */,
+				384B670F2C342C4000E8CE68 /* RecipeCardPreviewAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -173,6 +319,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		384B66F52C342C3900E8CE68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				384B67012C342C3F00E8CE68 /* Preview Assets.xcassets in Resources */,
+				384B66FE2C342C3F00E8CE68 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		384B67042C342C4000E8CE68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		384B670E2C342C4000E8CE68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -181,6 +350,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				19268D262C1E07550014E23E /* RecipesApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		384B66F32C342C3900E8CE68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				384B66FA2C342C3A00E8CE68 /* RecipeCardPreviewAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		384B67022C342C4000E8CE68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		384B670C2C342C4000E8CE68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +389,16 @@
 		19C199D62C2A01DA00F5E184 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = 19C199D52C2A01DA00F5E184 /* DesignSystem */;
+		};
+		384B67082C342C4000E8CE68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 384B66F62C342C3900E8CE68 /* RecipeCardPreviewApp */;
+			targetProxy = 384B67072C342C4000E8CE68 /* PBXContainerItemProxy */;
+		};
+		384B67122C342C4000E8CE68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 384B66F62C342C3900E8CE68 /* RecipeCardPreviewApp */;
+			targetProxy = 384B67112C342C4000E8CE68 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -337,7 +538,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -371,7 +572,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,6 +587,130 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		384B67192C342C4000E8CE68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RecipeCardPreviewApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fuxlud.RecipeCardPreviewApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		384B671A2C342C4000E8CE68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RecipeCardPreviewApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fuxlud.RecipeCardPreviewApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		384B671C2C342C4000E8CE68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fuxlud.RecipeCardPreviewAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecipeCardPreviewApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RecipeCardPreviewApp";
+			};
+			name = Debug;
+		};
+		384B671D2C342C4000E8CE68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fuxlud.RecipeCardPreviewAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecipeCardPreviewApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RecipeCardPreviewApp";
+			};
+			name = Release;
+		};
+		384B671F2C342C4000E8CE68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fuxlud.RecipeCardPreviewAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RecipeCardPreviewApp;
+			};
+			name = Debug;
+		};
+		384B67202C342C4000E8CE68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fuxlud.RecipeCardPreviewAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RecipeCardPreviewApp;
 			};
 			name = Release;
 		};
@@ -406,6 +731,33 @@
 			buildConfigurations = (
 				19268D492C1E07560014E23E /* Debug */,
 				19268D4A2C1E07560014E23E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		384B67182C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "RecipeCardPreviewApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				384B67192C342C4000E8CE68 /* Debug */,
+				384B671A2C342C4000E8CE68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		384B671B2C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "RecipeCardPreviewAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				384B671C2C342C4000E8CE68 /* Debug */,
+				384B671D2C342C4000E8CE68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		384B671E2C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "RecipeCardPreviewAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				384B671F2C342C4000E8CE68 /* Debug */,
+				384B67202C342C4000E8CE68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -452,6 +804,14 @@
 		19C199D52C2A01DA00F5E184 /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
+		};
+		384B67252C34303C00E8CE68 /* DomainMock */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DomainMock;
+		};
+		384B67272C34304100E8CE68 /* RecipesList */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RecipesList;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
