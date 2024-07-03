@@ -11,7 +11,7 @@ struct RecipesApp: App {
             let repository = RandomRecipesRepository(service: WebService())
             let useCase = RandomRecipesUseCase(repository: repository)
             let viewModel = RecipesViewModel(randomRecipesUseCase: useCase)
-            RecipesView(viewModel: viewModel)
+            RecipesView(viewModel: viewModel) //testing bitrise
         }
     }
 }
