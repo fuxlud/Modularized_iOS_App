@@ -6,7 +6,6 @@ It can be used as a starting point for a project. Simply delete unneeded targets
 
 ## Key features
 
-* The app uses the [spoonacular.com](https://spoonacular.com/food-api) REST API to show the list of recipes and details about them.
 * Vanilla **SwiftUI** implementation
 * Decoupled **Presentation**, **Business Logic**, and **Data Access** layers
 * **Modularized** with SPM - Designed for scalability. It can be used as a reference for building large production apps
