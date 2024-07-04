@@ -1,7 +1,7 @@
 import Foundation
 import Domain
 
-@Observable class DetailsScreenViewModel {
+@Observable public class DetailsScreenViewModel {
     public let id = UUID()
     public var state: ViewState<[DetailsCardViewModel]> = .idle(data: [])
 
