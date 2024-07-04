@@ -5,7 +5,7 @@ import Domain
     public let id = UUID()
     public var state: ViewState<[DetailsCardViewModel]> = .idle(data: [])
 
-    private(set) var breedName: String
+    private var breedName: String
     private(set) var favoriteImagesOfBreed = [BreedDetailsEntity]()
     private let breedDetailsUseCase: BreedDetailsUseCaseProtocol
 
@@ -24,6 +24,10 @@ import Domain
         case .onAppear:
             await fetchBreedDetails()
         }
+    }
+    
+    internal var title: String {
+        breedName.capitalized(with: Locale.current)
     }
    
     func fetchBreedDetails() async {

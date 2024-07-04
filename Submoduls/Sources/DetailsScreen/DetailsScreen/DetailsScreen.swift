@@ -27,7 +27,7 @@ public struct DetailsScreen: View {
                 }
                 .padding()
             }
-            .navigationTitle("To Change")
+            .navigationTitle(viewModel.title)
             .navigationBarTitleDisplayMode(.large)
             .alert(isPresented: .constant(viewModel.state.error != nil)) {
                 Alert(
