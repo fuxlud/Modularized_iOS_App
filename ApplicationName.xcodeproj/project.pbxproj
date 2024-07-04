@@ -17,7 +17,6 @@
 		384B66FA2C342C3A00E8CE68 /* CardPreviewAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B66F92C342C3A00E8CE68 /* CardPreviewAppApp.swift */; };
 		384B66FE2C342C3F00E8CE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B66FD2C342C3F00E8CE68 /* Assets.xcassets */; };
 		384B67012C342C3F00E8CE68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B67002C342C3F00E8CE68 /* Preview Assets.xcassets */; };
-		384B67282C34304100E8CE68 /* RecipesList in Frameworks */ = {isa = PBXBuildFile; productRef = 384B67272C34304100E8CE68 /* RecipesList */; };
 		38857C432C36A1790075FFFD /* List in Frameworks */ = {isa = PBXBuildFile; productRef = 38857C422C36A1790075FFFD /* List */; };
 /* End PBXBuildFile section */
 
@@ -44,12 +43,12 @@
 		19268D2B2C1E07560014E23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19268D2E2C1E07560014E23E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		193AAC232C234D5900E08FBB /* Submoduls */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Submoduls; sourceTree = "<group>"; };
-		384B66F72C342C3900E8CE68 /* RecipeCardPreviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeCardPreviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		384B66F72C342C3900E8CE68 /* CardPreviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardPreviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		384B66F92C342C3A00E8CE68 /* CardPreviewAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPreviewAppApp.swift; sourceTree = "<group>"; };
 		384B66FD2C342C3F00E8CE68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		384B67002C342C3F00E8CE68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		384B67062C342C4000E8CE68 /* RecipeCardPreviewAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeCardPreviewAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		384B67102C342C4000E8CE68 /* RecipeCardPreviewAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeCardPreviewAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		384B67062C342C4000E8CE68 /* CardPreviewAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardPreviewAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		384B67102C342C4000E8CE68 /* CardPreviewAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardPreviewAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				384B67282C34304100E8CE68 /* RecipesList in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,9 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				19268D222C1E07550014E23E /* Recipes.app */,
-				384B66F72C342C3900E8CE68 /* RecipeCardPreviewApp.app */,
-				384B67062C342C4000E8CE68 /* RecipeCardPreviewAppTests.xctest */,
-				384B67102C342C4000E8CE68 /* RecipeCardPreviewAppUITests.xctest */,
+				384B66F72C342C3900E8CE68 /* CardPreviewApp.app */,
+				384B67062C342C4000E8CE68 /* CardPreviewAppTests.xctest */,
+				384B67102C342C4000E8CE68 /* CardPreviewAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,9 +190,9 @@
 			productReference = 19268D222C1E07550014E23E /* Recipes.app */;
 			productType = "com.apple.product-type.application";
 		};
-		384B66F62C342C3900E8CE68 /* RecipeCardPreviewApp */ = {
+		384B66F62C342C3900E8CE68 /* CardPreviewApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 384B67182C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "RecipeCardPreviewApp" */;
+			buildConfigurationList = 384B67182C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "CardPreviewApp" */;
 			buildPhases = (
 				384B66F32C342C3900E8CE68 /* Sources */,
 				384B66F42C342C3900E8CE68 /* Frameworks */,
@@ -204,17 +202,16 @@
 			);
 			dependencies = (
 			);
-			name = RecipeCardPreviewApp;
+			name = CardPreviewApp;
 			packageProductDependencies = (
-				384B67272C34304100E8CE68 /* RecipesList */,
 			);
 			productName = RecipeCardPreviewApp;
-			productReference = 384B66F72C342C3900E8CE68 /* RecipeCardPreviewApp.app */;
+			productReference = 384B66F72C342C3900E8CE68 /* CardPreviewApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		384B67052C342C4000E8CE68 /* RecipeCardPreviewAppTests */ = {
+		384B67052C342C4000E8CE68 /* CardPreviewAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 384B671B2C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "RecipeCardPreviewAppTests" */;
+			buildConfigurationList = 384B671B2C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "CardPreviewAppTests" */;
 			buildPhases = (
 				384B67022C342C4000E8CE68 /* Sources */,
 				384B67032C342C4000E8CE68 /* Frameworks */,
@@ -225,14 +222,14 @@
 			dependencies = (
 				384B67082C342C4000E8CE68 /* PBXTargetDependency */,
 			);
-			name = RecipeCardPreviewAppTests;
+			name = CardPreviewAppTests;
 			productName = RecipeCardPreviewAppTests;
-			productReference = 384B67062C342C4000E8CE68 /* RecipeCardPreviewAppTests.xctest */;
+			productReference = 384B67062C342C4000E8CE68 /* CardPreviewAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		384B670F2C342C4000E8CE68 /* RecipeCardPreviewAppUITests */ = {
+		384B670F2C342C4000E8CE68 /* CardPreviewAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 384B671E2C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "RecipeCardPreviewAppUITests" */;
+			buildConfigurationList = 384B671E2C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "CardPreviewAppUITests" */;
 			buildPhases = (
 				384B670C2C342C4000E8CE68 /* Sources */,
 				384B670D2C342C4000E8CE68 /* Frameworks */,
@@ -243,11 +240,11 @@
 			dependencies = (
 				384B67122C342C4000E8CE68 /* PBXTargetDependency */,
 			);
-			name = RecipeCardPreviewAppUITests;
+			name = CardPreviewAppUITests;
 			packageProductDependencies = (
 			);
 			productName = RecipeCardPreviewAppUITests;
-			productReference = 384B67102C342C4000E8CE68 /* RecipeCardPreviewAppUITests.xctest */;
+			productReference = 384B67102C342C4000E8CE68 /* CardPreviewAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -292,9 +289,9 @@
 			projectRoot = "";
 			targets = (
 				19268D212C1E07550014E23E /* Recipes */,
-				384B66F62C342C3900E8CE68 /* RecipeCardPreviewApp */,
-				384B67052C342C4000E8CE68 /* RecipeCardPreviewAppTests */,
-				384B670F2C342C4000E8CE68 /* RecipeCardPreviewAppUITests */,
+				384B66F62C342C3900E8CE68 /* CardPreviewApp */,
+				384B67052C342C4000E8CE68 /* CardPreviewAppTests */,
+				384B670F2C342C4000E8CE68 /* CardPreviewAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -378,12 +375,12 @@
 		};
 		384B67082C342C4000E8CE68 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 384B66F62C342C3900E8CE68 /* RecipeCardPreviewApp */;
+			target = 384B66F62C342C3900E8CE68 /* CardPreviewApp */;
 			targetProxy = 384B67072C342C4000E8CE68 /* PBXContainerItemProxy */;
 		};
 		384B67122C342C4000E8CE68 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 384B66F62C342C3900E8CE68 /* RecipeCardPreviewApp */;
+			target = 384B66F62C342C3900E8CE68 /* CardPreviewApp */;
 			targetProxy = 384B67112C342C4000E8CE68 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -583,7 +580,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RecipeCardPreviewApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CardPreviewApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -611,7 +608,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RecipeCardPreviewApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CardPreviewApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -721,7 +718,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		384B67182C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "RecipeCardPreviewApp" */ = {
+		384B67182C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "CardPreviewApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				384B67192C342C4000E8CE68 /* Debug */,
@@ -730,7 +727,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		384B671B2C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "RecipeCardPreviewAppTests" */ = {
+		384B671B2C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "CardPreviewAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				384B671C2C342C4000E8CE68 /* Debug */,
@@ -739,7 +736,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		384B671E2C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "RecipeCardPreviewAppUITests" */ = {
+		384B671E2C342C4000E8CE68 /* Build configuration list for PBXNativeTarget "CardPreviewAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				384B671F2C342C4000E8CE68 /* Debug */,
@@ -774,10 +771,6 @@
 		19C199D52C2A01DA00F5E184 /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
-		};
-		384B67272C34304100E8CE68 /* RecipesList */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RecipesList;
 		};
 		38857C422C36A1790075FFFD /* List */ = {
 			isa = XCSwiftPackageProductDependency;
