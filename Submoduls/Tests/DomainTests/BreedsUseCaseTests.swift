@@ -3,7 +3,7 @@ import Domain
 
 struct BreedsUseCaseTests {
     
-    @Test func whenFetchRecipiesSuccess_shouldReturnRecipiesList() async {
+    @Test func whenFetchBreedsSuccess_shouldReturnBreedsList() async {
         let sut = BreedsUseCaseMock(breeds: BreedEntity.mock)
         
         do {
@@ -11,13 +11,13 @@ struct BreedsUseCaseTests {
             
             #expect(breeds.count == 10)
             
-            if let recipy = breeds.first {
-                #expect(recipy.name == "Golden Retriever")
+            if let breed = breeds.first {
+                #expect(breed.name == "Golden Retriever")
             }
         } catch {}
     }
     
-    @Test func whenFetchRecipiesFailure_shouldReturnRecipiesError() async {
+    @Test func whenFetchBreedsFailure_shouldReturnBreedsError() async {
         let sut = BreedsUseCaseMock(error: ErrorEntity.general)
         
         do {

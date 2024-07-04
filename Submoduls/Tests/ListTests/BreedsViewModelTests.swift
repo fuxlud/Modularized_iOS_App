@@ -2,9 +2,9 @@ import Testing
 import Domain
 import List
 
-struct RecipesViewModelTests {
+struct BreedsViewModelTests {
     
-    @Test func whenRecipesFetchedSuccesfully_shouldFillRecipesViewModelArray_andShowCorrectInfo() async {
+    @Test func whenBreedsFetchedSuccesfully_shouldFillBreedsViewModelArray_andShowCorrectInfo() async {
         let sut = await makeSUT(breedsUseCase: BreedsUseCaseMock(breeds: BreedEntity.mock))
         await sut.dispatch(.onAppear)
         
