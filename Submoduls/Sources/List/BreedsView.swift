@@ -2,11 +2,11 @@ import SwiftUI
 import Domain
 import DesignSystem
 
-public struct RecipesView: View {
+public struct BreedsView: View {
     
-    var viewModel: RecipesViewModel
+    var viewModel: BreedsViewModel
     
-    public init(viewModel: RecipesViewModel) {
+    public init(viewModel: BreedsViewModel) {
         self.viewModel = viewModel
     }
     
@@ -14,9 +14,9 @@ public struct RecipesView: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
-                    if let recipeViewModels = viewModel.state.data {
-                        ForEach(recipeViewModels) { recipeViewModel in
-                            Card(viewModel: recipeViewModel)
+                    if let breedsViewModels = viewModel.state.data {
+                        ForEach(breedsViewModels) { breedViewModel in
+                            BreedView(viewModel: breedViewModel)
                         }
                     }
                 }

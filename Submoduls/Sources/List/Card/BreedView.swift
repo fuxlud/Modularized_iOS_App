@@ -2,10 +2,10 @@ import SwiftUI
 import Domain
 import DesignSystem
 
-public struct Card: View {
-    var viewModel: RecipeViewModel
+public struct BreedView: View {
+    var viewModel: BreedViewModel
     
-    public init(viewModel: RecipeViewModel) {
+    public init(viewModel: BreedViewModel) {
         self.viewModel = viewModel
     }
     
@@ -49,9 +49,6 @@ public struct Card: View {
                 Text(viewModel.title)
                     .font(.headline)
                     .lineLimit(2)
-                Text("\(viewModel.servings) | \(viewModel.readyInMinutes)")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
             }
             .padding([.leading, .trailing, .bottom])
         }

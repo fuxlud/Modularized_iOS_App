@@ -1,167 +1,66 @@
-import Domain
 import Foundation
 
-public extension RecipeEntity {
+public extension BreedEntity {
     
     static let mock = [
-        RecipeEntity(id: 1,
-                     title: "Traditional spare ribs baked",
-                     image: "https://img.spoonacular.com/recipes/660048-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 4,
-                     readyInMinutes: 120,
-                     sourceUrl: "https://example.com/recipe1"),
+        BreedEntity(name: "Golden Retriever",
+                    breedImages: [
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/golden1.jpg")!, isFavorite: true),
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/golden2.jpg")!, isFavorite: false)
+                    ]),
         
-        RecipeEntity(id: 2,
-                     title: "Lamb chops with fruity couscous and mint",
-                     image: "https://img.spoonacular.com/recipes/716412-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 2,
-                     readyInMinutes: 45,
-                     sourceUrl: "https://example.com/recipe2"),
+        BreedEntity(name: "Labrador Retriever",
+                    breedImages: [
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/labrador1.jpg")!, isFavorite: true),
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/labrador2.jpg")!, isFavorite: false)
+                    ]),
         
-        RecipeEntity(id: 3,
-                     title: "Spice roasted chicken with flavored rice",
-                     image: "https://img.spoonacular.com/recipes/634753-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 3,
-                     readyInMinutes: 60,
-                     sourceUrl: "https://example.com/recipe3"),
+        BreedEntity(name: "German Shepherd",
+                    breedImages: [
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/germanshepherd1.jpg")!, isFavorite: true),
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/germanshepherd2.jpg")!, isFavorite: false)
+                    ]),
         
-        RecipeEntity(id: 4,
-                     title: "Chinese style Egg fried rice with sliced pork",
-                     image: "https://img.spoonacular.com/recipes/639137-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 2,
-                     readyInMinutes: 30,
-                     sourceUrl: "https://example.com/recipe4"),
+        BreedEntity(name: "Bulldog",
+                    breedImages: [
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/bulldog1.jpg")!, isFavorite: true),
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/bulldog2.jpg")!, isFavorite: false)
+                    ]),
         
-        RecipeEntity(id: 5,
-                     title: "Vegetarian pasta primavera",
-                     image: "https://img.spoonacular.com/recipes/664655-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 4,
-                     readyInMinutes: 35,
-                     sourceUrl: "https://example.com/recipe5"),
+        BreedEntity(name: "Beagle",
+                    breedImages: [
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/beagle1.jpg")!, isFavorite: true),
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/beagle2.jpg")!, isFavorite: false)
+                    ]),
         
-        RecipeEntity(id: 6,
-                     title: "Grilled salmon with lemon dill sauce",
-                     image: "https://img.spoonacular.com/recipes/632570-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 2,
-                     readyInMinutes: 25,
-                     sourceUrl: "https://example.com/recipe6"),
+        BreedEntity(name: "Poodle",
+                    breedImages: [
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/poodle1.jpg")!, isFavorite: true),
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/poodle2.jpg")!, isFavorite: false)
+                    ]),
         
-        RecipeEntity(id: 7,
-                     title: "Roasted beef with garlic and rosemary",
-                     image: "https://img.spoonacular.com/recipes/639769-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 6,
-                     readyInMinutes: 90,
-                     sourceUrl: "https://example.com/recipe7"),
+        BreedEntity(name: "Rottweiler",
+                    breedImages: [
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/rottweiler1.jpg")!, isFavorite: true),
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/rottweiler2.jpg")!, isFavorite: false)
+                    ]),
         
-        RecipeEntity(id: 8,
-                     title: "Chinese style Egg fried rice with sliced pork",
-                     image: "https://img.spoonacular.com/recipes/641687-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 2,
-                     readyInMinutes: 30,
-                     sourceUrl: "https://example.com/recipe8"),
+        BreedEntity(name: "Yorkshire Terrier",
+                    breedImages: [
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/yorkshireterrier1.jpg")!, isFavorite: true),
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/yorkshireterrier2.jpg")!, isFavorite: false)
+                    ]),
         
-        RecipeEntity(id: 9,
-                     title: "Mexican style shrimp tacos",
-                     image: "https://img.spoonacular.com/recipes/638741-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 4,
-                     readyInMinutes: 20,
-                     sourceUrl: "https://example.com/recipe9"),
+        BreedEntity(name: "Boxer",
+                    breedImages: [
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/boxer1.jpg")!, isFavorite: true),
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/boxer2.jpg")!, isFavorite: false)
+                    ]),
         
-        RecipeEntity(id: 10,
-                     title: "Creamy mushroom risotto",
-                     image: "https://img.spoonacular.com/recipes/634431-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 3,
-                     readyInMinutes: 45,
-                     sourceUrl: "https://example.com/recipe10"),
-        
-        RecipeEntity(id: 11,
-                     title: "Vegetable stir-fry with tofu",
-                     image: "https://img.spoonacular.com/recipes/657000-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 2,
-                     readyInMinutes: 25,
-                     sourceUrl: "https://example.com/recipe11"),
-        
-        RecipeEntity(id: 12,
-                     title: "Beef and broccoli stir-fry",
-                     image: "https://img.spoonacular.com/recipes/651767-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 4,
-                     readyInMinutes: 30,
-                     sourceUrl: "https://example.com/recipe12"),
-        
-        RecipeEntity(id: 13,
-                     title: "Classic Italian pizza margherita",
-                     image: "https://img.spoonacular.com/recipes/665172-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 4,
-                     readyInMinutes: 20,
-                     sourceUrl: "https://example.com/recipe13"),
-        
-        RecipeEntity(id: 14,
-                     title: "Spicy Thai green curry with chicken",
-                     image: "https://img.spoonacular.com/recipes/658007-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 3,
-                     readyInMinutes: 40,
-                     sourceUrl: "https://example.com/recipe14"),
-        
-        RecipeEntity(id: 15,
-                     title: "Grilled vegetable kebabs",
-                     image: "https://img.spoonacular.com/recipes/633068-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 2,
-                     readyInMinutes: 25,
-                     sourceUrl: "https://example.com/recipe15"),
-        
-        RecipeEntity(id: 16,
-                     title: "French onion soup",
-                     image: "https://img.spoonacular.com/recipes/660266-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 4,
-                     readyInMinutes: 60,
-                     sourceUrl: "https://example.com/recipe16"),
-        
-        RecipeEntity(id: 17,
-                     title: "Mediterranean quinoa salad",
-                     image: "https://img.spoonacular.com/recipes/633091-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 2,
-                     readyInMinutes: 15,
-                     sourceUrl: "https://example.com/recipe17"),
-        
-        RecipeEntity(id: 18,
-                     title: "BBQ pulled pork sliders",
-                     image: "https://img.spoonacular.com/recipes/665182-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 4,
-                     readyInMinutes: 180,
-                     sourceUrl: "https://example.com/recipe18"),
-        
-        RecipeEntity(id: 19,
-                     title: "Chicken Caesar salad",
-                     image: "https://img.spoonacular.com/recipes/664963-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 2,
-                     readyInMinutes: 20,
-                     sourceUrl: "https://example.com/recipe19"),
-        
-        RecipeEntity(id: 20,
-                     title: "Baked ziti with mozzarella and basil",
-                     image: "https://img.spoonacular.com/recipes/636632-556x370.jpg",
-                     imageType: "jpg",
-                     servings: 4,
-                     readyInMinutes: 50,
-                     sourceUrl: "https://example.com/recipe20")
+        BreedEntity(name: "Dachshund",
+                    breedImages: [
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/dachshund1.jpg")!, isFavorite: true),
+                        ImageDetailsEntity(url: URL(string: "https://example.com/images/dachshund2.jpg")!, isFavorite: false)
+                    ])
     ]
 }

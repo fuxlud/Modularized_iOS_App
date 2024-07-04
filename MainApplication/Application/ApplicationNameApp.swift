@@ -8,10 +8,10 @@ import Data
 struct ApplicationNameApp: App {
     var body: some Scene {
         WindowGroup {
-            let repository = RandomRecipesRepository(service: WebService())
-            let useCase = RandomRecipesUseCase(repository: repository)
-            let viewModel = RecipesViewModel(randomRecipesUseCase: useCase)
-            RecipesView(viewModel: viewModel) //testing bitrise
+            let repository = BreedsRepository(service: WebService())
+            let useCase = BreedsUseCase(repository: repository)
+            let viewModel = BreedsViewModel(breedsUseCase: useCase)
+            BreedsView(viewModel: viewModel)
         }
     }
 }
