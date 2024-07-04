@@ -10,19 +10,24 @@ public struct BreedsView: View {
         self.viewModel = viewModel
     }
     
+    private var flexibleColumns: [GridItem] {
+        Array(repeating: GridItem(.flexible(minimum: 100, maximum: 200)), count: 3)
+    }
+    
     public var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
+                LazyVGrid(columns: flexibleColumns, spacing: 20) {
                     if let breedsViewModels = viewModel.state.data {
                         ForEach(breedsViewModels) { breedViewModel in
                             BreedView(viewModel: breedViewModel)
+                                .frame(height: 100)
                         }
                     }
                 }
                 .padding()
             }
-            .navigationTitle("Dog Breeds")
+            .navigationTitle("🐶 Breeds")
             .navigationBarTitleDisplayMode(.large)
             .alert(isPresented: .constant(viewModel.state.error != nil)) {
                 Alert(
