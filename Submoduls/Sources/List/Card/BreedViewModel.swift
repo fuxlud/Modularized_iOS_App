@@ -10,7 +10,7 @@ import Domain
     }
     
     public var title: String {
-        breed.name
+        breed.name.capitalized(with: .current)
     }
     
     var imageUrl: URL? {
