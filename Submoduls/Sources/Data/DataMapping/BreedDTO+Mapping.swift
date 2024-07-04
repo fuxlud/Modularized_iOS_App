@@ -7,9 +7,3 @@ extension BreedDTO {
         return BreedEntity(name: self.name)
     }
 }
-
-extension BreedEntity {
-    func toBreedDTO() -> BreedDTO {
-        return BreedDTO(name: self.name)
-    }
-}

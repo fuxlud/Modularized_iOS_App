@@ -1,11 +1,14 @@
 import SwiftUI
 import Domain
 import DesignSystem
+import DetailsScreen
 
 public struct BreedsView: View {
     
     var viewModel: BreedsViewModel
-    
+    @State private var selectedBreedViewModel: DetailsScreenViewModel? //TODO: Move to ViewModel
+    @State private var showDetails = false //TODO: Move to ViewModel
+
     public init(viewModel: BreedsViewModel) {
         self.viewModel = viewModel
     }
@@ -22,6 +25,11 @@ public struct BreedsView: View {
                         ForEach(breedsViewModels) { breedViewModel in
                             BreedView(viewModel: breedViewModel)
                                 .frame(height: 100)
+                                .onTapGesture {
+                                    let breedDetailsViewModel = viewModel.detailsScreenViewModel(for: breedViewModel)
+                                    self.selectedBreedViewModel = breedDetailsViewModel
+                                    self.showDetails = true
+                                }
                         }
                     }
                 }
@@ -36,6 +44,11 @@ public struct BreedsView: View {
                     dismissButton: .default(Text("OK"))
                 )
             }
+            .sheet(isPresented: $showDetails) {
+                       if let selectedBreedViewModel = selectedBreedViewModel {
+                           DetailsScreen(viewModel: selectedBreedViewModel)
+                       }
+                   }
             .task {
                 await viewModel.dispatch(.onAppear)
             }

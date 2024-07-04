@@ -1,6 +1,6 @@
 import Foundation
 
-public struct ImageDetailsDTO: Codable {
+public struct BreedDetailsDTO: Codable {
     public let url: URL
     public var breedName = ""
     
@@ -9,14 +9,14 @@ public struct ImageDetailsDTO: Codable {
     }
 }
 
-extension ImageDetailsDTO: Equatable {
-    public static func == (lhs: ImageDetailsDTO, rhs: ImageDetailsDTO) -> Bool {
+extension BreedDetailsDTO: Equatable {
+    public static func == (lhs: BreedDetailsDTO, rhs: BreedDetailsDTO) -> Bool {
         return lhs.url == rhs.url
     }
 }
 
 struct BreedImagesResponse: Decodable {
-    var imagesDetails: [ImageDetailsDTO]
+    var imagesDetails: [BreedDetailsDTO]
     
     enum CodingKeys: String, CodingKey {
         case urlStrings = "message"
@@ -26,10 +26,10 @@ struct BreedImagesResponse: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let urlStrings = try container.decode([String].self, forKey: .urlStrings)
         
-        var fetchedImagesDetails: [ImageDetailsDTO] = []
+        var fetchedImagesDetails: [BreedDetailsDTO] = []
         for urlString in urlStrings {
             if let url = URL(string: urlString) {
-                let imageDetails = ImageDetailsDTO(url: url)
+                let imageDetails = BreedDetailsDTO(url: url)
                 fetchedImagesDetails.append(imageDetails)
             }
         }

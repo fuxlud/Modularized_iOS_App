@@ -2,10 +2,10 @@ import Foundation
 import Domain
 
 @Observable public class DetailsCardViewModel: ObservableObject, Identifiable {
-    private let imageDetails: ImageDetailsEntity
+    private let imageDetails: BreedDetailsEntity
     public let id = UUID()
     
-    public init(imageDetails: ImageDetailsEntity) {
+    public init(imageDetails: BreedDetailsEntity) {
         self.imageDetails = imageDetails
     }
     

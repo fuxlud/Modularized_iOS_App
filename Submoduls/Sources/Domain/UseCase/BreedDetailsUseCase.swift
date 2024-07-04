@@ -1,7 +1,7 @@
 import Foundation
 
 public protocol BreedDetailsUseCaseProtocol {
-    func getBreedDetails() async throws -> [ImageDetailsEntity]
+    func getBreedDetails(breedName: String) async throws -> [BreedDetailsEntity]
 }
 
 public struct BreedDetailsUseCase: BreedDetailsUseCaseProtocol {
@@ -11,7 +11,7 @@ public struct BreedDetailsUseCase: BreedDetailsUseCaseProtocol {
         self.repository = repository
     }
 
-    public func getBreedDetails() async throws -> [ImageDetailsEntity] {
-        try await repository.getBreedDetails()
+    public func getBreedDetails(breedName: String) async throws -> [BreedDetailsEntity] {
+        try await repository.getBreedDetails(breedName: breedName)
     }
 }

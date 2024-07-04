@@ -1,5 +1,5 @@
 import Foundation
 
 public protocol BreedDetailsRepositoryProtocol {
-    func getBreedDetails() async throws -> [ImageDetailsEntity]
+    func getBreedDetails(breedName: String) async throws -> [BreedDetailsEntity]
 }

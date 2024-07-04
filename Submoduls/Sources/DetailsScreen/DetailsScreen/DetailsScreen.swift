@@ -2,7 +2,7 @@ import SwiftUI
 import Domain
 import DesignSystem
 
-public struct BreedsView: View {
+public struct DetailsScreen: View {
     
     var viewModel: DetailsScreenViewModel
     

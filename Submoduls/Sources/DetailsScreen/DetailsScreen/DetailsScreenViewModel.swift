@@ -5,13 +5,13 @@ import Domain
     public let id = UUID()
     public var state: ViewState<[DetailsCardViewModel]> = .idle(data: [])
 
-    private(set) var breed: BreedEntity
-    private(set) var favoriteImagesOfBreed = [ImageDetailsEntity]()
+    private(set) var breedName: String
+    private(set) var favoriteImagesOfBreed = [BreedDetailsEntity]()
     private let breedDetailsUseCase: BreedDetailsUseCaseProtocol
 
-    public init(with breed: BreedEntity,
+    public init(breedName: String,
                 breedDetailsUseCase: BreedDetailsUseCaseProtocol) {
-        self.breed = breed
+        self.breedName = breedName
         self.breedDetailsUseCase = breedDetailsUseCase
     }
     
@@ -35,8 +35,8 @@ import Domain
         }
     }
     
-    func fetchBreedDetailsRemote() async throws -> [ImageDetailsEntity] {
-        return try await breedDetailsUseCase.getBreedDetails()
+    func fetchBreedDetailsRemote() async throws -> [BreedDetailsEntity] {
+        return try await breedDetailsUseCase.getBreedDetails(breedName: breedName)
     }
     
     @MainActor
@@ -51,7 +51,7 @@ import Domain
     }
     
     @MainActor
-    private func fillBreedDetails(_ breedDetails: [ImageDetailsEntity]) {
+    private func fillBreedDetails(_ breedDetails: [BreedDetailsEntity]) {
         let detailsCardViewModels = breedDetails.map { DetailsCardViewModel(imageDetails: $0) }
         state = .idle(data: detailsCardViewModels)
     }

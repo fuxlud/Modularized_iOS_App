@@ -1,9 +1,8 @@
 import Foundation
 
-public class ImageDetailsEntity: Codable {
+public class BreedDetailsEntity: Codable {
     public let url: URL
     public var isFavorite = false
-    public var breedName = ""
     
     public init(url: URL, isFavorite: Bool = false) {
         self.url = url
@@ -11,8 +10,8 @@ public class ImageDetailsEntity: Codable {
     }
 }
 
-extension ImageDetailsEntity: Equatable {
-    public static func == (lhs: ImageDetailsEntity, rhs: ImageDetailsEntity) -> Bool {
+extension BreedDetailsEntity: Equatable {
+    public static func == (lhs: BreedDetailsEntity, rhs: BreedDetailsEntity) -> Bool {
         return lhs.url == rhs.url
     }
 }
