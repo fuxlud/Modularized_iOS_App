@@ -12,10 +12,6 @@ import Domain
     public var title: String {
         breed.name.capitalized(with: .current)
     }
-    
-    var imageUrl: URL? {
-        breed.breedImages.first?.url
-    }
 }
 
 extension BreedViewModel: Equatable {

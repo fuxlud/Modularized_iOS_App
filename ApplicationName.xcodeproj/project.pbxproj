@@ -18,6 +18,7 @@
 		384B66FE2C342C3F00E8CE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B66FD2C342C3F00E8CE68 /* Assets.xcassets */; };
 		384B67012C342C3F00E8CE68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B67002C342C3F00E8CE68 /* Preview Assets.xcassets */; };
 		38857C432C36A1790075FFFD /* List in Frameworks */ = {isa = PBXBuildFile; productRef = 38857C422C36A1790075FFFD /* List */; };
+		38DB55B32C37283D008620AF /* DetailsScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 38DB55B22C37283D008620AF /* DetailsScreen */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 				196E57512C27463C00325FAC /* DesignSystem in Frameworks */,
 				38857C432C36A1790075FFFD /* List in Frameworks */,
 				1951EF202C23922100BD3A16 /* Networking in Frameworks */,
+				38DB55B32C37283D008620AF /* DetailsScreen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +187,7 @@
 				1951EF212C23922800BD3A16 /* Data */,
 				196E57502C27463C00325FAC /* DesignSystem */,
 				38857C422C36A1790075FFFD /* List */,
+				38DB55B22C37283D008620AF /* DetailsScreen */,
 			);
 			productName = LudushRecipes;
 			productReference = 19268D222C1E07550014E23E /* Recipes.app */;
@@ -775,6 +778,10 @@
 		38857C422C36A1790075FFFD /* List */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = List;
+		};
+		38DB55B22C37283D008620AF /* DetailsScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DetailsScreen;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
