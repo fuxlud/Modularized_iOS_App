@@ -6,9 +6,8 @@ import DetailsScreen
 public struct BreedsView: View {
     
     var viewModel: BreedsViewModel
-    @State private var selectedBreedViewModel: DetailsScreenViewModel? //TODO: Move to ViewModel
-    @State private var showDetails = false //TODO: Move to ViewModel
-
+    @State private var selectedBreedViewModel: DetailsScreenViewModel?
+    
     public init(viewModel: BreedsViewModel) {
         self.viewModel = viewModel
     }
@@ -23,13 +22,13 @@ public struct BreedsView: View {
                 LazyVGrid(columns: flexibleColumns, spacing: 20) {
                     if let breedsViewModels = viewModel.state.data {
                         ForEach(breedsViewModels) { breedViewModel in
-                            BreedView(viewModel: breedViewModel)
-                                .frame(height: 100)
-                                .onTapGesture {
-                                    let breedDetailsViewModel = viewModel.detailsScreenViewModel(for: breedViewModel)
-                                    self.selectedBreedViewModel = breedDetailsViewModel
-                                    self.showDetails = true
+                            NavigationLink(
+                                destination: DetailsScreen(viewModel: viewModel.detailsScreenViewModel(for: breedViewModel)),
+                                label: {
+                                    BreedView(viewModel: breedViewModel)
+                                        .frame(height: 100)
                                 }
+                            )
                         }
                     }
                 }
@@ -44,11 +43,6 @@ public struct BreedsView: View {
                     dismissButton: .default(Text("OK"))
                 )
             }
-            .sheet(isPresented: $showDetails) {
-                       if let selectedBreedViewModel = selectedBreedViewModel {
-                           DetailsScreen(viewModel: selectedBreedViewModel)
-                       }
-                   }
             .task {
                 await viewModel.dispatch(.onAppear)
             }
