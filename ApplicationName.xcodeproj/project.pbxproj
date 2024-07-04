@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		191A22D02C2AC88400D36BD6 /* RecipesList in Frameworks */ = {isa = PBXBuildFile; productRef = 191A22CF2C2AC88400D36BD6 /* RecipesList */; };
 		19268D262C1E07550014E23E /* ApplicationNameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D252C1E07550014E23E /* ApplicationNameApp.swift */; };
 		19268D2C2C1E07560014E23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2B2C1E07560014E23E /* Assets.xcassets */; };
 		19268D2F2C1E07560014E23E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2E2C1E07560014E23E /* Preview Assets.xcassets */; };
@@ -15,10 +14,11 @@
 		1951EF202C23922100BD3A16 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF1F2C23922100BD3A16 /* Networking */; };
 		1951EF222C23922800BD3A16 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF212C23922800BD3A16 /* Data */; };
 		196E57512C27463C00325FAC /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 196E57502C27463C00325FAC /* DesignSystem */; };
-		384B66FA2C342C3A00E8CE68 /* RecipeCardPreviewAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B66F92C342C3A00E8CE68 /* RecipeCardPreviewAppApp.swift */; };
+		384B66FA2C342C3A00E8CE68 /* CardPreviewAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B66F92C342C3A00E8CE68 /* CardPreviewAppApp.swift */; };
 		384B66FE2C342C3F00E8CE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B66FD2C342C3F00E8CE68 /* Assets.xcassets */; };
 		384B67012C342C3F00E8CE68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B67002C342C3F00E8CE68 /* Preview Assets.xcassets */; };
 		384B67282C34304100E8CE68 /* RecipesList in Frameworks */ = {isa = PBXBuildFile; productRef = 384B67272C34304100E8CE68 /* RecipesList */; };
+		38857C432C36A1790075FFFD /* List in Frameworks */ = {isa = PBXBuildFile; productRef = 38857C422C36A1790075FFFD /* List */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,7 @@
 		19268D2E2C1E07560014E23E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		193AAC232C234D5900E08FBB /* Submoduls */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Submoduls; sourceTree = "<group>"; };
 		384B66F72C342C3900E8CE68 /* RecipeCardPreviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeCardPreviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		384B66F92C342C3A00E8CE68 /* RecipeCardPreviewAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardPreviewAppApp.swift; sourceTree = "<group>"; };
+		384B66F92C342C3A00E8CE68 /* CardPreviewAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPreviewAppApp.swift; sourceTree = "<group>"; };
 		384B66FD2C342C3F00E8CE68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		384B67002C342C3F00E8CE68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		384B67062C342C4000E8CE68 /* RecipeCardPreviewAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeCardPreviewAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,10 +57,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				191A22D02C2AC88400D36BD6 /* RecipesList in Frameworks */,
 				193AAC222C233FA700E08FBB /* Domain in Frameworks */,
 				1951EF222C23922800BD3A16 /* Data in Frameworks */,
 				196E57512C27463C00325FAC /* DesignSystem in Frameworks */,
+				38857C432C36A1790075FFFD /* List in Frameworks */,
 				1951EF202C23922100BD3A16 /* Networking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,8 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				193AAC232C234D5900E08FBB /* Submoduls */,
-				19268D242C1E07550014E23E /* Recipes */,
-				384B66F82C342C3900E8CE68 /* RecipeCardPreviewApp */,
+				19268D242C1E07550014E23E /* MainApplication */,
+				384B66F82C342C3900E8CE68 /* CardPreviewApp */,
 				19268D232C1E07550014E23E /* Products */,
 				198761832C22E48600565BB0 /* Frameworks */,
 			);
@@ -112,14 +112,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		19268D242C1E07550014E23E /* Recipes */ = {
+		19268D242C1E07550014E23E /* MainApplication */ = {
 			isa = PBXGroup;
 			children = (
 				1938879C2C1E170F00CF2029 /* Application */,
 				19268D2B2C1E07560014E23E /* Assets.xcassets */,
 				19268D2D2C1E07560014E23E /* Preview Content */,
 			);
-			path = Recipes;
+			path = MainApplication;
 			sourceTree = "<group>";
 		};
 		19268D2D2C1E07560014E23E /* Preview Content */ = {
@@ -145,14 +145,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		384B66F82C342C3900E8CE68 /* RecipeCardPreviewApp */ = {
+		384B66F82C342C3900E8CE68 /* CardPreviewApp */ = {
 			isa = PBXGroup;
 			children = (
-				384B66F92C342C3A00E8CE68 /* RecipeCardPreviewAppApp.swift */,
+				384B66F92C342C3A00E8CE68 /* CardPreviewAppApp.swift */,
 				384B66FD2C342C3F00E8CE68 /* Assets.xcassets */,
 				384B66FF2C342C3F00E8CE68 /* Preview Content */,
 			);
-			path = RecipeCardPreviewApp;
+			path = CardPreviewApp;
 			sourceTree = "<group>";
 		};
 		384B66FF2C342C3F00E8CE68 /* Preview Content */ = {
@@ -177,7 +177,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				191A22D22C2AC8A500D36BD6 /* PBXTargetDependency */,
 				19C199CE2C2A01B900F5E184 /* PBXTargetDependency */,
 				19C199D62C2A01DA00F5E184 /* PBXTargetDependency */,
 			);
@@ -187,7 +186,7 @@
 				1951EF1F2C23922100BD3A16 /* Networking */,
 				1951EF212C23922800BD3A16 /* Data */,
 				196E57502C27463C00325FAC /* DesignSystem */,
-				191A22CF2C2AC88400D36BD6 /* RecipesList */,
+				38857C422C36A1790075FFFD /* List */,
 			);
 			productName = LudushRecipes;
 			productReference = 19268D222C1E07550014E23E /* Recipes.app */;
@@ -348,7 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				384B66FA2C342C3A00E8CE68 /* RecipeCardPreviewAppApp.swift in Sources */,
+				384B66FA2C342C3A00E8CE68 /* CardPreviewAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,10 +368,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		191A22D22C2AC8A500D36BD6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 191A22D12C2AC8A500D36BD6 /* RecipesList */;
-		};
 		19C199CE2C2A01B900F5E184 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = 19C199CD2C2A01B900F5E184 /* Domain */;
@@ -520,7 +515,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Recipes/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MainApplication/Preview Content\"";
 				DEVELOPMENT_TEAM = MLWUAG6YG2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -554,7 +549,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Recipes/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MainApplication/Preview Content\"";
 				DEVELOPMENT_TEAM = MLWUAG6YG2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -756,14 +751,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		191A22CF2C2AC88400D36BD6 /* RecipesList */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RecipesList;
-		};
-		191A22D12C2AC8A500D36BD6 /* RecipesList */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RecipesList;
-		};
 		193AAC212C233FA700E08FBB /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
@@ -791,6 +778,10 @@
 		384B67272C34304100E8CE68 /* RecipesList */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RecipesList;
+		};
+		38857C422C36A1790075FFFD /* List */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = List;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

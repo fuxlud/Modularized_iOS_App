@@ -1,6 +1,5 @@
 import SwiftUI
 import DesignSystem
-import RecipesList
 import Domain
 
 struct RecipesViewWithData_Preview: PreviewProvider {

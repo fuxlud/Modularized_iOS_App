@@ -1,6 +1,6 @@
 import SwiftUI
 import Domain
-import RecipesList
+import List
 import Networking
 import Data
 @main

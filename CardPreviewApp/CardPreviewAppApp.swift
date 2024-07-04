@@ -1,14 +1,14 @@
-import RecipesList
+import List
 import SwiftUI
 import Domain
 
 @main
-struct RecipeCardPreviewAppApp: App {
+struct CardPreviewAppApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 List {
-                    RecipeCard(viewModel: RecipeViewModel(recipe: RecipeEntity.mock.first!))
+                    Card(viewModel: RecipeViewModel(recipe: RecipeEntity.mock.first!))
                 }
             }
         }

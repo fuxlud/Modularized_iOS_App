@@ -16,7 +16,7 @@ public struct RecipesView: View {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
                     if let recipeViewModels = viewModel.state.data {
                         ForEach(recipeViewModels) { recipeViewModel in
-                            RecipeCard(viewModel: recipeViewModel)
+                            Card(viewModel: recipeViewModel)
                         }
                     }
                 }

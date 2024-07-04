@@ -2,7 +2,7 @@ import SwiftUI
 import Domain
 import DesignSystem
 
-public struct RecipeCard: View {
+public struct Card: View {
     var viewModel: RecipeViewModel
     
     public init(viewModel: RecipeViewModel) {
