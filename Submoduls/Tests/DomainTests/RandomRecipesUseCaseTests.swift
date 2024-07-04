@@ -1,30 +1,30 @@
 import Testing
 import Domain
 
-struct RandomRecipesUseCaseTests {
+struct BreedsUseCaseTests {
     
     @Test func whenFetchRecipiesSuccess_shouldReturnRecipiesList() async {
-        let sut = RandomRecipesUseCaseMock(recipes: RecipeEntity.mock)
+        let sut = BreedsUseCaseMock(breeds: BreedEntity.mock)
         
         do {
-            let recipies = try await sut.getRandomRecipes()
+            let breeds = try await sut.getAllBreeds()
             
-            #expect(recipies.count == 20)
+            #expect(breeds.count == 10)
             
-            if let recipy = recipies.first {
-                #expect(recipy.title == "Traditional spare ribs baked")
+            if let recipy = breeds.first {
+                #expect(recipy.name == "Golden Retriever")
             }
         } catch {}
     }
     
     @Test func whenFetchRecipiesFailure_shouldReturnRecipiesError() async {
-        let sut = RandomRecipesUseCaseMock(error: RecipeErrorEntity.general)
+        let sut = BreedsUseCaseMock(error: ErrorEntity.general)
         
         do {
-            let _ = try await sut.getRandomRecipes()
+            let _ = try await sut.getAllBreeds()
         } catch let error {
-            guard let concreteError = error as? RecipeErrorEntity else { return }
-            #expect(concreteError == RecipeErrorEntity.general)
+            guard let concreteError = error as? ErrorEntity else { return }
+            #expect(concreteError == ErrorEntity.general)
         }
     }
 }

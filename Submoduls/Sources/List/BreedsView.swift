@@ -22,7 +22,7 @@ public struct BreedsView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Random Recipes")
+            .navigationTitle("Dog Breeds")
             .navigationBarTitleDisplayMode(.large)
             .alert(isPresented: .constant(viewModel.state.error != nil)) {
                 Alert(

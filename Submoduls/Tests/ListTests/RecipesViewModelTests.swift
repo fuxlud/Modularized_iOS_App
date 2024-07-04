@@ -1,6 +1,6 @@
 import Testing
 import Domain
-import RecipesList
+import List
 
 struct RecipesViewModelTests {
     

@@ -42,8 +42,8 @@ import DesignSystem
         if isLoading {
             state = .loading
         } else {
-            if let recipeViewModels = state.data {
-                state = .idle(data: recipeViewModels)
+            if let viewModels = state.data {
+                state = .idle(data: viewModels)
             }
         }
     }
