@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		191A22D02C2AC88400D36BD6 /* RecipesList in Frameworks */ = {isa = PBXBuildFile; productRef = 191A22CF2C2AC88400D36BD6 /* RecipesList */; };
-		19268D262C1E07550014E23E /* RecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D252C1E07550014E23E /* RecipesApp.swift */; };
+		19268D262C1E07550014E23E /* ApplicationNameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D252C1E07550014E23E /* ApplicationNameApp.swift */; };
 		19268D2C2C1E07560014E23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2B2C1E07560014E23E /* Assets.xcassets */; };
 		19268D2F2C1E07560014E23E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2E2C1E07560014E23E /* Preview Assets.xcassets */; };
 		193AAC222C233FA700E08FBB /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 193AAC212C233FA700E08FBB /* Domain */; };
@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		19268D222C1E07550014E23E /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		19268D252C1E07550014E23E /* RecipesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesApp.swift; sourceTree = "<group>"; };
+		19268D252C1E07550014E23E /* ApplicationNameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationNameApp.swift; sourceTree = "<group>"; };
 		19268D2B2C1E07560014E23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19268D2E2C1E07560014E23E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		193AAC232C234D5900E08FBB /* Submoduls */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Submoduls; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		1938879C2C1E170F00CF2029 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				19268D252C1E07550014E23E /* RecipesApp.swift */,
+				19268D252C1E07550014E23E /* ApplicationNameApp.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 19268D1D2C1E07550014E23E /* Build configuration list for PBXProject "Recipes" */;
+			buildConfigurationList = 19268D1D2C1E07550014E23E /* Build configuration list for PBXProject "ApplicationName" */;
 			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -340,7 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19268D262C1E07550014E23E /* RecipesApp.swift in Sources */,
+				19268D262C1E07550014E23E /* ApplicationNameApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,7 +708,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		19268D1D2C1E07550014E23E /* Build configuration list for PBXProject "Recipes" */ = {
+		19268D1D2C1E07550014E23E /* Build configuration list for PBXProject "ApplicationName" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				19268D462C1E07560014E23E /* Debug */,

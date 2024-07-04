@@ -5,7 +5,7 @@ import Networking
 import Data
 @main
 
-struct RecipesApp: App {
+struct ApplicationNameApp: App {
     var body: some Scene {
         WindowGroup {
             let repository = RandomRecipesRepository(service: WebService())
