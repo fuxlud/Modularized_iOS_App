@@ -9,7 +9,7 @@ let package = Package(
         .library(name: "Data", targets: ["Data"]),
         .library(name: "Networking", targets: ["Networking"]),
         .library(name: "DesignSystem", targets: ["DesignSystem"]),
-        .library(name: "RecipesList", targets: ["RecipesList"]),
+        .library(name: "List", targets: ["List"]),
     ],
     targets: [
         .target(
@@ -33,7 +33,7 @@ let package = Package(
             dependencies: []
         ),
         .target(
-            name: "RecipesList",
+            name: "List",
             dependencies: ["Domain", "DesignSystem"]
         ),
         .testTarget(
@@ -41,8 +41,8 @@ let package = Package(
             dependencies: ["Networking"]
         ),
         .testTarget(
-            name: "RecipesListTests",
-            dependencies: ["Domain", "RecipesList"]
+            name: "ListTests",
+            dependencies: ["Domain", "List"]
         )
     ]
 )
