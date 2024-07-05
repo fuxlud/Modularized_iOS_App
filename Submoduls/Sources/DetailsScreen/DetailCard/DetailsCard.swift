@@ -14,23 +14,9 @@ public struct DetailsCard: View {
     public var body: some View {
         Group {
             if let imageUrl = viewModel.imageUrl {
-                CacheAsyncImage(
-                    url: imageUrl
-                ) { phase in
-                    switch phase {
-                    case .success(let image):
-                        image
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: tileSize, height: tileSize)
-                    case .failure( _), .empty:
-                        EmptyView()
-                            .frame(width: tileSize, height: tileSize)
-                    @unknown default:
-                        Image(systemName: "questionmark")
-                    }
-                }
-                .listRowSeparator(.hidden)
+                URLImage(imageUrl)
+                    .frame(width: tileSize, height: tileSize)
+                    .listRowSeparator(.hidden)
             }
         }
         .background(Color.white)
