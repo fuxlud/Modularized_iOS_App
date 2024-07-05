@@ -1,6 +1,6 @@
 import List
 import SwiftUI
-import Domain
+import DomainLayer
 
 @main
 struct CardPreviewApp: App {

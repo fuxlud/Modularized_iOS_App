@@ -1,6 +1,6 @@
 import SwiftUI
 import DesignSystem
-import Domain
+import DomainLayer
 
 struct BreedView_Preview: PreviewProvider {
     static var previews: some View {

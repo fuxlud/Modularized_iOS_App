@@ -1,5 +1,5 @@
 import SwiftUI
-import Domain
+import DomainLayer
 import DesignSystem
 
 public struct DetailsScreen: View {

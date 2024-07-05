@@ -10,7 +10,6 @@
 		19268D262C1E07550014E23E /* ApplicationNameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D252C1E07550014E23E /* ApplicationNameApp.swift */; };
 		19268D2C2C1E07560014E23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2B2C1E07560014E23E /* Assets.xcassets */; };
 		19268D2F2C1E07560014E23E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2E2C1E07560014E23E /* Preview Assets.xcassets */; };
-		193AAC222C233FA700E08FBB /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 193AAC212C233FA700E08FBB /* Domain */; };
 		1951EF202C23922100BD3A16 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF1F2C23922100BD3A16 /* Networking */; };
 		196E57512C27463C00325FAC /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 196E57502C27463C00325FAC /* DesignSystem */; };
 		384B66FA2C342C3A00E8CE68 /* CardPreviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B66F92C342C3A00E8CE68 /* CardPreviewApp.swift */; };
@@ -60,7 +59,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				193AAC222C233FA700E08FBB /* Domain in Frameworks */,
 				196E57512C27463C00325FAC /* DesignSystem in Frameworks */,
 				38706BDC2C38094E00BFB70B /* DataLayer in Frameworks */,
 				38857C432C36A1790075FFFD /* List in Frameworks */,
@@ -188,7 +186,6 @@
 			);
 			name = MainApplication;
 			packageProductDependencies = (
-				193AAC212C233FA700E08FBB /* Domain */,
 				1951EF1F2C23922100BD3A16 /* Networking */,
 				196E57502C27463C00325FAC /* DesignSystem */,
 				38857C422C36A1790075FFFD /* List */,
@@ -760,10 +757,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		193AAC212C233FA700E08FBB /* Domain */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Domain;
-		};
 		1951EF1F2C23922100BD3A16 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;

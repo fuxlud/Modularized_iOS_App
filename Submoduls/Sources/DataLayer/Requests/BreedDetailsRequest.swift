@@ -1,5 +1,5 @@
 import Foundation
-import Domain
+import DomainLayer
 import Networking
 
 protocol BreedDetailsService {

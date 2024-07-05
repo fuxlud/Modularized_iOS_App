@@ -1,5 +1,5 @@
 import Foundation
-import Domain
+import DomainLayer
 
 @Observable public class BreedViewModel: ObservableObject, Identifiable {
     private let breed: BreedEntity

@@ -1,5 +1,5 @@
 import Testing
-import Domain
+import DomainLayer
 import List
 
 struct BreedsViewModelTests {

@@ -1,5 +1,5 @@
 import Foundation
-import Domain
+import DomainLayer
 
 @Observable public class DetailsCardViewModel: ObservableObject, Identifiable {
     private let imageDetails: BreedDetailsEntity

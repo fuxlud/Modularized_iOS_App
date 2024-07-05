@@ -5,7 +5,7 @@ let package = Package(
     name: "Submodules",
     platforms: [.iOS(.v17)],
     products: [
-        .library(name: "Domain", targets: ["Domain"]),
+        .library(name: "DomainLayer", targets: ["DomainLayer"]),
         .library(name: "DataLayer", targets: ["DataLayer"]),
         .library(name: "Networking", targets: ["Networking"]),
         .library(name: "DesignSystem", targets: ["DesignSystem"]),
@@ -14,12 +14,12 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Domain",
+            name: "DomainLayer",
             dependencies: []
         ),
         .testTarget(
-            name: "DomainTests",
-            dependencies: ["Domain"]
+            name: "DomainLayerTests",
+            dependencies: ["DomainLayer"]
         ),
         .target(
             name: "Networking",
@@ -27,7 +27,7 @@ let package = Package(
         ),
         .target(
             name: "DataLayer",
-            dependencies: ["Domain", "Networking"]
+            dependencies: ["DomainLayer", "Networking"]
         ),
         .target(
             name: "DesignSystem",
@@ -35,11 +35,11 @@ let package = Package(
         ),
         .target(
             name: "List",
-            dependencies: ["DataLayer", "Domain", "DesignSystem", "DetailsScreen"] //DetailsScreen should be moved to coordinator. Data moved to dependeci container
+            dependencies: ["DataLayer", "DomainLayer", "DesignSystem", "DetailsScreen"] //DetailsScreen should be moved to coordinator. Data moved to dependeci container
         ),
         .target(
             name: "DetailsScreen",
-            dependencies: ["Domain", "DesignSystem"]
+            dependencies: ["DomainLayer", "DesignSystem"]
         ),
         .testTarget(
             name: "NetworkingTests",
@@ -47,7 +47,7 @@ let package = Package(
         ),
         .testTarget(
             name: "ListTests",
-            dependencies: ["Domain", "List"]
+            dependencies: ["DomainLayer", "List"]
         )
     ]
 )

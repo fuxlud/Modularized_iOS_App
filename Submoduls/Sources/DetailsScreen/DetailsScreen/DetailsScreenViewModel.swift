@@ -1,5 +1,5 @@
 import Foundation
-import Domain
+import DomainLayer
 
 @Observable public class DetailsScreenViewModel {
     public let id = UUID()
