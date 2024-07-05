@@ -33,7 +33,7 @@ public struct BreedsView: View {
                 }
                 .padding()
             }
-            .navigationTitle("🐶 Breeds")
+            .navigationTitle("All 🐶 Breeds")
             .alert(isPresented: .constant(viewModel.state.error != nil)) {
                 Alert(
                     title: Text("Error"),

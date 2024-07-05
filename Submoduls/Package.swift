@@ -35,7 +35,7 @@ let package = Package(
         ),
         .target(
             name: "List",
-            dependencies: ["Domain", "DesignSystem"]
+            dependencies: ["Data", "Domain", "DesignSystem", "DetailsScreen"] //DetailsScreen should be moved to coordinator. Data moved to dependeci container
         ),
         .target(
             name: "DetailsScreen",

@@ -3,12 +3,13 @@ import SwiftUI
 import Domain
 
 @main
-struct CardPreviewAppApp: App {
+struct CardPreviewApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 List {
-                    Card(viewModel: RecipeViewModel(recipe: RecipeEntity.mock.first!))
+                    BreedView(viewModel: BreedViewModel(breed: BreedEntity.mock.first!))
+                    
                 }
             }
         }

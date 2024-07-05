@@ -14,9 +14,12 @@
 		1951EF202C23922100BD3A16 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF1F2C23922100BD3A16 /* Networking */; };
 		1951EF222C23922800BD3A16 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF212C23922800BD3A16 /* Data */; };
 		196E57512C27463C00325FAC /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 196E57502C27463C00325FAC /* DesignSystem */; };
-		384B66FA2C342C3A00E8CE68 /* CardPreviewAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B66F92C342C3A00E8CE68 /* CardPreviewAppApp.swift */; };
+		384B66FA2C342C3A00E8CE68 /* CardPreviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B66F92C342C3A00E8CE68 /* CardPreviewApp.swift */; };
 		384B66FE2C342C3F00E8CE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B66FD2C342C3F00E8CE68 /* Assets.xcassets */; };
 		384B67012C342C3F00E8CE68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B67002C342C3F00E8CE68 /* Preview Assets.xcassets */; };
+		38706BD62C38064200BFB70B /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 38706BD52C38064200BFB70B /* Domain */; };
+		38706BD82C38064800BFB70B /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 38706BD72C38064800BFB70B /* DesignSystem */; };
+		38706BDA2C38065700BFB70B /* List in Frameworks */ = {isa = PBXBuildFile; productRef = 38706BD92C38065700BFB70B /* List */; };
 		38857C432C36A1790075FFFD /* List in Frameworks */ = {isa = PBXBuildFile; productRef = 38857C422C36A1790075FFFD /* List */; };
 		38DB55B32C37283D008620AF /* DetailsScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 38DB55B22C37283D008620AF /* DetailsScreen */; };
 /* End PBXBuildFile section */
@@ -45,7 +48,7 @@
 		19268D2E2C1E07560014E23E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		193AAC232C234D5900E08FBB /* Submoduls */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Submoduls; sourceTree = "<group>"; };
 		384B66F72C342C3900E8CE68 /* CardPreviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardPreviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		384B66F92C342C3A00E8CE68 /* CardPreviewAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPreviewAppApp.swift; sourceTree = "<group>"; };
+		384B66F92C342C3A00E8CE68 /* CardPreviewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPreviewApp.swift; sourceTree = "<group>"; };
 		384B66FD2C342C3F00E8CE68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		384B67002C342C3F00E8CE68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		384B67062C342C4000E8CE68 /* CardPreviewAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardPreviewAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +73,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38706BDA2C38065700BFB70B /* List in Frameworks */,
+				38706BD62C38064200BFB70B /* Domain in Frameworks */,
+				38706BD82C38064800BFB70B /* DesignSystem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +154,7 @@
 		384B66F82C342C3900E8CE68 /* CardPreviewApp */ = {
 			isa = PBXGroup;
 			children = (
-				384B66F92C342C3A00E8CE68 /* CardPreviewAppApp.swift */,
+				384B66F92C342C3A00E8CE68 /* CardPreviewApp.swift */,
 				384B66FD2C342C3F00E8CE68 /* Assets.xcassets */,
 				384B66FF2C342C3F00E8CE68 /* Preview Content */,
 			);
@@ -207,6 +213,9 @@
 			);
 			name = CardPreviewApp;
 			packageProductDependencies = (
+				38706BD52C38064200BFB70B /* Domain */,
+				38706BD72C38064800BFB70B /* DesignSystem */,
+				38706BD92C38065700BFB70B /* List */,
 			);
 			productName = RecipeCardPreviewApp;
 			productReference = 384B66F72C342C3900E8CE68 /* CardPreviewApp.app */;
@@ -347,7 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				384B66FA2C342C3A00E8CE68 /* CardPreviewAppApp.swift in Sources */,
+				384B66FA2C342C3A00E8CE68 /* CardPreviewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,6 +783,18 @@
 		19C199D52C2A01DA00F5E184 /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DesignSystem;
+		};
+		38706BD52C38064200BFB70B /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		38706BD72C38064800BFB70B /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
+		};
+		38706BD92C38065700BFB70B /* List */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = List;
 		};
 		38857C422C36A1790075FFFD /* List */ = {
 			isa = XCSwiftPackageProductDependency;
