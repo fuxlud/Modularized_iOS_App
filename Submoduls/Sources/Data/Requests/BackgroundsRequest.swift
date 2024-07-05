@@ -1,4 +1,6 @@
 import Foundation
+import Domain
+import Networking
 
 public extension WebService {
     func getAllBreeds() async throws -> [BreedDTO] {

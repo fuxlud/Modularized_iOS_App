@@ -6,6 +6,7 @@ import Data
 @main
 
 struct ApplicationNameApp: App {
+    
     var body: some Scene {
         WindowGroup {
             let repository = BreedsRepository(service: WebService())

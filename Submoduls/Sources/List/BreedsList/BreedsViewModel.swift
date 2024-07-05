@@ -2,6 +2,9 @@ import Foundation
 import SwiftUI
 import Domain
 import DesignSystem
+import DetailsScreen
+import Data //Should be removed from here. Move to dependency container
+import Networking //same
 
 @Observable public class BreedsViewModel {
     public let id = UUID()
@@ -61,6 +64,14 @@ import DesignSystem
             return
         }
         state = .error(message: error.description)
+    }
+    
+    func detailsScreenViewModel(for breedViewModel: BreedViewModel ) -> DetailsScreenViewModel {
+        //Should be moved to dependency container
+        let breedName = breedViewModel.title.lowercased()
+        let repository =  BreedDetailsRepository(service: WebService())
+        let breedDetailsUseCase = BreedDetailsUseCase(repository: repository)
+        return DetailsScreenViewModel(breedName: breedName, breedDetailsUseCase: breedDetailsUseCase)
     }
 }
 

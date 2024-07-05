@@ -1,34 +1,39 @@
 import SwiftUI
 import Domain
 import DesignSystem
+import DetailsScreen
 
 public struct BreedsView: View {
     
+    let tileSize: CGFloat = 150
+    let spacing: CGFloat = 20
+    
     var viewModel: BreedsViewModel
+    @State private var selectedBreedViewModel: DetailsScreenViewModel?
     
     public init(viewModel: BreedsViewModel) {
         self.viewModel = viewModel
     }
     
-    private var flexibleColumns: [GridItem] {
-        Array(repeating: GridItem(.flexible(minimum: 100, maximum: 200)), count: 3)
-    }
-    
     public var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: flexibleColumns, spacing: 20) {
+                LazyVGrid(columns: [ .init(.adaptive( minimum: tileSize ), spacing: spacing)], spacing: spacing) {
                     if let breedsViewModels = viewModel.state.data {
                         ForEach(breedsViewModels) { breedViewModel in
-                            BreedView(viewModel: breedViewModel)
-                                .frame(height: 100)
+                            NavigationLink(
+                                destination: DetailsScreen(viewModel: viewModel.detailsScreenViewModel(for: breedViewModel)),
+                                label: {
+                                    BreedView(viewModel: breedViewModel)
+                                        .frame(height: tileSize)
+                                }
+                            )
                         }
                     }
                 }
                 .padding()
             }
             .navigationTitle("🐶 Breeds")
-            .navigationBarTitleDisplayMode(.large)
             .alert(isPresented: .constant(viewModel.state.error != nil)) {
                 Alert(
                     title: Text("Error"),

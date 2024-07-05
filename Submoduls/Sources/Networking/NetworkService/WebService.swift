@@ -7,7 +7,7 @@ public protocol WebServiceProtocol {
 }
 
 public struct WebService {
-    var router: NetworkRouterProtocol!
+    public var router: NetworkRouterProtocol!
 
     public init(router: NetworkRouterProtocol = NetworkRouter()) {
         self.router = router

@@ -10,6 +10,7 @@ let package = Package(
         .library(name: "Networking", targets: ["Networking"]),
         .library(name: "DesignSystem", targets: ["DesignSystem"]),
         .library(name: "List", targets: ["List"]),
+        .library(name: "DetailsScreen", targets: ["DetailsScreen"]),
     ],
     targets: [
         .target(
@@ -34,6 +35,10 @@ let package = Package(
         ),
         .target(
             name: "List",
+            dependencies: ["Domain", "DesignSystem"]
+        ),
+        .target(
+            name: "DetailsScreen",
             dependencies: ["Domain", "DesignSystem"]
         ),
         .testTarget(
