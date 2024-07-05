@@ -9,19 +9,14 @@ public struct DetailsScreen: View {
     public init(viewModel: DetailsScreenViewModel) {
         self.viewModel = viewModel
     }
-    
-    private var flexibleColumns: [GridItem] {
-        Array(repeating: GridItem(.flexible(minimum: 100, maximum: 200)), count: 3)
-    }
-    
+
     public var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: flexibleColumns, spacing: 20) {
+                LazyVGrid(columns: [.init(.fixed(100)), .init(.fixed(100)), .init(.fixed(100))]) {
                     if let breedDetailsViewModels = viewModel.state.data {
                         ForEach(breedDetailsViewModels) { breedDetailsViewModel in
                             DetailsCard(viewModel: breedDetailsViewModel)
-                                .frame(height: 100)
                         }
                     }
                 }

@@ -9,9 +9,6 @@ public struct DetailsCard: View {
         self.viewModel = viewModel
     }
     
-    private let imageWidth = 110.0
-    private let cellHeight = 130.0
-    
     public var body: some View {
         Group {
             if let imageUrl = viewModel.imageUrl {
@@ -23,9 +20,9 @@ public struct DetailsCard: View {
                         image
                             .resizable()
                             .scaledToFill()
+                            .frame(width: 100, height: 100)
                     case .failure(let error):
                         ErrorView(error: error)
-                        Circle()
                     case .empty:
                         HStack {
                             ProgressView()
