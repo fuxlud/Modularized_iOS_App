@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 import DomainLayer
 import PresentationLayer_DesignSystem
-import DetailsScreen
+import PresentationLayer_Features_DetailsScreen
 import DataLayer //Should be removed from here. Move to dependency container
 import Networking //same
 

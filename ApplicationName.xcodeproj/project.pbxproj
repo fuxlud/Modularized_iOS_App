@@ -20,7 +20,8 @@
 		38706BDC2C38094E00BFB70B /* DataLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 38706BDB2C38094E00BFB70B /* DataLayer */; };
 		38857C432C36A1790075FFFD /* List in Frameworks */ = {isa = PBXBuildFile; productRef = 38857C422C36A1790075FFFD /* List */; };
 		38C328E02C380C6700352124 /* PresentationLayer_DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328DF2C380C6700352124 /* PresentationLayer_DesignSystem */; };
-		38DB55B32C37283D008620AF /* DetailsScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 38DB55B22C37283D008620AF /* DetailsScreen */; };
+		38C328E22C380CF500352124 /* PresentationLayer_Features_DetailsScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E12C380CF500352124 /* PresentationLayer_Features_DetailsScreen */; };
+		38C328E42C380D0D00352124 /* DomainLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E32C380D0D00352124 /* DomainLayer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +62,10 @@
 			files = (
 				38706BDC2C38094E00BFB70B /* DataLayer in Frameworks */,
 				38857C432C36A1790075FFFD /* List in Frameworks */,
+				38C328E42C380D0D00352124 /* DomainLayer in Frameworks */,
 				1951EF202C23922100BD3A16 /* Networking in Frameworks */,
+				38C328E22C380CF500352124 /* PresentationLayer_Features_DetailsScreen in Frameworks */,
 				38C328E02C380C6700352124 /* PresentationLayer_DesignSystem in Frameworks */,
-				38DB55B32C37283D008620AF /* DetailsScreen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,9 +190,10 @@
 			packageProductDependencies = (
 				1951EF1F2C23922100BD3A16 /* Networking */,
 				38857C422C36A1790075FFFD /* List */,
-				38DB55B22C37283D008620AF /* DetailsScreen */,
 				38706BDB2C38094E00BFB70B /* DataLayer */,
 				38C328DF2C380C6700352124 /* PresentationLayer_DesignSystem */,
+				38C328E12C380CF500352124 /* PresentationLayer_Features_DetailsScreen */,
+				38C328E32C380D0D00352124 /* DomainLayer */,
 			);
 			productName = LudushRecipes;
 			productReference = 19268D222C1E07550014E23E /* MainApplication.app */;
@@ -793,9 +796,13 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = PresentationLayer_DesignSystem;
 		};
-		38DB55B22C37283D008620AF /* DetailsScreen */ = {
+		38C328E12C380CF500352124 /* PresentationLayer_Features_DetailsScreen */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = DetailsScreen;
+			productName = PresentationLayer_Features_DetailsScreen;
+		};
+		38C328E32C380D0D00352124 /* DomainLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DomainLayer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

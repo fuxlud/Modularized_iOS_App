@@ -1,7 +1,7 @@
 import SwiftUI
 import DomainLayer
 import PresentationLayer_DesignSystem
-import DetailsScreen
+import PresentationLayer_Features_DetailsScreen
 
 public struct BreedsView: View {
     
