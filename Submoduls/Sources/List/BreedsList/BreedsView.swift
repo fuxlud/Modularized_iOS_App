@@ -35,7 +35,6 @@ public struct BreedsView: View {
                 .padding()
             }
             .navigationTitle("🐶 Breeds")
-            .navigationBarTitleDisplayMode(.large)
             .alert(isPresented: .constant(viewModel.state.error != nil)) {
                 Alert(
                     title: Text("Error"),
