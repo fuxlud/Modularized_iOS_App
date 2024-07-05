@@ -6,7 +6,7 @@ let package = Package(
     platforms: [.iOS(.v17)],
     products: [
         .library(name: "Domain", targets: ["Domain"]),
-        .library(name: "Data", targets: ["Data"]),
+        .library(name: "DataLayer", targets: ["DataLayer"]),
         .library(name: "Networking", targets: ["Networking"]),
         .library(name: "DesignSystem", targets: ["DesignSystem"]),
         .library(name: "List", targets: ["List"]),
@@ -26,7 +26,7 @@ let package = Package(
             dependencies: []
         ),
         .target(
-            name: "Data",
+            name: "DataLayer",
             dependencies: ["Domain", "Networking"]
         ),
         .target(
@@ -35,7 +35,7 @@ let package = Package(
         ),
         .target(
             name: "List",
-            dependencies: ["Data", "Domain", "DesignSystem", "DetailsScreen"] //DetailsScreen should be moved to coordinator. Data moved to dependeci container
+            dependencies: ["DataLayer", "Domain", "DesignSystem", "DetailsScreen"] //DetailsScreen should be moved to coordinator. Data moved to dependeci container
         ),
         .target(
             name: "DetailsScreen",

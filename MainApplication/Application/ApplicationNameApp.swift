@@ -2,7 +2,7 @@ import SwiftUI
 import Domain
 import List
 import Networking
-import Data
+import DataLayer
 @main
 
 struct ApplicationNameApp: App {

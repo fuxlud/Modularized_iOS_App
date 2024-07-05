@@ -3,7 +3,7 @@ import SwiftUI
 import Domain
 import DesignSystem
 import DetailsScreen
-import Data //Should be removed from here. Move to dependency container
+import DataLayer //Should be removed from here. Move to dependency container
 import Networking //same
 
 @Observable public class BreedsViewModel {
