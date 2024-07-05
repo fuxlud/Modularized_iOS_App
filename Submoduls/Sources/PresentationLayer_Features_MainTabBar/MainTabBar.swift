@@ -18,7 +18,7 @@ public struct MainTabBar: View {
 
             favoriteImages
                 .tabItem {
-                    Label("Favorites", systemImage: "star")
+                    Label("Favorites", systemImage: "heart")
                 }
         }
     }

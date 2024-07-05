@@ -5,6 +5,7 @@ import PresentationLayer_DesignSystem
 public struct DetailsCard: View {
     private var viewModel: DetailsCardViewModel
     private let tileSize: CGFloat
+    private let padding: CGFloat = 3
     
     public init(viewModel: DetailsCardViewModel, tileSize: CGFloat) {
         self.viewModel = viewModel
@@ -16,7 +17,7 @@ public struct DetailsCard: View {
             if let imageUrl = viewModel.imageUrl {
                 ZStack {
                     URLImage(imageUrl)
-                                            
+                        .frame(width: tileSize, height: tileSize)
                     favoriteButton
                 }
                 .frame(width: tileSize, height: tileSize)
@@ -29,20 +30,20 @@ public struct DetailsCard: View {
     
     var favoriteButton: some View {
         VStack {
+            Spacer()
             HStack {
                 Spacer()
                 Button(action: {
-                    ()
+                    
                 }) {
-                    Image(systemName: "star")
-                        .font(.system(size: 35))
+                    Image(systemName: "heart")
+                        .font(.system(size: 28, weight: .medium))
                         .foregroundColor(.white)
                 }
             }
-            .padding(5)
-            Spacer()
+            .padding(padding)
         }
-        .padding(5)
+        .padding(padding)
     }
 }
 
@@ -53,5 +54,16 @@ struct DetailsCard_Preview: PreviewProvider {
         
         return DetailsCard(viewModel: viewModel, tileSize: 100)
             .previewLayout(.sizeThatFits)
+    }
+}
+
+
+struct DetailsViewWithData_Preview: PreviewProvider {
+    static var previews: some View {
+
+        let useCase = BreedDetailsUseCaseMock(breedDetails: BreedDetailsEntity.mock)
+        let viewModel = DetailsScreenViewModel(breedName: "", breedDetailsUseCase: useCase)
+
+        DetailsScreen(viewModel: viewModel)
     }
 }
