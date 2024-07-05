@@ -34,11 +34,17 @@ public struct DetailsCard: View {
             HStack {
                 Spacer()
                 Button(action: {
-                    
+                    viewModel.likeButtonTapped()
                 }) {
-                    Image(systemName: "heart")
-                        .font(.system(size: 28, weight: .medium))
-                        .foregroundColor(.white)
+                    Group {
+                        if viewModel.isFavorite {
+                            Image(systemName: "heart.fill")
+                        } else {
+                            Image(systemName: "heart")
+                        }
+                    }
+                    .font(.system(size: 28, weight: .medium))
+                    .foregroundColor(.white)
                 }
             }
             .padding(padding)

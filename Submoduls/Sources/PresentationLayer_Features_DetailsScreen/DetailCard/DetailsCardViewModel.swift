@@ -2,7 +2,7 @@ import Foundation
 import DomainLayer
 
 @Observable public class DetailsCardViewModel: ObservableObject, Identifiable {
-    private let imageDetails: BreedDetailsEntity
+    private var imageDetails: BreedDetailsEntity
     public let id = UUID()
     
     public init(imageDetails: BreedDetailsEntity) {
@@ -11,6 +11,16 @@ import DomainLayer
     
     var imageUrl: URL? {
         imageDetails.url
+    }
+    
+    var isFavorite: Bool {
+        return imageDetails.isFavorite
+    }
+    
+    func likeButtonTapped() {
+        let isFavoriteBeforeTap = imageDetails.isFavorite
+        print(isFavoriteBeforeTap)
+        imageDetails.isFavorite.toggle()
     }
 }
 
