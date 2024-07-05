@@ -39,3 +39,13 @@ public struct DetailsScreen: View {
         }
     }
 }
+
+struct DetailsViewWithData_Preview: PreviewProvider {
+    static var previews: some View {
+
+        let useCase = BreedDetailsUseCaseMock(breedDetails: BreedDetailsEntity.mock)
+        let viewModel = DetailsScreenViewModel(breedName: "", breedDetailsUseCase: useCase)
+
+        DetailsScreen(viewModel: viewModel)
+    }
+}
