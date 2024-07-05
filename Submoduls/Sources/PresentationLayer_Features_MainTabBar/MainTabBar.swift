@@ -12,12 +12,12 @@ public struct MainTabBar: View {
         TabView {
             allBreedsView
                 .tabItem {
-                    Label("Menu", systemImage: "list.dash")
+                    Label("All Breeds", systemImage: "pawprint")
                 }
 
             allBreedsView
                 .tabItem {
-                    Label("Order", systemImage: "square.and.pencil")
+                    Label("Favorites", systemImage: "star")
                 }
         }
     }
