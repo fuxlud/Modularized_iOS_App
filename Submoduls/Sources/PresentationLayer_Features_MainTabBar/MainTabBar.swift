@@ -1,6 +1,7 @@
 import SwiftUI
 import DomainLayer
 import PresentationLayer_Features_AllBreeds
+import PresentationLayer_Features_DetailsScreen
 import Networking
 import DataLayer
 
@@ -15,7 +16,7 @@ public struct MainTabBar: View {
                     Label("All Breeds", systemImage: "pawprint")
                 }
 
-            allBreedsView
+            favoriteImages
                 .tabItem {
                     Label("Favorites", systemImage: "star")
                 }
@@ -30,6 +31,9 @@ public struct MainTabBar: View {
     }
     
     var favoriteImages: some View {
-        EmptyView()
+        let repository = BreedDetailsRepository(service: WebService())
+        let useCase = BreedDetailsUseCase(repository: repository)
+        let viewModel = DetailsScreenViewModel(breedName: "akita", breedDetailsUseCase: useCase)
+        return DetailsScreen(viewModel: viewModel)
     }
 }
