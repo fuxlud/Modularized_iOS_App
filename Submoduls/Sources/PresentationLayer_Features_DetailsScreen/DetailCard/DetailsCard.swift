@@ -1,6 +1,7 @@
 import SwiftUI
 import DomainLayer
 import PresentationLayer_DesignSystem
+import DataLayer // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
 
 public struct DetailsCard: View {
     private var viewModel: DetailsCardViewModel
@@ -56,7 +57,9 @@ public struct DetailsCard: View {
 struct DetailsCard_Preview: PreviewProvider {
     static var previews: some View {
         let breedDetails = BreedDetailsEntity.mock.first
-        let viewModel = DetailsCardViewModel(imageDetails: breedDetails!)
+        let persistence = UserDefaults.standard // TODO: Should move to Dependency Container and should be a mock!!!
+        let favoritesManager = FavoritesManager(persistence: persistence)
+        let viewModel = DetailsCardViewModel(imageDetails: breedDetails!, favoritesManager: favoritesManager)
         
         return DetailsCard(viewModel: viewModel, tileSize: 100)
             .previewLayout(.sizeThatFits)

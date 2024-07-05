@@ -2,9 +2,11 @@ import Foundation
 
 public struct BreedDetailsDTO: Codable {
     public let url: URL
+    public let isFavorite: Bool
     
-    public init(url: URL) {
+    public init(url: URL, isFavorite: Bool = false) {
         self.url = url
+        self.isFavorite = isFavorite
     }
 }
 

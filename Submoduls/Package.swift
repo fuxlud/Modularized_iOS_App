@@ -51,7 +51,7 @@ let package = Package(
         ),
         .target(
             name: "PresentationLayer_Features_DetailsScreen",
-            dependencies: ["DomainLayer", "PresentationLayer_DesignSystem"]
+            dependencies: ["DomainLayer", "PresentationLayer_DesignSystem", "DataLayer"]
         ),
         .testTarget(
             name: "NetworkingTests",

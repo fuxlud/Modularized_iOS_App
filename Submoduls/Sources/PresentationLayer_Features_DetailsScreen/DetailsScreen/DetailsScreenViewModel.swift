@@ -1,5 +1,6 @@
 import Foundation
 import DomainLayer
+import DataLayer // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
 
 @Observable public class DetailsScreenViewModel {
     public let id = UUID()
@@ -56,7 +57,10 @@ import DomainLayer
     
     @MainActor
     private func fillBreedDetails(_ breedDetails: [BreedDetailsEntity]) {
-        let detailsCardViewModels = breedDetails.map { DetailsCardViewModel(imageDetails: $0) }
+        let persistence = UserDefaults.standard // TODO: Should move to Dependency Container
+        let favoritesManager = FavoritesManager(persistence: persistence)
+        let detailsCardViewModels = breedDetails.map { DetailsCardViewModel(imageDetails: $0,
+                                                                            favoritesManager: favoritesManager) }
         state = .idle(data: detailsCardViewModels)
     }
     
