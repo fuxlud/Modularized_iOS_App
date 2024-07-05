@@ -20,12 +20,9 @@ public struct DetailsCard: View {
                 ) { phase in
                     switch phase {
                     case .success(let image):
-                        HStack {
-                            image
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: imageWidth)
-                        }
+                        image
+                            .resizable()
+                            .scaledToFill()
                     case .failure(let error):
                         ErrorView(error: error)
                         Circle()
@@ -39,9 +36,6 @@ public struct DetailsCard: View {
                         Image(systemName: "questionmark")
                     }
                 }
-                .frame(maxWidth: .infinity)
-                .frame(height: cellHeight)
-                .padding()
                 .listRowSeparator(.hidden)
             }
         }

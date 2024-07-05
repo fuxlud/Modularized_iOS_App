@@ -39,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19268D222C1E07550014E23E /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19268D222C1E07550014E23E /* MainApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19268D252C1E07550014E23E /* ApplicationNameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationNameApp.swift; sourceTree = "<group>"; };
 		19268D2B2C1E07560014E23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19268D2E2C1E07560014E23E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		19268D232C1E07550014E23E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				19268D222C1E07550014E23E /* Recipes.app */,
+				19268D222C1E07550014E23E /* MainApplication.app */,
 				384B66F72C342C3900E8CE68 /* CardPreviewApp.app */,
 				384B67062C342C4000E8CE68 /* CardPreviewAppTests.xctest */,
 				384B67102C342C4000E8CE68 /* CardPreviewAppUITests.xctest */,
@@ -166,9 +166,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		19268D212C1E07550014E23E /* Recipes */ = {
+		19268D212C1E07550014E23E /* MainApplication */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 19268D482C1E07560014E23E /* Build configuration list for PBXNativeTarget "Recipes" */;
+			buildConfigurationList = 19268D482C1E07560014E23E /* Build configuration list for PBXNativeTarget "MainApplication" */;
 			buildPhases = (
 				19268D1E2C1E07550014E23E /* Sources */,
 				19268D1F2C1E07550014E23E /* Frameworks */,
@@ -180,7 +180,7 @@
 				19C199CE2C2A01B900F5E184 /* PBXTargetDependency */,
 				19C199D62C2A01DA00F5E184 /* PBXTargetDependency */,
 			);
-			name = Recipes;
+			name = MainApplication;
 			packageProductDependencies = (
 				193AAC212C233FA700E08FBB /* Domain */,
 				1951EF1F2C23922100BD3A16 /* Networking */,
@@ -190,7 +190,7 @@
 				38DB55B22C37283D008620AF /* DetailsScreen */,
 			);
 			productName = LudushRecipes;
-			productReference = 19268D222C1E07550014E23E /* Recipes.app */;
+			productReference = 19268D222C1E07550014E23E /* MainApplication.app */;
 			productType = "com.apple.product-type.application";
 		};
 		384B66F62C342C3900E8CE68 /* CardPreviewApp */ = {
@@ -291,7 +291,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				19268D212C1E07550014E23E /* Recipes */,
+				19268D212C1E07550014E23E /* MainApplication */,
 				384B66F62C342C3900E8CE68 /* CardPreviewApp */,
 				384B67052C342C4000E8CE68 /* CardPreviewAppTests */,
 				384B670F2C342C4000E8CE68 /* CardPreviewAppUITests */,
@@ -530,7 +530,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.LudaFux.LudushRecipes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LudaFux.Ludush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -564,7 +564,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.LudaFux.LudushRecipes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LudaFux.Ludush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -712,7 +712,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		19268D482C1E07560014E23E /* Build configuration list for PBXNativeTarget "Recipes" */ = {
+		19268D482C1E07560014E23E /* Build configuration list for PBXNativeTarget "MainApplication" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				19268D492C1E07560014E23E /* Debug */,
