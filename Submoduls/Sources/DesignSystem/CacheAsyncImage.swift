@@ -47,8 +47,6 @@ struct CacheAsyncImage_Previews: PreviewProvider {
     
     
     static var previews: some View {
-        let imageWidth = 110.0
-        let cellHeight = 130.0
         
         return Group {
             
@@ -73,8 +71,6 @@ struct CacheAsyncImage_Previews: PreviewProvider {
                     Image(systemName: "questionmark")
                 }
             }
-            .frame(maxWidth: .infinity)
-            .frame(height: cellHeight)
             .listRowSeparator(.hidden)
         }
         .background(Color.white)

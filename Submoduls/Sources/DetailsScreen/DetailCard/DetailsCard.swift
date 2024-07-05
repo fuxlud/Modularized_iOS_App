@@ -3,10 +3,12 @@ import Domain
 import DesignSystem
 
 public struct DetailsCard: View {
-    var viewModel: DetailsCardViewModel
+    private var viewModel: DetailsCardViewModel
+    private let tileSize: CGFloat
     
-    public init(viewModel: DetailsCardViewModel) {
+    public init(viewModel: DetailsCardViewModel, tileSize: CGFloat) {
         self.viewModel = viewModel
+        self.tileSize = tileSize
     }
     
     public var body: some View {
@@ -20,15 +22,10 @@ public struct DetailsCard: View {
                         image
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 100, height: 100)
-                    case .failure(let error):
-                        ErrorView(error: error)
-                    case .empty:
-                        HStack {
-                            ProgressView()
-                                .progressViewStyle(CircularProgressViewStyle(tint: .red))
-                            Spacer()
-                        }
+                            .frame(width: tileSize, height: tileSize)
+                    case .failure( _), .empty:
+                        EmptyView()
+                            .frame(width: tileSize, height: tileSize)
                     @unknown default:
                         Image(systemName: "questionmark")
                     }

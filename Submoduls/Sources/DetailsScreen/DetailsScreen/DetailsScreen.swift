@@ -20,7 +20,7 @@ public struct DetailsScreen: View {
                     if let breedDetailsViewModels = viewModel.state.data {
                         ForEach(breedDetailsViewModels) { breedDetailsViewModel in
                             
-                            DetailsCard(viewModel: breedDetailsViewModel)
+                            DetailsCard(viewModel: breedDetailsViewModel, tileSize: tileSize)
                         }
                     }
                 }
