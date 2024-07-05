@@ -7,7 +7,6 @@ public protocol FavoritesManagerProtocol {
 }
 
 public actor FavoritesManager: FavoritesManagerProtocol {
-    private let favoriteKey = "fav"
         
     private(set) var favoriteBreeds: Set<BreedDetailsDTO> = []
     private let persistence: PersistenceProtocol
@@ -36,12 +35,12 @@ public actor FavoritesManager: FavoritesManagerProtocol {
     private func updateLocalStorage() {
         do {
             let favoriteBreedsEncoded = try JSONEncoder().encode(favoriteBreeds)
-            persistence.set(favoriteBreedsEncoded, forKey: favoriteKey)
+            persistence.set(favoriteBreedsEncoded, forKey: String(describing: FavoritesManager.self))
         } catch {}
     }
     
     private func loadFavoritesFromLocalStorage() {
-        if let favoriteBreedsEncoded = persistence.data(forKey: favoriteKey)
+        if let favoriteBreedsEncoded = persistence.data(forKey: String(describing: FavoritesManager.self))
         {
             do {
                 let decoder = JSONDecoder()
