@@ -1,5 +1,5 @@
 import SwiftUI
-import DesignSystem
+import PresentationLayer_DesignSystem
 import DomainLayer
 
 struct BreedView_Preview: PreviewProvider {

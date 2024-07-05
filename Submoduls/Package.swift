@@ -8,7 +8,7 @@ let package = Package(
         .library(name: "DomainLayer", targets: ["DomainLayer"]),
         .library(name: "DataLayer", targets: ["DataLayer"]),
         .library(name: "Networking", targets: ["Networking"]),
-        .library(name: "DesignSystem", targets: ["DesignSystem"]),
+        .library(name: "PresentationLayer_DesignSystem", targets: ["PresentationLayer_DesignSystem"]),
         .library(name: "List", targets: ["List"]),
         .library(name: "DetailsScreen", targets: ["DetailsScreen"]),
     ],
@@ -30,16 +30,16 @@ let package = Package(
             dependencies: ["DomainLayer", "Networking"]
         ),
         .target(
-            name: "DesignSystem",
+            name: "PresentationLayer_DesignSystem",
             dependencies: []
         ),
         .target(
             name: "List",
-            dependencies: ["DataLayer", "DomainLayer", "DesignSystem", "DetailsScreen"] //DetailsScreen should be moved to coordinator. Data moved to dependeci container
+            dependencies: ["DataLayer", "DomainLayer", "PresentationLayer_DesignSystem", "DetailsScreen"] //DetailsScreen should be moved to coordinator. Data moved to dependeci container
         ),
         .target(
             name: "DetailsScreen",
-            dependencies: ["DomainLayer", "DesignSystem"]
+            dependencies: ["DomainLayer", "PresentationLayer_DesignSystem"]
         ),
         .testTarget(
             name: "NetworkingTests",

@@ -1,6 +1,6 @@
 import SwiftUI
 import DomainLayer
-import DesignSystem
+import PresentationLayer_DesignSystem
 
 public struct BreedView: View {
   var viewModel: BreedViewModel

@@ -1,6 +1,6 @@
 import SwiftUI
 import DomainLayer
-import DesignSystem
+import PresentationLayer_DesignSystem
 
 public struct DetailsCard: View {
     private var viewModel: DetailsCardViewModel

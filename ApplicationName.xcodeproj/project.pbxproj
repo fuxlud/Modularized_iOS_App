@@ -11,7 +11,6 @@
 		19268D2C2C1E07560014E23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2B2C1E07560014E23E /* Assets.xcassets */; };
 		19268D2F2C1E07560014E23E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2E2C1E07560014E23E /* Preview Assets.xcassets */; };
 		1951EF202C23922100BD3A16 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF1F2C23922100BD3A16 /* Networking */; };
-		196E57512C27463C00325FAC /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 196E57502C27463C00325FAC /* DesignSystem */; };
 		384B66FA2C342C3A00E8CE68 /* CardPreviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B66F92C342C3A00E8CE68 /* CardPreviewApp.swift */; };
 		384B66FE2C342C3F00E8CE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B66FD2C342C3F00E8CE68 /* Assets.xcassets */; };
 		384B67012C342C3F00E8CE68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B67002C342C3F00E8CE68 /* Preview Assets.xcassets */; };
@@ -20,6 +19,7 @@
 		38706BDA2C38065700BFB70B /* List in Frameworks */ = {isa = PBXBuildFile; productRef = 38706BD92C38065700BFB70B /* List */; };
 		38706BDC2C38094E00BFB70B /* DataLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 38706BDB2C38094E00BFB70B /* DataLayer */; };
 		38857C432C36A1790075FFFD /* List in Frameworks */ = {isa = PBXBuildFile; productRef = 38857C422C36A1790075FFFD /* List */; };
+		38C328E02C380C6700352124 /* PresentationLayer_DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328DF2C380C6700352124 /* PresentationLayer_DesignSystem */; };
 		38DB55B32C37283D008620AF /* DetailsScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 38DB55B22C37283D008620AF /* DetailsScreen */; };
 /* End PBXBuildFile section */
 
@@ -59,10 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				196E57512C27463C00325FAC /* DesignSystem in Frameworks */,
 				38706BDC2C38094E00BFB70B /* DataLayer in Frameworks */,
 				38857C432C36A1790075FFFD /* List in Frameworks */,
 				1951EF202C23922100BD3A16 /* Networking in Frameworks */,
+				38C328E02C380C6700352124 /* PresentationLayer_DesignSystem in Frameworks */,
 				38DB55B32C37283D008620AF /* DetailsScreen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,10 +187,10 @@
 			name = MainApplication;
 			packageProductDependencies = (
 				1951EF1F2C23922100BD3A16 /* Networking */,
-				196E57502C27463C00325FAC /* DesignSystem */,
 				38857C422C36A1790075FFFD /* List */,
 				38DB55B22C37283D008620AF /* DetailsScreen */,
 				38706BDB2C38094E00BFB70B /* DataLayer */,
+				38C328DF2C380C6700352124 /* PresentationLayer_DesignSystem */,
 			);
 			productName = LudushRecipes;
 			productReference = 19268D222C1E07550014E23E /* MainApplication.app */;
@@ -761,10 +761,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
 		};
-		196E57502C27463C00325FAC /* DesignSystem */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DesignSystem;
-		};
 		19C199CD2C2A01B900F5E184 /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
@@ -792,6 +788,10 @@
 		38857C422C36A1790075FFFD /* List */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = List;
+		};
+		38C328DF2C380C6700352124 /* PresentationLayer_DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PresentationLayer_DesignSystem;
 		};
 		38DB55B22C37283D008620AF /* DetailsScreen */ = {
 			isa = XCSwiftPackageProductDependency;
