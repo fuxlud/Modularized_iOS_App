@@ -12,20 +12,19 @@ public struct DetailsCard: View {
     }
     
     public var body: some View {
-        ZStack {
-            Group {
-                if let imageUrl = viewModel.imageUrl {
+        Group {
+            if let imageUrl = viewModel.imageUrl {
+                ZStack {
                     URLImage(imageUrl)
-                        .frame(width: tileSize, height: tileSize)
-                        .listRowSeparator(.hidden)
+                                            
+                    favoriteButton
                 }
+                .frame(width: tileSize, height: tileSize)
             }
-            .background(Color.white)
-            .cornerRadius(8)
-            .shadow(color: Color(.black).opacity(0.2), radius: 5, x: 0, y: 5)
-            
-            favoriteButton
         }
+        .background(Color.white)
+        .cornerRadius(8)
+        .shadow(color: Color(.black).opacity(0.2), radius: 5, x: 0, y: 5)
     }
     
     var favoriteButton: some View {
@@ -33,14 +32,14 @@ public struct DetailsCard: View {
             HStack {
                 Spacer()
                 Button(action: {
-                  ()
+                    ()
                 }) {
-                  Image(systemName: "star")
-                    .font(.system(size: 24))
-                    .foregroundColor(.white)
+                    Image(systemName: "star")
+                        .font(.system(size: 35))
+                        .foregroundColor(.white)
                 }
             }
-            .padding(10)
+            .padding(5)
             Spacer()
         }
         .padding(5)
