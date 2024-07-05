@@ -22,6 +22,7 @@
 		38C328E22C380CF500352124 /* PresentationLayer_Features_DetailsScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E12C380CF500352124 /* PresentationLayer_Features_DetailsScreen */; };
 		38C328E42C380D0D00352124 /* DomainLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E32C380D0D00352124 /* DomainLayer */; };
 		38C328E62C380DD600352124 /* PresentationLayer_Features_AllBreeds in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E52C380DD600352124 /* PresentationLayer_Features_AllBreeds */; };
+		38C328EA2C38335800352124 /* PresentationLayer_Features_MainTabBar in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E92C38335800352124 /* PresentationLayer_Features_MainTabBar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 				38C328E62C380DD600352124 /* PresentationLayer_Features_AllBreeds in Frameworks */,
 				1951EF202C23922100BD3A16 /* Networking in Frameworks */,
 				38C328E22C380CF500352124 /* PresentationLayer_Features_DetailsScreen in Frameworks */,
+				38C328EA2C38335800352124 /* PresentationLayer_Features_MainTabBar in Frameworks */,
 				38C328E02C380C6700352124 /* PresentationLayer_DesignSystem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +196,7 @@
 				38C328E12C380CF500352124 /* PresentationLayer_Features_DetailsScreen */,
 				38C328E32C380D0D00352124 /* DomainLayer */,
 				38C328E52C380DD600352124 /* PresentationLayer_Features_AllBreeds */,
+				38C328E92C38335800352124 /* PresentationLayer_Features_MainTabBar */,
 			);
 			productName = LudushRecipes;
 			productReference = 19268D222C1E07550014E23E /* MainApplication.app */;
@@ -803,6 +806,10 @@
 		38C328E52C380DD600352124 /* PresentationLayer_Features_AllBreeds */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PresentationLayer_Features_AllBreeds;
+		};
+		38C328E92C38335800352124 /* PresentationLayer_Features_MainTabBar */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PresentationLayer_Features_MainTabBar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
