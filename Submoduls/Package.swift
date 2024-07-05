@@ -9,7 +9,7 @@ let package = Package(
         .library(name: "DataLayer", targets: ["DataLayer"]),
         .library(name: "Networking", targets: ["Networking"]),
         .library(name: "PresentationLayer_DesignSystem", targets: ["PresentationLayer_DesignSystem"]),
-        .library(name: "List", targets: ["List"]),
+        .library(name: "PresentationLayer_Features_AllBreeds", targets: ["PresentationLayer_Features_AllBreeds"]),
         .library(name: "PresentationLayer_Features_DetailsScreen", targets: ["PresentationLayer_Features_DetailsScreen"]),
     ],
     targets: [
@@ -34,7 +34,7 @@ let package = Package(
             dependencies: []
         ),
         .target(
-            name: "List",
+            name: "PresentationLayer_Features_AllBreeds",
             dependencies: ["DataLayer",
                            "DomainLayer",
                            "PresentationLayer_DesignSystem",
@@ -49,8 +49,8 @@ let package = Package(
             dependencies: ["Networking"]
         ),
         .testTarget(
-            name: "ListTests",
-            dependencies: ["DomainLayer", "List"]
+            name: "PresentationLayer_Features_AllBreedsTests",
+            dependencies: ["DomainLayer", "PresentationLayer_Features_AllBreeds"]
         )
     ]
 )

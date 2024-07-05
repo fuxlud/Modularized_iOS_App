@@ -18,10 +18,10 @@
 		38706BD82C38064800BFB70B /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 38706BD72C38064800BFB70B /* DesignSystem */; };
 		38706BDA2C38065700BFB70B /* List in Frameworks */ = {isa = PBXBuildFile; productRef = 38706BD92C38065700BFB70B /* List */; };
 		38706BDC2C38094E00BFB70B /* DataLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 38706BDB2C38094E00BFB70B /* DataLayer */; };
-		38857C432C36A1790075FFFD /* List in Frameworks */ = {isa = PBXBuildFile; productRef = 38857C422C36A1790075FFFD /* List */; };
 		38C328E02C380C6700352124 /* PresentationLayer_DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328DF2C380C6700352124 /* PresentationLayer_DesignSystem */; };
 		38C328E22C380CF500352124 /* PresentationLayer_Features_DetailsScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E12C380CF500352124 /* PresentationLayer_Features_DetailsScreen */; };
 		38C328E42C380D0D00352124 /* DomainLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E32C380D0D00352124 /* DomainLayer */; };
+		38C328E62C380DD600352124 /* PresentationLayer_Features_AllBreeds in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E52C380DD600352124 /* PresentationLayer_Features_AllBreeds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +61,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				38706BDC2C38094E00BFB70B /* DataLayer in Frameworks */,
-				38857C432C36A1790075FFFD /* List in Frameworks */,
 				38C328E42C380D0D00352124 /* DomainLayer in Frameworks */,
+				38C328E62C380DD600352124 /* PresentationLayer_Features_AllBreeds in Frameworks */,
 				1951EF202C23922100BD3A16 /* Networking in Frameworks */,
 				38C328E22C380CF500352124 /* PresentationLayer_Features_DetailsScreen in Frameworks */,
 				38C328E02C380C6700352124 /* PresentationLayer_DesignSystem in Frameworks */,
@@ -189,11 +189,11 @@
 			name = MainApplication;
 			packageProductDependencies = (
 				1951EF1F2C23922100BD3A16 /* Networking */,
-				38857C422C36A1790075FFFD /* List */,
 				38706BDB2C38094E00BFB70B /* DataLayer */,
 				38C328DF2C380C6700352124 /* PresentationLayer_DesignSystem */,
 				38C328E12C380CF500352124 /* PresentationLayer_Features_DetailsScreen */,
 				38C328E32C380D0D00352124 /* DomainLayer */,
+				38C328E52C380DD600352124 /* PresentationLayer_Features_AllBreeds */,
 			);
 			productName = LudushRecipes;
 			productReference = 19268D222C1E07550014E23E /* MainApplication.app */;
@@ -788,10 +788,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = DataLayer;
 		};
-		38857C422C36A1790075FFFD /* List */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = List;
-		};
 		38C328DF2C380C6700352124 /* PresentationLayer_DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PresentationLayer_DesignSystem;
@@ -803,6 +799,10 @@
 		38C328E32C380D0D00352124 /* DomainLayer */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DomainLayer;
+		};
+		38C328E52C380DD600352124 /* PresentationLayer_Features_AllBreeds */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PresentationLayer_Features_AllBreeds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

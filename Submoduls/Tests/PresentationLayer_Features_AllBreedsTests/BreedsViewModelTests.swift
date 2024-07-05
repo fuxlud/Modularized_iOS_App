@@ -1,6 +1,6 @@
 import Testing
 import DomainLayer
-import List
+import PresentationLayer_Features_AllBreeds
 
 struct BreedsViewModelTests {
     
