@@ -5,6 +5,9 @@ import DetailsScreen
 
 public struct BreedsView: View {
     
+    let tileSize: CGFloat = 150
+    let spacing: CGFloat = 20
+    
     var viewModel: BreedsViewModel
     @State private var selectedBreedViewModel: DetailsScreenViewModel?
     
@@ -12,21 +15,17 @@ public struct BreedsView: View {
         self.viewModel = viewModel
     }
     
-    private var flexibleColumns: [GridItem] {
-        Array(repeating: GridItem(.flexible(minimum: 100, maximum: 200)), count: 3)
-    }
-    
     public var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: flexibleColumns, spacing: 20) {
+                LazyVGrid(columns: [ .init(.adaptive( minimum: tileSize ), spacing: spacing)], spacing: spacing) {
                     if let breedsViewModels = viewModel.state.data {
                         ForEach(breedsViewModels) { breedViewModel in
                             NavigationLink(
                                 destination: DetailsScreen(viewModel: viewModel.detailsScreenViewModel(for: breedViewModel)),
                                 label: {
                                     BreedView(viewModel: breedViewModel)
-                                        .frame(height: 100)
+                                        .frame(height: tileSize)
                                 }
                             )
                         }
