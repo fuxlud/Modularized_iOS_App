@@ -9,18 +9,22 @@ public struct DetailsScreen: View {
     public init(viewModel: DetailsScreenViewModel) {
         self.viewModel = viewModel
     }
+    
+    let tileSize: CGFloat = 100
+    let spacing: CGFloat = 20
 
     public var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: [.init(.fixed(100)), .init(.fixed(100)), .init(.fixed(100))]) {
+                LazyVGrid(columns: [ .init(.adaptive( minimum: tileSize ), spacing: spacing)], spacing: spacing) {
                     if let breedDetailsViewModels = viewModel.state.data {
                         ForEach(breedDetailsViewModels) { breedDetailsViewModel in
+                            
                             DetailsCard(viewModel: breedDetailsViewModel)
                         }
                     }
                 }
-                .padding()
+                .padding(spacing)
             }
             .navigationTitle(viewModel.title)
             .navigationBarTitleDisplayMode(.large)
