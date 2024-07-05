@@ -2,7 +2,6 @@ import Foundation
 
 public struct BreedDetailsDTO: Codable {
     public let url: URL
-    public var breedName = ""
     
     public init(url: URL) {
         self.url = url
@@ -12,6 +11,12 @@ public struct BreedDetailsDTO: Codable {
 extension BreedDetailsDTO: Equatable {
     public static func == (lhs: BreedDetailsDTO, rhs: BreedDetailsDTO) -> Bool {
         return lhs.url == rhs.url
+    }
+}
+
+extension BreedDetailsDTO: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(url)
     }
 }
 

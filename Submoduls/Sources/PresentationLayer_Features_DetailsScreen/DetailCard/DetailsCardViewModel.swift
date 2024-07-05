@@ -19,7 +19,6 @@ import DomainLayer
     
     func likeButtonTapped() {
         let isFavoriteBeforeTap = imageDetails.isFavorite
-        print(isFavoriteBeforeTap)
         imageDetails.isFavorite.toggle()
     }
 }
