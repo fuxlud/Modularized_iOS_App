@@ -7,7 +7,6 @@ import DataLayer // TODO: Should move to Dependency Container. Is here becouse o
     public var state: ViewState<[DetailsCardViewModel]> = .idle(data: [])
 
     private var breedName: String
-    private(set) var favoriteImagesOfBreed = [BreedDetailsEntity]()
     private let breedDetailsUseCase: BreedDetailsUseCaseProtocol
 
     public init(breedName: String,
@@ -57,10 +56,8 @@ import DataLayer // TODO: Should move to Dependency Container. Is here becouse o
     
     @MainActor
     private func fillBreedDetails(_ breedDetails: [BreedDetailsEntity]) {
-        let persistence = UserDefaults.standard // TODO: Should move to Dependency Container
-        let favoritesManager = FavoritesManager(persistence: persistence)
-        let detailsCardViewModels = breedDetails.map { DetailsCardViewModel(imageDetails: $0,
-                                                                            favoritesManager: favoritesManager) }
+        let detailsCardViewModels = breedDetails.map { DetailsCardViewModel(breedDetails: $0,
+                                                                            breedDetailsUseCase: breedDetailsUseCase) }
         state = .idle(data: detailsCardViewModels)
     }
     

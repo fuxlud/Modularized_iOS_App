@@ -3,28 +3,27 @@ import DomainLayer
 import DataLayer
 
 @Observable public class DetailsCardViewModel: ObservableObject, Identifiable {
-    private var imageDetails: BreedDetailsEntity
-    private let favoritesManager: FavoritesManagerProtocol
+    private var breedDetails: BreedDetailsEntity
+    private var breedDetailsUseCase: BreedDetailsUseCaseProtocol
     public let id = UUID()
     
-    public init(imageDetails: BreedDetailsEntity, favoritesManager: FavoritesManagerProtocol) {
-        self.imageDetails = imageDetails
-        self.favoritesManager = favoritesManager
+    public init(breedDetails: BreedDetailsEntity,
+                breedDetailsUseCase: BreedDetailsUseCaseProtocol) {
+        self.breedDetails = breedDetails
+        self.breedDetailsUseCase = breedDetailsUseCase
     }
     
     var imageUrl: URL? {
-        imageDetails.url
+        breedDetails.url
     }
     
     var isFavorite: Bool {
-        return imageDetails.isFavorite
+        return breedDetails.isFavorite
     }
     
     func likeButtonTapped() {
-        imageDetails.isFavorite.toggle()
-        Task {
-            await favoritesManager.toggleLiking(breedDetails: imageDetails.toBreedDetailsDTO())
-        }
+        breedDetails.isFavorite.toggle()
+        breedDetailsUseCase.toggleLiking(breedDetailsEntity: breedDetails)
     }
 }
 

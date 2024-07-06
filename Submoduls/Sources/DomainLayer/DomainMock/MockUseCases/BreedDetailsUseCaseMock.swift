@@ -1,5 +1,4 @@
 public struct BreedDetailsUseCaseMock: BreedDetailsUseCaseProtocol {
-    
     let breedDetails: [BreedDetailsEntity]?
     let error: Error?
     
@@ -13,5 +12,9 @@ public struct BreedDetailsUseCaseMock: BreedDetailsUseCaseProtocol {
             throw error
         }
         return breedDetails ?? []
+    }
+    
+    public func toggleLiking(breedDetailsEntity: BreedDetailsEntity) {
+        ()
     }
 }

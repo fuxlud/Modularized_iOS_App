@@ -31,7 +31,9 @@ public struct MainTabBar: View {
     }
     
     var favoriteImages: some View {
-        let repository = BreedDetailsRepository(service: WebService())
+        let favoritesManager = FavoritesManager(persistence: UserDefaults.standard)
+        let repository =  BreedDetailsRepository(service: WebService(),
+                                                 favoritesManager: favoritesManager)
         let useCase = BreedDetailsUseCase(repository: repository)
         let viewModel = DetailsScreenViewModel(breedName: "akita", breedDetailsUseCase: useCase)
         return DetailsScreen(viewModel: viewModel)
