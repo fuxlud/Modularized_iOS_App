@@ -69,9 +69,8 @@ import Networking //same
     func detailsScreenViewModel(for breedViewModel: BreedViewModel ) -> DetailsScreenViewModel {
         //Should be moved to dependency container
         let breedName = breedViewModel.title.lowercased()
-        let favoritesManager = FavoritesManager(persistence: UserDefaults.standard)
         let repository =  BreedDetailsRepository(service: WebService(),
-                                                 favoritesManager: favoritesManager)
+                                                 favoritesManager: FavoritesManager.shared)
         let breedDetailsUseCase = BreedDetailsUseCase(repository: repository)
         return DetailsScreenViewModel(breedName: breedName, breedDetailsUseCase: breedDetailsUseCase)
     }

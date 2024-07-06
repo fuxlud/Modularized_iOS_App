@@ -10,6 +10,7 @@ import DataLayer
     public init(breedDetails: BreedDetailsEntity,
                 breedDetailsUseCase: BreedDetailsUseCaseProtocol) {
         self.breedDetails = breedDetails
+        print(breedDetails)
         self.breedDetailsUseCase = breedDetailsUseCase
     }
     

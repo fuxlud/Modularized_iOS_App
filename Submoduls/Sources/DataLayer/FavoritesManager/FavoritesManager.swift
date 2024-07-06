@@ -6,11 +6,13 @@ public protocol FavoritesManagerProtocol {
 }
 
 public actor FavoritesManager: FavoritesManagerProtocol {
-        
+    
+    public static let shared = FavoritesManager()
+    
     private(set) var favoriteBreeds: Set<BreedDetailsDTO> = []
     private let persistence: PersistenceProtocol
     
-    public init(persistence: PersistenceProtocol) {
+    public init(persistence: PersistenceProtocol = UserDefaults()) {
         self.persistence = persistence
         Task {
             await loadFavoritesFromPersistence()
@@ -43,6 +45,7 @@ public actor FavoritesManager: FavoritesManagerProtocol {
             do {
                 let decoder = JSONDecoder()
                 favoriteBreeds = try decoder.decode(Set<BreedDetailsDTO>.self, from: favoriteBreedsEncoded)
+                print(favoriteBreeds)
             } catch {}
         }
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol BreedDetailsUseCaseProtocol {
+public protocol BreedDetailsUseCaseProtocol { //MARK: Is class needed indeed?
     func getBreedDetails(breedName: String) async throws -> [BreedDetailsEntity]
     func toggleLiking(breedDetailsEntity: BreedDetailsEntity)
 }
