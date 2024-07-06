@@ -6,13 +6,10 @@ public struct ColorfulMeshGradient: View {
     
     public var body: some View {
         Group {
-            if #available(iOS 18.0, *) {
-                MeshGradient(width: 2, height: 2, points: [
-                    [0, 0], [1, 0], [0, 1], [1, 1]
-                ], colors: getRandomColors())
-            } else {
-                LinearGradient(gradient: Gradient(colors: getRandomColors()), startPoint: .topLeading, endPoint: .bottomTrailing)
-            }
+            MeshGradient(width: 2, 
+                         height: 2,
+                         points: [ [0, 0], [1, 0], [0, 1], [1, 1]],
+                         colors: getRandomColors())
         }
     }
     
