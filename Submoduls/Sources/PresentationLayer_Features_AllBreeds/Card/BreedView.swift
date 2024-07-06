@@ -38,3 +38,13 @@ public struct BreedView: View {
         .shadow(color: Color(.black).opacity(0.2), radius: 5, x: 0, y: 5)
   }
 }
+
+struct BreedView_Preview: PreviewProvider {
+    static var previews: some View {
+        let breedMock = BreedEntity.mock.first
+        let viewModel = BreedViewModel(breed: breedMock!)
+        
+        return BreedView(viewModel: viewModel)
+            .previewLayout(.sizeThatFits)
+    }
+}
