@@ -14,12 +14,12 @@ import PresentationLayer_Features_DetailsScreen //TODO: Consider taking out the 
     }
     
     public enum Action {
-        case onAppear
+        case onViewDidLoad
     }
     
     public func dispatch(_ action: Action) async {
         switch action {
-        case .onAppear:
+        case .onViewDidLoad:
             await fetchBreedDetails()
         }
     }

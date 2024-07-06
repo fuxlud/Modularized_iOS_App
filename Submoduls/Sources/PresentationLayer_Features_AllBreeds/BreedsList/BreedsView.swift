@@ -41,8 +41,10 @@ public struct BreedsView: View {
                     dismissButton: .default(Text("OK"))
                 )
             }
-            .task {
-                await viewModel.dispatch(.onAppear)
+            .onViewDidLoad {
+                Task {
+                    await viewModel.dispatch(.onViewDidLoad)
+                }
             }
         }
     }
