@@ -15,3 +15,9 @@ extension BreedDetailsEntity: Equatable {
         return lhs.url == rhs.url
     }
 }
+
+extension BreedDetailsEntity: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(url)
+    }
+}

@@ -54,24 +54,24 @@ public struct DetailsCard: View {
     }
 }
 
-struct DetailsCard_Preview: PreviewProvider {
-    static var previews: some View {
-        let breedDetails = BreedDetailsEntity.mock.first!
-        let useCase = BreedDetailsUseCaseMock()
-        let viewModel = DetailsCardViewModel(breedDetails: breedDetails, breedDetailsUseCase: useCase)
-        
-        return DetailsCard(viewModel: viewModel, tileSize: 100)
-            .previewLayout(.sizeThatFits)
-    }
-}
-
-
-struct DetailsViewWithData_Preview: PreviewProvider {
-    static var previews: some View {
-
-        let useCase = BreedDetailsUseCaseMock(breedDetails: BreedDetailsEntity.mock)
-        let viewModel = DetailsScreenViewModel(breedName: "", breedDetailsUseCase: useCase)
-
-        DetailsScreen(viewModel: viewModel)
-    }
-}
+//struct DetailsCard_Preview: PreviewProvider {
+//    static var previews: some View {
+//        let breedDetails = BreedDetailsEntity.mock.first!
+//        let useCase = BreedDetailsUseCaseMock()
+//        let viewModel = DetailsCardViewModel(breedDetails: breedDetails, favoritingUseCase: useCase)
+//        
+//        return DetailsCard(viewModel: viewModel, tileSize: 100)
+//            .previewLayout(.sizeThatFits)
+//    }
+//}
+//
+//
+//struct DetailsViewWithData_Preview: PreviewProvider {
+//    static var previews: some View {
+//
+//        let useCase = BreedDetailsUseCaseMock(breedDetails: BreedDetailsEntity.mock)
+//        let viewModel = DetailsScreenViewModel(breedName: "", breedDetailsUseCase: useCase)
+//
+//        DetailsScreen(viewModel: viewModel)
+//    }
+//}

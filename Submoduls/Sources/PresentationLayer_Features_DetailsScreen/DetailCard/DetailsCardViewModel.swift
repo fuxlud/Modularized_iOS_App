@@ -4,14 +4,13 @@ import DataLayer
 
 @Observable public class DetailsCardViewModel: ObservableObject, Identifiable {
     private var breedDetails: BreedDetailsEntity
-    private var breedDetailsUseCase: BreedDetailsUseCaseProtocol
+    private var favoritingUseCase: FavoritingUseCaseProtocol
     public let id = UUID()
     
     public init(breedDetails: BreedDetailsEntity,
-                breedDetailsUseCase: BreedDetailsUseCaseProtocol) {
+                favoritingUseCase: FavoritingUseCaseProtocol) {
         self.breedDetails = breedDetails
-        print(breedDetails)
-        self.breedDetailsUseCase = breedDetailsUseCase
+        self.favoritingUseCase = favoritingUseCase
     }
     
     var imageUrl: URL? {
@@ -24,7 +23,7 @@ import DataLayer
     
     func likeButtonTapped() {
         breedDetails.isFavorite.toggle()
-        breedDetailsUseCase.toggleLiking(breedDetailsEntity: breedDetails)
+        favoritingUseCase.toggleLiking(breedDetailsEntity: breedDetails)
     }
 }
 

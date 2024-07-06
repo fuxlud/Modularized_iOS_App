@@ -1,18 +1,16 @@
 import Foundation
 import DomainLayer
 import DataLayer // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
+import PresentationLayer_Features_DetailsScreen //TODO: Consider taking out the card into a seperate module
 
-@Observable public class DetailsScreenViewModel {
+@Observable public class FavoritesViewModel {
     public let id = UUID()
     public var state: ViewState<[DetailsCardViewModel]> = .idle(data: [])
 
-    private var breedName: String
-    private let breedDetailsUseCase: FavoritingBreedDetailsUseCaseProtocol
+    private let favoritesUseCase: FavoritesUseCaseProtocol
 
-    public init(breedName: String,
-                breedDetailsUseCase: FavoritingBreedDetailsUseCaseProtocol) {
-        self.breedName = breedName
-        self.breedDetailsUseCase = breedDetailsUseCase
+    public init(favoritesUseCase: FavoritesUseCaseProtocol) {
+        self.favoritesUseCase = favoritesUseCase
     }
     
     public enum Action {
@@ -27,20 +25,17 @@ import DataLayer // TODO: Should move to Dependency Container. Is here becouse o
     }
     
     internal var title: String {
-        breedName.capitalized(with: Locale.current)
+        "Favorite Images"
     }
    
     func fetchBreedDetails() async {
-        do {
-            let breedDetails = try await fetchBreedDetailsRemote()
-            await fillBreedDetails(breedDetails)
-        } catch let error {
-            await handleError(error)
-        }
+        let breedDetails = await fetchFavoriteBreedDetails()
+        await fillBreedDetails(breedDetails)
     }
     
-    func fetchBreedDetailsRemote() async throws -> [BreedDetailsEntity] {
-        return try await breedDetailsUseCase.getBreedDetails(breedName: breedName)
+    private func fetchFavoriteBreedDetails() async -> [BreedDetailsEntity] {
+        let favorites = await favoritesUseCase.fatchFavorites()
+        return favorites
     }
     
     @MainActor
@@ -56,9 +51,8 @@ import DataLayer // TODO: Should move to Dependency Container. Is here becouse o
     
     @MainActor
     private func fillBreedDetails(_ breedDetails: [BreedDetailsEntity]) {
-        let detailsCardViewModels = breedDetails.map { 
-            DetailsCardViewModel(breedDetails: $0,
-                                 favoritingUseCase: breedDetailsUseCase) }
+        let detailsCardViewModels = breedDetails.map { DetailsCardViewModel(breedDetails: $0,
+                                                                            favoritingUseCase: favoritesUseCase) }
         state = .idle(data: detailsCardViewModels)
     }
     

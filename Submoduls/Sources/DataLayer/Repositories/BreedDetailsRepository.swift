@@ -3,7 +3,6 @@ import DomainLayer
 import Networking
 
 public struct BreedDetailsRepository: BreedDetailsRepositoryProtocol {
-    
     private let service: WebService
     private let favoritesManager: FavoritesManagerProtocol
     public init(service: WebService, favoritesManager: FavoritesManagerProtocol) {
@@ -20,6 +19,10 @@ public struct BreedDetailsRepository: BreedDetailsRepositoryProtocol {
         }
         
         return breedDetailsDTOs.map { $0.toBreedDetailsEntity() }
+    }
+    
+    public func fatchFavorites() async -> [BreedDetailsEntity] {
+        await favoritesManager.fatchFavorites().map { $0.toBreedDetailsEntity() }
     }
     
     public func toggleLiking(breedDetailsEntity: BreedDetailsEntity) {

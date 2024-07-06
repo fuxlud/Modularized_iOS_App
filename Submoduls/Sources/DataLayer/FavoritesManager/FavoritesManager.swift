@@ -3,6 +3,7 @@ import Foundation
 public protocol FavoritesManagerProtocol {
     func toggleLiking(breedDetails: BreedDetailsDTO) async
     func isLiked(breedDetails: BreedDetailsDTO) async -> Bool
+    func fatchFavorites() async -> Set<BreedDetailsDTO>
 }
 
 public actor FavoritesManager: FavoritesManagerProtocol {
@@ -45,8 +46,11 @@ public actor FavoritesManager: FavoritesManagerProtocol {
             do {
                 let decoder = JSONDecoder()
                 favoriteBreeds = try decoder.decode(Set<BreedDetailsDTO>.self, from: favoriteBreedsEncoded)
-                print(favoriteBreeds)
             } catch {}
         }
+    }
+    
+    public func fatchFavorites() async -> Set<BreedDetailsDTO> {
+        return favoriteBreeds
     }
 }

@@ -12,6 +12,7 @@ let package = Package(
         .library(name: "PresentationLayer_Features_AllBreeds", targets: ["PresentationLayer_Features_AllBreeds"]),
         .library(name: "PresentationLayer_Features_MainTabBar", targets: ["PresentationLayer_Features_MainTabBar"]),
         .library(name: "PresentationLayer_Features_DetailsScreen", targets: ["PresentationLayer_Features_DetailsScreen"]),
+        .library(name: "PresentationLayer_Features_FavoritesScreen", targets: ["PresentationLayer_Features_FavoritesScreen"]),
     ],
     targets: [
         .target(
@@ -48,6 +49,13 @@ let package = Package(
                            "PresentationLayer_DesignSystem",
                            "PresentationLayer_Features_DetailsScreen",
                            "PresentationLayer_Features_AllBreeds"] //DetailsScreen should be moved to coordinator. Data moved to dependeci container
+        ),
+        .target(
+            name: "PresentationLayer_Features_FavoritesScreen",
+            dependencies: ["DataLayer",
+                           "DomainLayer",
+                           "PresentationLayer_DesignSystem",
+                           "PresentationLayer_Features_DetailsScreen"]
         ),
         .target(
             name: "PresentationLayer_Features_DetailsScreen",
