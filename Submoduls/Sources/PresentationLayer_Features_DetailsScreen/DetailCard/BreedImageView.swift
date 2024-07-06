@@ -3,12 +3,12 @@ import DomainLayer
 import PresentationLayer_DesignSystem
 import DataLayer // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
 
-public struct DetailsCard: View {
-    private var viewModel: DetailsCardViewModel
+public struct BreedImageView: View {
+    private var viewModel: BreedImageViewModel
     private let tileSize: CGFloat
     private let padding: CGFloat = 3
     
-    public init(viewModel: DetailsCardViewModel, tileSize: CGFloat) {
+    public init(viewModel: BreedImageViewModel, tileSize: CGFloat) {
         self.viewModel = viewModel
         self.tileSize = tileSize
     }
@@ -70,8 +70,8 @@ public struct DetailsCard: View {
 //    static var previews: some View {
 //
 //        let useCase = BreedDetailsUseCaseMock(breedDetails: BreedDetailsEntity.mock)
-//        let viewModel = DetailsScreenViewModel(breedName: "", breedDetailsUseCase: useCase)
+//        let viewModel = BreedImagesViewModel(breedName: "", breedDetailsUseCase: useCase)
 //
-//        DetailsScreen(viewModel: viewModel)
+//        BreedImagesScreen(viewModel: viewModel)
 //    }
 //}

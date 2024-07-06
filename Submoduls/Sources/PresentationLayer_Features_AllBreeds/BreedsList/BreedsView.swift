@@ -9,7 +9,7 @@ public struct BreedsView: View {
     let spacing: CGFloat = 20
     
     var viewModel: BreedsViewModel
-    @State private var selectedBreedViewModel: DetailsScreenViewModel?
+    @State private var selectedBreedViewModel: BreedImagesViewModel?
     
     public init(viewModel: BreedsViewModel) {
         self.viewModel = viewModel
@@ -22,7 +22,7 @@ public struct BreedsView: View {
                     if let breedsViewModels = viewModel.state.data {
                         ForEach(breedsViewModels) { breedViewModel in
                             NavigationLink(
-                                destination: DetailsScreen(viewModel: viewModel.detailsScreenViewModel(for: breedViewModel)),
+                                destination: BreedImagesScreen(viewModel: viewModel.detailsScreenViewModel(for: breedViewModel)),
                                 label: {
                                     BreedView(viewModel: breedViewModel)
                                         .frame(height: tileSize)

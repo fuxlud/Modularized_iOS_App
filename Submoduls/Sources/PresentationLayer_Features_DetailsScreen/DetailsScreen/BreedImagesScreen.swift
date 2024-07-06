@@ -2,11 +2,11 @@ import SwiftUI
 import DomainLayer
 import PresentationLayer_DesignSystem
 
-public struct DetailsScreen: View {
+public struct BreedImagesScreen: View {
     
-    var viewModel: DetailsScreenViewModel
+    @State var viewModel: BreedImagesViewModel
     
-    public init(viewModel: DetailsScreenViewModel) {
+    public init(viewModel: BreedImagesViewModel) {
         self.viewModel = viewModel
     }
     
@@ -19,7 +19,7 @@ public struct DetailsScreen: View {
                 if let breedDetailsViewModels = viewModel.state.data {
                     ForEach(breedDetailsViewModels) { breedDetailsViewModel in
                         
-                        DetailsCard(viewModel: breedDetailsViewModel, tileSize: tileSize)
+                        BreedImageView(viewModel: breedDetailsViewModel, tileSize: tileSize)
                     }
                 }
             }
@@ -34,8 +34,10 @@ public struct DetailsScreen: View {
                 dismissButton: .default(Text("OK"))
             )
         }
-        .task {
-            await viewModel.dispatch(.onAppear)
+        .onViewDidLoad {
+            Task {
+                await viewModel.dispatch(.onAppear)
+            }
         }
     }
 }

@@ -2,7 +2,7 @@ import Foundation
 import DomainLayer
 import DataLayer
 
-@Observable public class DetailsCardViewModel: ObservableObject, Identifiable {
+@Observable public class BreedImageViewModel: ObservableObject, Identifiable {
     private var breedDetails: BreedDetailsEntity
     private var favoritingUseCase: FavoritingUseCaseProtocol
     public let id = UUID()
@@ -27,8 +27,8 @@ import DataLayer
     }
 }
 
-extension DetailsCardViewModel: Equatable {
-    public static func == (lhs: DetailsCardViewModel, rhs: DetailsCardViewModel) -> Bool {
+extension BreedImageViewModel: Equatable {
+    public static func == (lhs: BreedImageViewModel, rhs: BreedImageViewModel) -> Bool {
       return lhs.id == rhs.id
     }
 }

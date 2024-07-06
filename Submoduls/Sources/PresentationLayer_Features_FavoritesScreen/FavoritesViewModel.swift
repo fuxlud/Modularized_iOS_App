@@ -5,7 +5,7 @@ import PresentationLayer_Features_DetailsScreen //TODO: Consider taking out the 
 
 @Observable public class FavoritesViewModel {
     public let id = UUID()
-    public var state: ViewState<[DetailsCardViewModel]> = .idle(data: [])
+    public var state: ViewState<[BreedImageViewModel]> = .idle(data: [])
 
     private let favoritesUseCase: FavoritesUseCaseProtocol
 
@@ -51,7 +51,7 @@ import PresentationLayer_Features_DetailsScreen //TODO: Consider taking out the 
     
     @MainActor
     private func fillBreedDetails(_ breedDetails: [BreedDetailsEntity]) {
-        let detailsCardViewModels = breedDetails.map { DetailsCardViewModel(breedDetails: $0,
+        let detailsCardViewModels = breedDetails.map { BreedImageViewModel(breedDetails: $0,
                                                                             favoritingUseCase: favoritesUseCase) }
         state = .idle(data: detailsCardViewModels)
     }
@@ -66,8 +66,8 @@ import PresentationLayer_Features_DetailsScreen //TODO: Consider taking out the 
     }
 }
 
-extension DetailsScreenViewModel: Equatable {
-    public static func == (lhs: DetailsScreenViewModel, rhs: DetailsScreenViewModel) -> Bool {
+extension BreedImagesViewModel: Equatable {
+    public static func == (lhs: BreedImagesViewModel, rhs: BreedImagesViewModel) -> Bool {
       return lhs.id == rhs.id
     }
 }

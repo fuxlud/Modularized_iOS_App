@@ -2,9 +2,9 @@ import Foundation
 import DomainLayer
 import DataLayer // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
 
-@Observable public class DetailsScreenViewModel {
+@Observable public class BreedImagesViewModel {
     public let id = UUID()
-    public var state: ViewState<[DetailsCardViewModel]> = .idle(data: [])
+    public var state: ViewState<[BreedImageViewModel]> = .idle(data: [])
 
     private var breedName: String
     private let breedDetailsUseCase: FavoritingBreedDetailsUseCaseProtocol
@@ -57,7 +57,7 @@ import DataLayer // TODO: Should move to Dependency Container. Is here becouse o
     @MainActor
     private func fillBreedDetails(_ breedDetails: [BreedDetailsEntity]) {
         let detailsCardViewModels = breedDetails.map { 
-            DetailsCardViewModel(breedDetails: $0,
+            BreedImageViewModel(breedDetails: $0,
                                  favoritingUseCase: breedDetailsUseCase) }
         state = .idle(data: detailsCardViewModels)
     }
@@ -72,8 +72,8 @@ import DataLayer // TODO: Should move to Dependency Container. Is here becouse o
     }
 }
 
-extension DetailsScreenViewModel: Equatable {
-    public static func == (lhs: DetailsScreenViewModel, rhs: DetailsScreenViewModel) -> Bool {
+extension BreedImagesViewModel: Equatable {
+    public static func == (lhs: BreedImagesViewModel, rhs: BreedImagesViewModel) -> Bool {
       return lhs.id == rhs.id
     }
 }

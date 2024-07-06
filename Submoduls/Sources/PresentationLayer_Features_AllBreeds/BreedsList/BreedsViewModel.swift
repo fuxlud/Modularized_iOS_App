@@ -66,13 +66,13 @@ import Networking //same
         state = .error(message: error.description)
     }
     
-    func detailsScreenViewModel(for breedViewModel: BreedViewModel ) -> DetailsScreenViewModel {
+    func detailsScreenViewModel(for breedViewModel: BreedViewModel ) -> BreedImagesViewModel {
         //Should be moved to dependency container
         let breedName = breedViewModel.title.lowercased()
         let repository =  BreedDetailsRepository(service: WebService(),
                                                  favoritesManager: FavoritesManager.shared)
         let breedDetailsUseCase = BreedDetailsUseCase(repository: repository)
-        return DetailsScreenViewModel(breedName: breedName, breedDetailsUseCase: breedDetailsUseCase)
+        return BreedImagesViewModel(breedName: breedName, breedDetailsUseCase: breedDetailsUseCase)
     }
 }
 

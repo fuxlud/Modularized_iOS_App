@@ -19,7 +19,7 @@ public struct FavoritesView: View {
                 if let breedDetailsViewModels = viewModel.state.data {
                     ForEach(breedDetailsViewModels) { breedDetailsViewModel in
                         
-                        DetailsCard(viewModel: breedDetailsViewModel, tileSize: tileSize)
+                        BreedImageView(viewModel: breedDetailsViewModel, tileSize: tileSize)
                     }
                 }
             }
