@@ -6,7 +6,7 @@ extension BreedDetailsDTO {
     func toBreedDetailsEntity() -> BreedDetailsEntity {
         return BreedDetailsEntity(
             url: self.url,
-            isFavorite: false)
+            isFavorite: self.isFavorite)
     }
 }
 

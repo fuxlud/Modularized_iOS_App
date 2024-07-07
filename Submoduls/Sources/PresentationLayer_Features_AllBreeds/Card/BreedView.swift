@@ -14,7 +14,7 @@ public struct BreedView: View {
         .font(.headline)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         .background(
-            MeshBackground()
+            ColorfulMeshGradient()
         )
         .cornerRadius(8)
         .foregroundColor(.black)

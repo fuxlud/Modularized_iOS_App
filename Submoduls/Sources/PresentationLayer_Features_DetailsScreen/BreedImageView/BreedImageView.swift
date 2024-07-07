@@ -3,12 +3,12 @@ import DomainLayer
 import PresentationLayer_DesignSystem
 import DataLayer // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
 
-public struct DetailsCard: View {
-    private var viewModel: DetailsCardViewModel
+public struct BreedImageView: View {
+    private var viewModel: BreedImageViewModel
     private let tileSize: CGFloat
     private let padding: CGFloat = 3
     
-    public init(viewModel: DetailsCardViewModel, tileSize: CGFloat) {
+    public init(viewModel: BreedImageViewModel, tileSize: CGFloat) {
         self.viewModel = viewModel
         self.tileSize = tileSize
     }
@@ -54,25 +54,24 @@ public struct DetailsCard: View {
     }
 }
 
-struct DetailsCard_Preview: PreviewProvider {
-    static var previews: some View {
-        let breedDetails = BreedDetailsEntity.mock.first
-        let persistence = UserDefaults.standard // TODO: Should move to Dependency Container and should be a mock!!!
-        let favoritesManager = FavoritesManager(persistence: persistence)
-        let viewModel = DetailsCardViewModel(imageDetails: breedDetails!, favoritesManager: favoritesManager)
-        
-        return DetailsCard(viewModel: viewModel, tileSize: 100)
-            .previewLayout(.sizeThatFits)
-    }
-}
-
-
-struct DetailsViewWithData_Preview: PreviewProvider {
-    static var previews: some View {
-
-        let useCase = BreedDetailsUseCaseMock(breedDetails: BreedDetailsEntity.mock)
-        let viewModel = DetailsScreenViewModel(breedName: "", breedDetailsUseCase: useCase)
-
-        DetailsScreen(viewModel: viewModel)
-    }
-}
+//struct DetailsCard_Preview: PreviewProvider {
+//    static var previews: some View {
+//        let breedDetails = BreedDetailsEntity.mock.first!
+//        let useCase = BreedDetailsUseCaseMock()
+//        let viewModel = DetailsCardViewModel(breedDetails: breedDetails, favoritingUseCase: useCase)
+//        
+//        return DetailsCard(viewModel: viewModel, tileSize: 100)
+//            .previewLayout(.sizeThatFits)
+//    }
+//}
+//
+//
+//struct DetailsViewWithData_Preview: PreviewProvider {
+//    static var previews: some View {
+//
+//        let useCase = BreedDetailsUseCaseMock(breedDetails: BreedDetailsEntity.mock)
+//        let viewModel = BreedImagesViewModel(breedName: "", breedDetailsUseCase: useCase)
+//
+//        BreedImagesScreen(viewModel: viewModel)
+//    }
+//}

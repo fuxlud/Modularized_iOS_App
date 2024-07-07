@@ -6,7 +6,7 @@ struct BreedsViewModelTests {
     
     @Test func whenBreedsFetchedSuccesfully_shouldFillBreedsViewModelArray_andShowCorrectInfo() async {
         let sut = await makeSUT(breedsUseCase: BreedsUseCaseMock(breeds: BreedEntity.mock))
-        await sut.dispatch(.onAppear)
+        await sut.dispatch(.onViewDidLoad)
         
         #expect(sut.state.data?.count == 10)
         #expect(sut.state.error == nil)
@@ -19,7 +19,7 @@ struct BreedsViewModelTests {
     @Test func whenAstronomiesFetchError_shouldPresentError() async {
         let sut = await makeSUT(breedsUseCase: BreedsUseCaseMock(error: ErrorEntity.general))
         
-        await sut.dispatch(.onAppear)
+        await sut.dispatch(.onViewDidLoad)
         
         #expect(sut.state.error != nil)
         
@@ -28,8 +28,6 @@ struct BreedsViewModelTests {
         }
     }
     
-    
-    // MARK: - Test helpers
     @MainActor
     func makeSUT(breedsUseCase: some BreedsUseCaseProtocol) -> BreedsViewModel {
         let sut = BreedsViewModel(breedsUseCase: breedsUseCase)
