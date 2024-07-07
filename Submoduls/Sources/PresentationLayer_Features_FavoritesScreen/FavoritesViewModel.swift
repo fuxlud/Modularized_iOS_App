@@ -2,14 +2,15 @@ import Foundation
 import DomainLayer
 import DataLayer // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
 import PresentationLayer_Features_DetailsScreen //TODO: Consider taking out the card into a seperate module
+import Networking // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
 
 @Observable public class FavoritesViewModel {
     public let id = UUID()
     public var state: ViewState<[BreedImageViewModel]> = .idle(data: [])
 
-    private let favoritesUseCase: FavoritesUseCaseProtocol
+    private let favoritesUseCase: FetchFavoritesUseCase
 
-    public init(favoritesUseCase: FavoritesUseCaseProtocol) {
+    public init(favoritesUseCase: FetchFavoritesUseCase) {
         self.favoritesUseCase = favoritesUseCase
     }
     
@@ -51,8 +52,10 @@ import PresentationLayer_Features_DetailsScreen //TODO: Consider taking out the 
     
     @MainActor
     private func fillBreedDetails(_ breedDetails: [BreedDetailsEntity]) {
+        let repository = BreedDetailsRepository(service: WebService(), favoritesManager: FavoritesManager.shared) //Move to Devendency container
+        let favoritingUseCase = FavoriteUseCase(repository: repository)
         let detailsCardViewModels = breedDetails.map { BreedImageViewModel(breedDetails: $0,
-                                                                            favoritingUseCase: favoritesUseCase) }
+                                                                            favoritingUseCase: favoritingUseCase) }
         state = .idle(data: detailsCardViewModels)
     }
     

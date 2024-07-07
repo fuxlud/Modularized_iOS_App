@@ -1,12 +1,10 @@
 import Foundation
 
-public protocol BreedDetailsUseCaseProtocol { //MARK: Is class indeed needed?
+public protocol BreedDetailsUseCaseProtocol {
     func getBreedDetails(breedName: String) async throws -> [BreedDetailsEntity]
 }
 
-public typealias FavoritingBreedDetailsUseCaseProtocol = BreedDetailsUseCaseProtocol & FavoritingUseCaseProtocol
-
-public struct BreedDetailsUseCase: FavoritingBreedDetailsUseCaseProtocol  {
+public struct BreedDetailsUseCase: BreedDetailsUseCaseProtocol {
     private let repository: any BreedDetailsRepositoryProtocol
 
     public init(repository: any BreedDetailsRepositoryProtocol) {
@@ -15,9 +13,5 @@ public struct BreedDetailsUseCase: FavoritingBreedDetailsUseCaseProtocol  {
 
     public func getBreedDetails(breedName: String) async throws -> [BreedDetailsEntity] {
         try await repository.getBreedDetails(breedName: breedName)
-    }
-    
-    public func toggleLiking(breedDetailsEntity: BreedDetailsEntity) {
-        repository.toggleLiking(breedDetailsEntity: breedDetailsEntity)
     }
 }

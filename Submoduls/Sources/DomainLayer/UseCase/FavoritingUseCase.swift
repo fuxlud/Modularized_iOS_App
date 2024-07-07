@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol FavoritingUseCaseProtocol { //MARK: Is Use case classes indeed needed?
+public protocol FavoritingUseCaseProtocol {
     func toggleLiking(breedDetailsEntity: BreedDetailsEntity)
 }
 

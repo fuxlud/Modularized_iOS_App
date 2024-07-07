@@ -35,7 +35,7 @@ public struct MainTabBar: View {
         let favoritesManager = FavoritesManager.shared
         let repository =  BreedDetailsRepository(service: WebService(),
                                                  favoritesManager: favoritesManager)
-        let useCase = FavoritesUseCase(repository: repository)
+        let useCase = FetchFavoritesUseCase(repository: repository)
         let viewModel = FavoritesViewModel(favoritesUseCase: useCase)
         return FavoritesView(viewModel: viewModel)
     }

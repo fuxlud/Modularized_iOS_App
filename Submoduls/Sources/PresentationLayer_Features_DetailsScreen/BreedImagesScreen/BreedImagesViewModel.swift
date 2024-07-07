@@ -1,16 +1,17 @@
 import Foundation
 import DomainLayer
 import DataLayer // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
+import Networking // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
 
 @Observable public class BreedImagesViewModel {
     public let id = UUID()
     public var state: ViewState<[BreedImageViewModel]> = .idle(data: [])
 
     private var breedName: String
-    private let breedDetailsUseCase: FavoritingBreedDetailsUseCaseProtocol
+    private let breedDetailsUseCase: BreedDetailsUseCaseProtocol
 
     public init(breedName: String,
-                breedDetailsUseCase: FavoritingBreedDetailsUseCaseProtocol) {
+                breedDetailsUseCase: BreedDetailsUseCaseProtocol) {
         self.breedName = breedName
         self.breedDetailsUseCase = breedDetailsUseCase
     }
@@ -56,9 +57,11 @@ import DataLayer // TODO: Should move to Dependency Container. Is here becouse o
     
     @MainActor
     private func fillBreedDetails(_ breedDetails: [BreedDetailsEntity]) {
-        let detailsCardViewModels = breedDetails.map { 
+        let repository = BreedDetailsRepository(service: WebService(), favoritesManager: FavoritesManager.shared) //Move to Devendency container
+        let favoritingUseCase = FavoriteUseCase(repository: repository)
+        let detailsCardViewModels = breedDetails.map {
             BreedImageViewModel(breedDetails: $0,
-                                 favoritingUseCase: breedDetailsUseCase) }
+                                 favoritingUseCase: favoritingUseCase) }
         state = .idle(data: detailsCardViewModels)
     }
     
