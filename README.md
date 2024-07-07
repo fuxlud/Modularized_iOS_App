@@ -12,6 +12,8 @@ It can be used as a starting point for a project. Simply delete unneeded targets
 * Simple yet flexible vanila **Networking Layer** built on Generics
 * Unit Test Coverage with **Swift Testing**
 * Reactive State Management of shared state with **Combine**
+
+  **(TODO: Add Combine to the first tab)**
   
 ## Modularization
 Few words on the [Benefits of Modularization](https://www.ludafux.com/post/the-benefits-of-modularization) on my blog.
