@@ -3,7 +3,7 @@ import Foundation
 public protocol FavoritesManagerProtocol {
     func toggleLiking(breedDetails: BreedDetailsDTO) async
     func isLiked(breedDetails: BreedDetailsDTO) async -> Bool
-    func fatchFavorites() async -> Set<BreedDetailsDTO>
+    func fetchFavorites() async -> Set<BreedDetailsDTO>
 }
 
 public actor FavoritesManager: FavoritesManagerProtocol {
@@ -50,7 +50,7 @@ public actor FavoritesManager: FavoritesManagerProtocol {
         }
     }
     
-    public func fatchFavorites() async -> Set<BreedDetailsDTO> {
+    public func fetchFavorites() async -> Set<BreedDetailsDTO> {
         return favoriteBreeds
     }
 }

@@ -10,19 +10,13 @@ public struct BreedDetailsRepository: BreedDetailsRepositoryProtocol {
         self.favoritesManager = favoritesManager
     }
     
-    public func getBreedDetails(breedName: String) async throws -> [BreedDetailsEntity] {
-        var breedDetailsDTOs: [BreedDetailsDTO] = try await service.getBreedDetails(breedName: breedName)
-        for i in 0..<breedDetailsDTOs.count {
-            if await favoritesManager.isLiked(breedDetails: breedDetailsDTOs[i]) {
-                breedDetailsDTOs[i].isFavorite = true
-            }
-        }
-        
+    public func getRemoteBreedDetails(breedName: String) async throws -> [BreedDetailsEntity] {
+        let breedDetailsDTOs: [BreedDetailsDTO] = try await service.getBreedDetails(breedName: breedName)
         return breedDetailsDTOs.map { $0.toBreedDetailsEntity() }
     }
     
-    public func fatchFavorites() async -> [BreedDetailsEntity] {
-        await favoritesManager.fatchFavorites().map { $0.toBreedDetailsEntity() }
+    public func fetchFavorites() async -> Set<BreedDetailsEntity> {
+        await Set(favoritesManager.fetchFavorites().map { $0.toBreedDetailsEntity() })
     }
     
     public func toggleLiking(breedDetailsEntity: BreedDetailsEntity) {

@@ -1,7 +1,7 @@
 import Foundation
 
 public protocol BreedDetailsRepositoryProtocol {
-    func getBreedDetails(breedName: String) async throws -> [BreedDetailsEntity]
+    func getRemoteBreedDetails(breedName: String) async throws -> [BreedDetailsEntity]
     func toggleLiking(breedDetailsEntity: BreedDetailsEntity) 
-    func fatchFavorites() async -> [BreedDetailsEntity]
+    func fetchFavorites() async -> Set<BreedDetailsEntity>
 }

@@ -35,7 +35,7 @@ import Networking // TODO: Should move to Dependency Container. Is here becouse 
     }
     
     private func fetchFavoriteBreedDetails() async -> [BreedDetailsEntity] {
-        let favorites = await favoritesUseCase.fatchFavorites()
+        let favorites = await favoritesUseCase.fetchFavorites()
         return favorites
     }
     

@@ -1,7 +1,7 @@
 import Foundation
 
 public protocol FetchFavoritesUseCaseProtocol {
-    func fatchFavorites() async -> [BreedDetailsEntity]
+    func fetchFavorites() async -> [BreedDetailsEntity]
 }
 
 public struct FetchFavoritesUseCase: FetchFavoritesUseCaseProtocol {
@@ -11,7 +11,7 @@ public struct FetchFavoritesUseCase: FetchFavoritesUseCaseProtocol {
         self.repository = repository
     }
 
-    public func fatchFavorites() async -> [BreedDetailsEntity] {
-        await repository.fatchFavorites()
+    public func fetchFavorites() async -> [BreedDetailsEntity] {
+        await Array(repository.fetchFavorites())
     }
 }
