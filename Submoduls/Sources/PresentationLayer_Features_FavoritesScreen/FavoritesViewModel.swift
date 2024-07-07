@@ -1,17 +1,21 @@
+import Combine
 import Foundation
 import DomainLayer
 import DataLayer // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
 import PresentationLayer_Features_DetailsScreen //TODO: Consider taking out the card into a seperate module
 import Networking // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
 
+@MainActor
 @Observable public class FavoritesViewModel {
     public let id = UUID()
     public var state: ViewState<[BreedImageViewModel]> = .idle(data: [])
-
-    private let favoritesUseCase: FetchFavoritesUseCase
-
-    public init(favoritesUseCase: FetchFavoritesUseCase) {
+    
+    private let favoritesUseCase: FetchFavoritesUseCaseProtocol
+    private var cancellables = Set<AnyCancellable>()
+    
+    public init(favoritesUseCase: FetchFavoritesUseCaseProtocol) {
         self.favoritesUseCase = favoritesUseCase
+        subscribeToUpdates()
     }
     
     public enum Action {
@@ -28,18 +32,27 @@ import Networking // TODO: Should move to Dependency Container. Is here becouse 
     internal var title: String {
         "Favorite Images"
     }
-   
+    
+    private func subscribeToUpdates() {
+        favoritesUseCase.itemsPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] items in
+                Task {
+                    self?.updateViewModels(with: items)
+                }
+            }
+            .store(in: &cancellables)
+    }
+    
     func fetchBreedDetails() async {
         let breedDetails = await fetchFavoriteBreedDetails()
-        await fillBreedDetails(breedDetails)
+        fillBreedDetails(breedDetails)
     }
     
     private func fetchFavoriteBreedDetails() async -> [BreedDetailsEntity] {
-        let favorites = await favoritesUseCase.fetchFavorites()
-        return favorites
+        return await favoritesUseCase.fetchFavorites()
     }
     
-    @MainActor
     private func handleLoading(_ isLoading: Bool) {
         if isLoading {
             state = .loading
@@ -50,16 +63,15 @@ import Networking // TODO: Should move to Dependency Container. Is here becouse 
         }
     }
     
-    @MainActor
     private func fillBreedDetails(_ breedDetails: [BreedDetailsEntity]) {
         let repository = BreedDetailsRepository(service: WebService(), favoritesManager: FavoritesManager.shared) //Move to Devendency container
         let favoritingUseCase = FavoriteUseCase(repository: repository)
-        let detailsCardViewModels = breedDetails.map { BreedImageViewModel(breedDetails: $0,
-                                                                            favoritingUseCase: favoritingUseCase) }
+        let detailsCardViewModels = breedDetails.map {
+            BreedImageViewModel(breedDetails: $0, favoritingUseCase: favoritingUseCase)
+        }
         state = .idle(data: detailsCardViewModels)
     }
     
-    @MainActor
     private func handleError(_ error: Error) {
         guard let error = error as? ErrorEntity else {
             state = .error(message: error.localizedDescription)
@@ -67,10 +79,19 @@ import Networking // TODO: Should move to Dependency Container. Is here becouse 
         }
         state = .error(message: error.description)
     }
+    
+    private func updateViewModels(with breedDetails: [BreedDetailsEntity]) {
+        let repository = BreedDetailsRepository(service: WebService(), favoritesManager: FavoritesManager.shared)
+        let favoritingUseCase = FavoriteUseCase(repository: repository)
+        let detailsCardViewModels = breedDetails.map {
+            BreedImageViewModel(breedDetails: $0, favoritingUseCase: favoritingUseCase)
+        }
+        state = .idle(data: detailsCardViewModels)
+    }
 }
 
-extension BreedImagesViewModel: Equatable {
-    public static func == (lhs: BreedImagesViewModel, rhs: BreedImagesViewModel) -> Bool {
-      return lhs.id == rhs.id
+extension FavoritesViewModel: @preconcurrency Equatable {
+    public static func == (lhs: FavoritesViewModel, rhs: FavoritesViewModel) -> Bool {
+        return lhs.id == rhs.id
     }
 }

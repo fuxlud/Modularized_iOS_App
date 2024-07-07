@@ -1,3 +1,4 @@
+import Combine
 import Foundation
 import DomainLayer
 import Networking
@@ -5,6 +6,7 @@ import Networking
 public struct BreedDetailsRepository: BreedDetailsRepositoryProtocol {
     private let service: WebService
     private let favoritesManager: FavoritesManagerProtocol
+    
     public init(service: WebService, favoritesManager: FavoritesManagerProtocol) {
         self.service = service
         self.favoritesManager = favoritesManager
@@ -23,5 +25,13 @@ public struct BreedDetailsRepository: BreedDetailsRepositoryProtocol {
         Task {
             await favoritesManager.toggleLiking(breedDetails: breedDetailsEntity.toBreedDetailsDTO())
         }
+    }
+    
+    public var itemsPublisher: AnyPublisher<[BreedDetailsEntity], Never> {
+        favoritesManager.favoriteBreedsPublisher
+            .map { favoriteBreeds in
+                favoriteBreeds.map { $0.toBreedDetailsEntity() }
+            }
+            .eraseToAnyPublisher()
     }
 }

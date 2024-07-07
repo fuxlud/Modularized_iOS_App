@@ -1,7 +1,9 @@
 import Foundation
+import Combine
 
 public protocol FetchFavoritesUseCaseProtocol {
     func fetchFavorites() async -> [BreedDetailsEntity]
+    var itemsPublisher: AnyPublisher<[BreedDetailsEntity], Never> { get }
 }
 
 public struct FetchFavoritesUseCase: FetchFavoritesUseCaseProtocol {
@@ -13,5 +15,13 @@ public struct FetchFavoritesUseCase: FetchFavoritesUseCaseProtocol {
 
     public func fetchFavorites() async -> [BreedDetailsEntity] {
         await Array(repository.fetchFavorites())
+    }
+    
+    public var itemsPublisher: AnyPublisher<[BreedDetailsEntity], Never> {
+        repository.itemsPublisher
+            .map { items in
+                items.filter { $0.isFavorite }
+            }
+            .eraseToAnyPublisher()
     }
 }
