@@ -22,6 +22,6 @@ Few words on the [Benefits of Modularization](https://www.ludafux.com/post/the-b
 Few words on the [Consolidated ViewState](https://www.ludafux.com/post/consolidated-viewstate) on my blog.
 
 ## SwiftUI
-Few words on the **.executeOnceOnAppear** [The ViewDidLoad Doppelgänger in SwiftUI](https://www.ludafux.com/post/viewdidload_doppelganger) on my blog. 
+Few words on the **.executeOnceOnAppear** on my blog: [The ViewDidLoad Doppelgänger in SwiftUI](https://www.ludafux.com/post/viewdidload_doppelganger). 
 
 
