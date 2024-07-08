@@ -48,13 +48,13 @@
 		19268D252C1E07550014E23E /* ApplicationNameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationNameApp.swift; sourceTree = "<group>"; };
 		19268D2B2C1E07560014E23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19268D2E2C1E07560014E23E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		193AAC232C234D5900E08FBB /* Submoduls */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Submoduls; sourceTree = "<group>"; };
 		384B66F72C342C3900E8CE68 /* CardPreviewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardPreviewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		384B66F92C342C3A00E8CE68 /* CardPreviewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPreviewApp.swift; sourceTree = "<group>"; };
 		384B66FD2C342C3F00E8CE68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		384B67002C342C3F00E8CE68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		384B67062C342C4000E8CE68 /* CardPreviewAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardPreviewAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		384B67102C342C4000E8CE68 /* CardPreviewAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardPreviewAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		387B06D42C3BD4770082EDBF /* Submodules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Submodules; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 		19268D192C1E07550014E23E = {
 			isa = PBXGroup;
 			children = (
-				193AAC232C234D5900E08FBB /* Submoduls */,
+				387B06D42C3BD4770082EDBF /* Submodules */,
 				19268D242C1E07550014E23E /* MainApplication */,
 				384B66F82C342C3900E8CE68 /* CardPreviewApp */,
 				19268D232C1E07550014E23E /* Products */,
