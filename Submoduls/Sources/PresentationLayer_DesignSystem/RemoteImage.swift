@@ -1,9 +1,9 @@
 import Combine
 import SwiftUI
 
-class RemoteImageLoader: ObservableObject {
+@Observable class RemoteImageLoader {
 
-    @Published var data: Data = Data()
+    var data: Data = Data()
 
     init(imageURL: URL) {
         URLSession.shared.dataTask(with: imageURL) { data, response, error in
@@ -15,7 +15,7 @@ class RemoteImageLoader: ObservableObject {
 }
 
 public struct URLImage: View {
-    @ObservedObject var remoteImageLoader: RemoteImageLoader
+    var remoteImageLoader: RemoteImageLoader
 
     public init(_ imageUrl: URL) {
         remoteImageLoader = RemoteImageLoader(imageURL: imageUrl)
