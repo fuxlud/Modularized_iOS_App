@@ -6,6 +6,7 @@ public struct MeshBackground: View {
     
     public var body: some View {
         Group {
+            #if swift(>=6.0)
             if #available(iOS 18.0, *) {
                 MeshGradient(width: 2, height: 2, points: [
                     [0, 0], [1, 0], [0, 1], [1, 1]
@@ -13,6 +14,9 @@ public struct MeshBackground: View {
             } else {
                 LinearGradient(gradient: Gradient(colors: getRandomColors()), startPoint: .topLeading, endPoint: .bottomTrailing)
             }
+            #else
+            LinearGradient(gradient: Gradient(colors: getRandomColors()), startPoint: .topLeading, endPoint: .bottomTrailing)
+            #endif
         }
     }
     
