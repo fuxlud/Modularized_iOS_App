@@ -17,12 +17,12 @@ import Networking //same
     }
     
     public enum Action {
-        case onViewDidLoad
+        case executeOnceOnAppear
     }
     
     public func dispatch(_ action: Action) async {
         switch action {
-        case .onViewDidLoad:
+        case .executeOnceOnAppear:
             await fetchBreeds()
         }
     }

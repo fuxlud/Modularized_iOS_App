@@ -1,14 +1,14 @@
 import SwiftUI
 
-public struct ViewDidLoadModifier: ViewModifier {
-    @State private var viewDidLoad = false
+public struct ExecuteOnceOnAppearModifier: ViewModifier {
+    @State private var hasAppeared = false
     let action: (() -> Void)?
     
     public func body(content: Content) -> some View {
         content
             .onAppear {
-                if viewDidLoad == false {
-                    viewDidLoad = true
+                if hasAppeared == false {
+                    hasAppeared = true
                     action?()
                 }
             }
@@ -16,8 +16,7 @@ public struct ViewDidLoadModifier: ViewModifier {
 }
 
 public extension View {
-    
-    func onViewDidLoad(perform action: (() -> Void)? = nil) -> some View {
-        self.modifier(ViewDidLoadModifier(action: action))
+    func executeOnceOnAppear(perform action: (() -> Void)? = nil) -> some View {
+        self.modifier(ExecuteOnceOnAppearModifier(action: action))
     }
 }

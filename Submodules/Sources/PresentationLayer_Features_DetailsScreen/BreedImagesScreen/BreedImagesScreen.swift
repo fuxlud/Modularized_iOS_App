@@ -34,7 +34,7 @@ public struct BreedImagesScreen: View {
                 dismissButton: .default(Text("OK"))
             )
         }
-        .onViewDidLoad {
+        .executeOnceOnAppear {
             Task {
                 await viewModel.dispatch(.onAppear)
             }

@@ -19,12 +19,12 @@ import Networking // TODO: Should move to Dependency Container. Is here becouse 
     }
     
     public enum Action {
-        case onViewDidLoad
+        case executeOnceOnAppear
     }
     
     public func dispatch(_ action: Action) async {
         switch action {
-        case .onViewDidLoad:
+        case .executeOnceOnAppear:
             await fetchBreedDetails()
         }
     }
