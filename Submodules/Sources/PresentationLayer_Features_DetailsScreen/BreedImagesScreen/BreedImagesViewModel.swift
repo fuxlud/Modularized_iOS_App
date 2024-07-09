@@ -2,18 +2,26 @@ import Foundation
 import DomainLayer
 import DataLayer // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
 import Networking // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
+import Combine
 
-@Observable public class BreedImagesViewModel {
+public class BreedImagesViewModel: ObservableObject {
     public let id = UUID()
-    public var state: ViewState<[BreedImageViewModel]> = .idle(data: [])
+    @Published public var state: ViewState<[BreedImageViewModel]> = .idle(data: [])
 
     private var breedName: String
     private let breedDetailsUseCase: BreedDetailsUseCaseProtocol
+    private let favoritesUseCase: FetchFavoritesUseCaseProtocol
+
+    var items: [BreedImageViewModel] = []
+    private var cancellables = Set<AnyCancellable>()
 
     public init(breedName: String,
-                breedDetailsUseCase: BreedDetailsUseCaseProtocol) {
+                breedDetailsUseCase: BreedDetailsUseCaseProtocol,
+                favoritesUseCase: FetchFavoritesUseCaseProtocol) {
         self.breedName = breedName
         self.breedDetailsUseCase = breedDetailsUseCase
+        self.favoritesUseCase = favoritesUseCase
+        subscribeToUpdates()
     }
     
     public enum Action {
@@ -31,6 +39,41 @@ import Networking // TODO: Should move to Dependency Container. Is here becouse 
         breedName.capitalized(with: Locale.current)
     }
    
+    private func subscribeToUpdates() {
+        favoritesUseCase.itemsPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] items in
+                Task {
+                    await self?.updateViewModels(with: items)
+                }
+            }
+            .store(in: &cancellables)
+    }
+    
+    @MainActor
+    private func updateViewModels(with breedDetails: [BreedDetailsEntity]) async {
+        
+        switch state {
+        case .idle(let data):
+            for viewModelItem in data {
+                
+                if breedDetails.first(where: { $0.url == viewModelItem.imageUrl }) != nil
+                {
+                    if !viewModelItem.breedDetails.isFavorite {
+                        viewModelItem.breedDetails.isFavorite = true
+                    }
+                } else {
+                    if viewModelItem.breedDetails.isFavorite {
+                        viewModelItem.breedDetails.isFavorite = false
+                    }
+                }
+            }
+            state = .idle(data: data)
+        default:
+            ()
+        }
+    }
+    
     func fetchBreedDetails() async {
         do {
             let breedDetails = try await fetchBreedDetailsRemote()
@@ -51,6 +94,7 @@ import Networking // TODO: Should move to Dependency Container. Is here becouse 
         } else {
             if let viewModels = state.data {
                 state = .idle(data: viewModels)
+                items = viewModels
             }
         }
     }
@@ -63,6 +107,7 @@ import Networking // TODO: Should move to Dependency Container. Is here becouse 
             BreedImageViewModel(breedDetails: $0,
                                  favoritingUseCase: favoritingUseCase) }
         state = .idle(data: detailsCardViewModels)
+        items = detailsCardViewModels
     }
     
     @MainActor

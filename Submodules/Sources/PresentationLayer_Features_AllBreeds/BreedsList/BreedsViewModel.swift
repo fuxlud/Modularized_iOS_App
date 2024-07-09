@@ -72,7 +72,8 @@ import Networking //same
         let repository =  BreedDetailsRepository(service: WebService(),
                                                  favoritesManager: FavoritesManager.shared)
         let breedDetailsUseCase = BreedDetailsUseCase(repository: repository)
-        return BreedImagesViewModel(breedName: breedName, breedDetailsUseCase: breedDetailsUseCase)
+        let useCase = FetchFavoritesUseCase(repository: repository)
+        return BreedImagesViewModel(breedName: breedName, breedDetailsUseCase: breedDetailsUseCase, favoritesUseCase: useCase)
     }
 }
 
