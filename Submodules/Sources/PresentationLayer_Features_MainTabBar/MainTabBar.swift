@@ -5,6 +5,7 @@ import DataLayer
 import PresentationLayer_Features_AllBreeds
 import PresentationLayer_Features_DetailsScreen
 import PresentationLayer_Features_FavoritesScreen
+import DependencyContainer
 
 public struct MainTabBar: View {
     
@@ -25,9 +26,7 @@ public struct MainTabBar: View {
     }
     
     var allBreedsView: some View {
-        let repository = BreedsRepository(service: WebService())
-        let useCase = BreedsUseCase(repository: repository)
-        let viewModel = BreedsViewModel(breedsUseCase: useCase)
+        let viewModel = BreedsViewModel(breedsUseCase: DIContainer.shared.resolve(type: BreedsUseCaseProtocol.self)!)
         return BreedsView(viewModel: viewModel)
     }
     
