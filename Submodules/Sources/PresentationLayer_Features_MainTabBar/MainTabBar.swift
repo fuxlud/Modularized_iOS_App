@@ -5,7 +5,6 @@ import DataLayer
 import PresentationLayer_Features_AllBreeds
 import PresentationLayer_Features_DetailsScreen
 import PresentationLayer_Features_FavoritesScreen
-import DependencyContainer
 
 public struct MainTabBar: View {
     

@@ -4,7 +4,7 @@ import PresentationLayer_Features_AllBreeds
 import PresentationLayer_Features_MainTabBar
 import Networking
 import DataLayer
-import DependencyContainer
+
 @main
 
 struct ApplicationNameApp: App {
