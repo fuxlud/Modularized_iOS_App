@@ -1,7 +1,7 @@
 import SwiftUI
 import DomainLayer
 import PresentationLayer_DesignSystem
-import PresentationLayer_Features_DetailsScreen //TODO: Take only the card
+import PresentationLayer_Features_DetailsScreen
 public struct FavoritesView: View {
     
     var viewModel: FavoritesViewModel

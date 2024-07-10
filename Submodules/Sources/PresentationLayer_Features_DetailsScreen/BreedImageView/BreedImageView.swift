@@ -1,7 +1,6 @@
 import SwiftUI
 import DomainLayer
 import PresentationLayer_DesignSystem
-import DataLayer // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
 
 public struct BreedImageView: View {
     private var viewModel: BreedImageViewModel
