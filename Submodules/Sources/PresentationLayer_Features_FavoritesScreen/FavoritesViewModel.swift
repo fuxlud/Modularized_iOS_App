@@ -65,7 +65,7 @@ import Networking // TODO: Should move to Dependency Container. Is here becouse 
     
     private func fillBreedDetails(_ breedDetails: [BreedDetailsEntity]) {
         let repository = BreedDetailsRepository(service: WebService(), favoritesManager: FavoritesManager.shared) //Move to Devendency container
-        let favoritingUseCase = FavoriteUseCase(repository: repository)
+        let favoritingUseCase = FavoritingUseCase(repository: repository)
         let detailsCardViewModels = breedDetails.map {
             BreedImageViewModel(breedDetails: $0, favoritingUseCase: favoritingUseCase)
         }
@@ -82,7 +82,7 @@ import Networking // TODO: Should move to Dependency Container. Is here becouse 
     
     private func updateViewModels(with breedDetails: [BreedDetailsEntity]) {
         let repository = BreedDetailsRepository(service: WebService(), favoritesManager: FavoritesManager.shared)
-        let favoritingUseCase = FavoriteUseCase(repository: repository)
+        let favoritingUseCase = FavoritingUseCase(repository: repository)
         let detailsCardViewModels = breedDetails.map {
             BreedImageViewModel(breedDetails: $0, favoritingUseCase: favoritingUseCase)
         }

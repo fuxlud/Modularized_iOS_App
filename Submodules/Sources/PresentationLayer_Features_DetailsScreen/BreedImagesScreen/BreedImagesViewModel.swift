@@ -102,7 +102,7 @@ public class BreedImagesViewModel: ObservableObject {
     @MainActor
     private func fillBreedDetails(_ breedDetails: [BreedDetailsEntity]) {
         let repository = BreedDetailsRepository(service: WebService(), favoritesManager: FavoritesManager.shared) //Move to Devendency container
-        let favoritingUseCase = FavoriteUseCase(repository: repository)
+        let favoritingUseCase = FavoritingUseCase(repository: repository)
         let detailsCardViewModels = breedDetails.map {
             BreedImageViewModel(breedDetails: $0,
                                  favoritingUseCase: favoritingUseCase) }
