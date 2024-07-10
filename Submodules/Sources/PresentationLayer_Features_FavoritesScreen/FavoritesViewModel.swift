@@ -64,10 +64,8 @@ import Networking // TODO: Should move to Dependency Container. Is here becouse 
     }
     
     private func fillBreedDetails(_ breedDetails: [BreedDetailsEntity]) {
-        let repository = BreedDetailsRepository(service: WebService(), favoritesManager: FavoritesManager.shared) //Move to Devendency container
-        let favoritingUseCase = FavoritingUseCase(repository: repository)
         let detailsCardViewModels = breedDetails.map {
-            BreedImageViewModel(breedDetails: $0, favoritingUseCase: favoritingUseCase)
+            BreedImageViewModel(breedDetails: $0, favoritingUseCase: DIContainer.shared.resolve(type: FavoritingUseCaseProtocol.self)!)
         }
         state = .idle(data: detailsCardViewModels)
     }
@@ -81,10 +79,8 @@ import Networking // TODO: Should move to Dependency Container. Is here becouse 
     }
     
     private func updateViewModels(with breedDetails: [BreedDetailsEntity]) {
-        let repository = BreedDetailsRepository(service: WebService(), favoritesManager: FavoritesManager.shared)
-        let favoritingUseCase = FavoritingUseCase(repository: repository)
         let detailsCardViewModels = breedDetails.map {
-            BreedImageViewModel(breedDetails: $0, favoritingUseCase: favoritingUseCase)
+            BreedImageViewModel(breedDetails: $0, favoritingUseCase: DIContainer.shared.resolve(type: FavoritingUseCaseProtocol.self)!)
         }
         state = .idle(data: detailsCardViewModels)
     }

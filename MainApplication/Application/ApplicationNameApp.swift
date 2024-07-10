@@ -22,6 +22,9 @@ struct ApplicationNameApp: App {
         
         container.register(type: FetchFavoritesUseCaseProtocol.self, component:
                             FetchFavoritesUseCase(repository: breedDetailsRepository))
+        
+        container.register(type: FavoritingUseCaseProtocol.self, component: FavoritingUseCase(repository: breedDetailsRepository))
+
     }
     
     var body: some Scene {
