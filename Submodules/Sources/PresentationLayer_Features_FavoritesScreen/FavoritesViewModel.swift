@@ -1,9 +1,7 @@
 import Combine
 import Foundation
 import DomainLayer
-import DataLayer // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
-import PresentationLayer_Features_DetailsScreen //TODO: Consider taking out the card into a seperate module
-import Networking // TODO: Should move to Dependency Container. Is here becouse of FavoritesManager creation
+import PresentationLayer_Features_DetailsScreen
 
 @MainActor
 @Observable public class FavoritesViewModel {
