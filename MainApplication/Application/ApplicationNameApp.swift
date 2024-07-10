@@ -11,12 +11,15 @@ struct ApplicationNameApp: App {
     
     init() {
         let container = DIContainer.shared
-        container.register(type: BreedsUseCaseProtocol.self, component:
-                            BreedsUseCase(repository: BreedsRepository(service: WebService())))
-        
+        let webService = WebService()
         let favoritesManager = FavoritesManager.shared
-        let breedDetailsRepository =  BreedDetailsRepository(service: WebService(),
+        let breedDetailsRepository =  BreedDetailsRepository(service: webService,
                                                  favoritesManager: favoritesManager)
+        
+        container.register(type: BreedsUseCaseProtocol.self, component:
+                            BreedsUseCase(repository: BreedsRepository(service: webService)))
+        
+        
         container.register(type: FetchFavoritesUseCaseProtocol.self, component:
                             FetchFavoritesUseCase(repository: breedDetailsRepository))
     }
