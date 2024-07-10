@@ -11,7 +11,6 @@ struct ApplicationNameApp: App {
     
     init() {
         registratingComponentsIntoDIContainer()
-
     }
     
     private func registratingComponentsIntoDIContainer() {
