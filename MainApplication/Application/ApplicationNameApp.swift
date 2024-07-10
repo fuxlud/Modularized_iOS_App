@@ -10,6 +10,11 @@ import DataLayer
 struct ApplicationNameApp: App {
     
     init() {
+        registratingComponentsIntoDIContainer()
+
+    }
+    
+    private func registratingComponentsIntoDIContainer() {
         let container = DIContainer.shared
         let webService = WebService()
         let favoritesManager = FavoritesManager.shared
@@ -24,7 +29,8 @@ struct ApplicationNameApp: App {
                             FetchFavoritesUseCase(repository: breedDetailsRepository))
         
         container.register(type: FavoritingUseCaseProtocol.self, component: FavoritingUseCase(repository: breedDetailsRepository))
-
+        
+        container.register(type: BreedDetailsUseCaseProtocol.self, component: BreedDetailsUseCase(repository: breedDetailsRepository))
     }
     
     var body: some Scene {
