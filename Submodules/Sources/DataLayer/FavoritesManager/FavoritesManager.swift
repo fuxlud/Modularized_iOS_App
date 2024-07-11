@@ -8,11 +8,11 @@ public protocol FavoritesManagerProtocol {
     var favoriteBreedsPublisher: AnyPublisher<Set<BreedDetailsDTO>, Never> { get }
 }
 
-public actor FavoritesManager: @preconcurrency FavoritesManagerProtocol {
+public actor FavoritesManager: ObservableObject, @preconcurrency FavoritesManagerProtocol {
     
     public static let shared = FavoritesManager()
     
-    private var favoriteBreeds: Set<BreedDetailsDTO> = []
+    @Published private var favoriteBreeds: Set<BreedDetailsDTO> = []
     private let persistence: PersistenceProtocol
     private let favoriteBreedsSubject = CurrentValueSubject<Set<BreedDetailsDTO>, Never>([])
     
