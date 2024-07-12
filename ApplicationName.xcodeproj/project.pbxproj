@@ -24,7 +24,6 @@
 		38C328E42C380D0D00352124 /* DomainLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E32C380D0D00352124 /* DomainLayer */; };
 		38C328E62C380DD600352124 /* PresentationLayer_Features_AllBreeds in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E52C380DD600352124 /* PresentationLayer_Features_AllBreeds */; };
 		38C328EA2C38335800352124 /* PresentationLayer_Features_MainTabBar in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E92C38335800352124 /* PresentationLayer_Features_MainTabBar */; };
-		38F817B02C4055180045BE3C /* DIContainerRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F817AF2C4055070045BE3C /* DIContainerRegistration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +55,6 @@
 		384B67062C342C4000E8CE68 /* CardPreviewAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardPreviewAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		384B67102C342C4000E8CE68 /* CardPreviewAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardPreviewAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		387B06D42C3BD4770082EDBF /* Submodules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Submodules; sourceTree = "<group>"; };
-		38F817AF2C4055070045BE3C /* DIContainerRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainerRegistration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +143,6 @@
 		1938879C2C1E170F00CF2029 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				38F817AF2C4055070045BE3C /* DIContainerRegistration.swift */,
 				19268D252C1E07550014E23E /* ApplicationNameApp.swift */,
 			);
 			path = Application;
@@ -358,7 +355,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				19268D262C1E07550014E23E /* ApplicationNameApp.swift in Sources */,
-				38F817B02C4055180045BE3C /* DIContainerRegistration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

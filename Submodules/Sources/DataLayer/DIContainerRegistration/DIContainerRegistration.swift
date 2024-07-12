@@ -1,10 +1,9 @@
 import DomainLayer
 import Networking
-import DataLayer
 
-struct DIContainerRegistration {
+public struct DIContainerRegistration {
   
-  static func registerComponents() {
+  public static func registerComponents() {
     let container = DIContainer.shared
     let webService = WebService()
     let favoritesManager = FavoritesManager.shared
