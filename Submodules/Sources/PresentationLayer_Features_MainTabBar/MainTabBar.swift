@@ -25,18 +25,13 @@ public struct MainTabBar: View {
     }
     
     var allBreedsView: some View {
-        let repository = BreedsRepository(service: WebService())
-        let useCase = BreedsUseCase(repository: repository)
-        let viewModel = BreedsViewModel(breedsUseCase: useCase)
+        let viewModel = BreedsViewModel(breedsUseCase: DIContainer.shared.resolve(type: BreedsUseCaseProtocol.self)!)
         return BreedsView(viewModel: viewModel)
     }
     
     var favorites: some View {
-        let favoritesManager = FavoritesManager.shared
-        let repository =  BreedDetailsRepository(service: WebService(),
-                                                 favoritesManager: favoritesManager)
-        let useCase = FetchFavoritesUseCase(repository: repository)
-        let viewModel = FavoritesViewModel(favoritesUseCase: useCase)
+
+        let viewModel = FavoritesViewModel(favoritesUseCase: DIContainer.shared.resolve(type: FetchFavoritesUseCaseProtocol.self)!)
         return FavoritesView(viewModel: viewModel)
     }
 }

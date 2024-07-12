@@ -4,7 +4,7 @@ public protocol FavoritingUseCaseProtocol {
     func toggleLiking(breedDetailsEntity: BreedDetailsEntity)
 }
 
-public struct FavoriteUseCase: FavoritingUseCaseProtocol {
+public struct FavoritingUseCase: FavoritingUseCaseProtocol {
     private let repository: any BreedDetailsRepositoryProtocol
 
     public init(repository: any BreedDetailsRepositoryProtocol) {
