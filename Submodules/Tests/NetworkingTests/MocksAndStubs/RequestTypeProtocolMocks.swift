@@ -1,5 +1,5 @@
 import Foundation
-@testable import Networking
+@testable import InfrastructureLayer
 
 struct MockGetTestingStubDetails: RequestTypeProtocol {
     typealias ResponseType = [String: [TestingStub]]

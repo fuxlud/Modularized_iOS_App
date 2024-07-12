@@ -10,7 +10,6 @@
 		19268D262C1E07550014E23E /* ApplicationNameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19268D252C1E07550014E23E /* ApplicationNameApp.swift */; };
 		19268D2C2C1E07560014E23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2B2C1E07560014E23E /* Assets.xcassets */; };
 		19268D2F2C1E07560014E23E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19268D2E2C1E07560014E23E /* Preview Assets.xcassets */; };
-		1951EF202C23922100BD3A16 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 1951EF1F2C23922100BD3A16 /* Networking */; };
 		384B66FA2C342C3A00E8CE68 /* CardPreviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B66F92C342C3A00E8CE68 /* CardPreviewApp.swift */; };
 		384B66FE2C342C3F00E8CE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B66FD2C342C3F00E8CE68 /* Assets.xcassets */; };
 		384B67012C342C3F00E8CE68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B67002C342C3F00E8CE68 /* Preview Assets.xcassets */; };
@@ -24,6 +23,7 @@
 		38C328E42C380D0D00352124 /* DomainLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E32C380D0D00352124 /* DomainLayer */; };
 		38C328E62C380DD600352124 /* PresentationLayer_Features_AllBreeds in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E52C380DD600352124 /* PresentationLayer_Features_AllBreeds */; };
 		38C328EA2C38335800352124 /* PresentationLayer_Features_MainTabBar in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E92C38335800352124 /* PresentationLayer_Features_MainTabBar */; };
+		38F817B22C413AB90045BE3C /* InfrastructureLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 38F817B12C413AB90045BE3C /* InfrastructureLayer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +63,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				38706BDC2C38094E00BFB70B /* DataLayer in Frameworks */,
+				38F817B22C413AB90045BE3C /* InfrastructureLayer in Frameworks */,
 				38C328E42C380D0D00352124 /* DomainLayer in Frameworks */,
 				38C328E62C380DD600352124 /* PresentationLayer_Features_AllBreeds in Frameworks */,
 				387B06D22C39B2160082EDBF /* PresentationLayer_Features_FavoritesScreen in Frameworks */,
-				1951EF202C23922100BD3A16 /* Networking in Frameworks */,
 				38C328E22C380CF500352124 /* PresentationLayer_Features_DetailsScreen in Frameworks */,
 				38C328EA2C38335800352124 /* PresentationLayer_Features_MainTabBar in Frameworks */,
 				38C328E02C380C6700352124 /* PresentationLayer_DesignSystem in Frameworks */,
@@ -192,7 +192,6 @@
 			);
 			name = MainApplication;
 			packageProductDependencies = (
-				1951EF1F2C23922100BD3A16 /* Networking */,
 				38706BDB2C38094E00BFB70B /* DataLayer */,
 				38C328DF2C380C6700352124 /* PresentationLayer_DesignSystem */,
 				38C328E12C380CF500352124 /* PresentationLayer_Features_DetailsScreen */,
@@ -200,6 +199,7 @@
 				38C328E52C380DD600352124 /* PresentationLayer_Features_AllBreeds */,
 				38C328E92C38335800352124 /* PresentationLayer_Features_MainTabBar */,
 				387B06D12C39B2160082EDBF /* PresentationLayer_Features_FavoritesScreen */,
+				38F817B12C413AB90045BE3C /* InfrastructureLayer */,
 			);
 			productName = LudushRecipes;
 			productReference = 19268D222C1E07550014E23E /* MainApplication.app */;
@@ -766,10 +766,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1951EF1F2C23922100BD3A16 /* Networking */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Networking;
-		};
 		19C199CD2C2A01B900F5E184 /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
@@ -817,6 +813,10 @@
 		38C328E92C38335800352124 /* PresentationLayer_Features_MainTabBar */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PresentationLayer_Features_MainTabBar;
+		};
+		38F817B12C413AB90045BE3C /* InfrastructureLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = InfrastructureLayer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

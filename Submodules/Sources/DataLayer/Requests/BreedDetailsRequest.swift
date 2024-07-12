@@ -1,6 +1,6 @@
 import Foundation
 import DomainLayer
-import Networking
+import InfrastructureLayer
 
 protocol BreedDetailsService {
     func getBreedDetails(breedName: String) async throws -> [BreedDetailsDTO]

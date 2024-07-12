@@ -1,6 +1,7 @@
 import Foundation
 import DomainLayer
 import Combine
+import InfrastructureLayer
 
 public class BreedImagesViewModel: ObservableObject {
     public let id = UUID()

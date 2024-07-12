@@ -1,5 +1,5 @@
 import Foundation
-@testable import Networking
+@testable import InfrastructureLayer
 
 struct MockWebService: WebServiceProtocol {
     var router: NetworkRouterProtocol!

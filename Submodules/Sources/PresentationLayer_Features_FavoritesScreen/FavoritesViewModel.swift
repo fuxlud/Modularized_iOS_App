@@ -2,6 +2,7 @@ import Combine
 import Foundation
 import DomainLayer
 import PresentationLayer_Features_DetailsScreen
+import InfrastructureLayer
 
 @MainActor
 @Observable public class FavoritesViewModel {

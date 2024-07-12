@@ -1,6 +1,6 @@
 import Foundation
 import DomainLayer
-import Networking
+import InfrastructureLayer
 
 public struct BreedsRepository: BreedsRepositoryProtocol {
     

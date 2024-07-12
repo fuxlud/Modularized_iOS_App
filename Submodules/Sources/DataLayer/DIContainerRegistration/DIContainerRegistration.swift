@@ -1,5 +1,5 @@
 import DomainLayer
-import Networking
+import InfrastructureLayer
 
 public struct DIContainerRegistration {
   

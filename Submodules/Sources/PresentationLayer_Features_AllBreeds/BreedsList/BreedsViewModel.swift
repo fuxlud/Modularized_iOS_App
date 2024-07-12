@@ -3,6 +3,7 @@ import SwiftUI
 import DomainLayer
 import PresentationLayer_DesignSystem
 import PresentationLayer_Features_DetailsScreen
+import InfrastructureLayer
 
 @Observable public class BreedsViewModel {
     public let id = UUID()

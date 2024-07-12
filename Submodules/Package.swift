@@ -5,9 +5,10 @@ let package = Package(
     name: "Submodules",
     platforms: [.iOS(.v18)],
     products: [
+        .library(name: "PresentationLayer_Features_FavoritesScreen", targets: ["PresentationLayer_Features_FavoritesScreen"]),
         .library(name: "DomainLayer", targets: ["DomainLayer"]),
         .library(name: "DataLayer", targets: ["DataLayer"]),
-        .library(name: "Networking", targets: ["Networking"]),
+        .library(name: "InfrastructureLayer", targets: ["InfrastructureLayer"]),
         .library(name: "PresentationLayer_DesignSystem", targets: ["PresentationLayer_DesignSystem"]),
         .library(name: "PresentationLayer_Features_AllBreeds", targets: ["PresentationLayer_Features_AllBreeds"]),
         .library(name: "PresentationLayer_Features_MainTabBar", targets: ["PresentationLayer_Features_MainTabBar"]),
@@ -24,12 +25,12 @@ let package = Package(
             dependencies: ["DomainLayer"]
         ),
         .target(
-            name: "Networking",
+            name: "InfrastructureLayer",
             dependencies: []
         ),
         .target(
             name: "DataLayer",
-            dependencies: ["DomainLayer", "Networking"]
+            dependencies: ["DomainLayer", "InfrastructureLayer"]
         ),
         .target(
             name: "PresentationLayer_DesignSystem",
@@ -63,7 +64,7 @@ let package = Package(
         ),
         .testTarget(
             name: "NetworkingTests",
-            dependencies: ["Networking"]
+            dependencies: ["InfrastructureLayer"]
         ),
         .testTarget(
             name: "PresentationLayer_Features_AllBreedsTests",

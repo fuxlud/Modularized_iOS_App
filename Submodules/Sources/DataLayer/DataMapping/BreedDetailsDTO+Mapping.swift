@@ -1,6 +1,5 @@
 import Foundation
 import DomainLayer
-import Networking
 
 extension BreedDetailsDTO {
     func toBreedDetailsEntity() -> BreedDetailsEntity {

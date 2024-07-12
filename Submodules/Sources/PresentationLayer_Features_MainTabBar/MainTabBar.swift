@@ -1,7 +1,7 @@
 import SwiftUI
 import DomainLayer
-import Networking
 import DataLayer
+import InfrastructureLayer
 import PresentationLayer_Features_AllBreeds
 import PresentationLayer_Features_DetailsScreen
 import PresentationLayer_Features_FavoritesScreen

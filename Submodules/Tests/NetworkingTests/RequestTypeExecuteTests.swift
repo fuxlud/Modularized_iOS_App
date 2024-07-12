@@ -1,6 +1,6 @@
 import Testing
 import Foundation
-@testable import Networking
+@testable import InfrastructureLayer
 
 struct RequestTypeExecuteTests {
     
