@@ -5,7 +5,6 @@ import PresentationLayer_DesignSystem
 public struct BreedImageView: View {
     private var viewModel: BreedImageViewModel
     private let tileSize: CGFloat
-    private let padding: CGFloat = 3
     
     public init(viewModel: BreedImageViewModel, tileSize: CGFloat) {
         self.viewModel = viewModel
@@ -18,7 +17,8 @@ public struct BreedImageView: View {
                 ZStack {
                     URLImage(imageUrl)
                         .frame(width: tileSize, height: tileSize)
-                    favoriteButton
+                    FavoriteButton(isOn: viewModel.isFavorite,
+                                   action: { viewModel.likeButtonTapped() } )
                 }
                 .frame(width: tileSize, height: tileSize)
             }
@@ -26,30 +26,6 @@ public struct BreedImageView: View {
         .background(Color.white)
         .cornerRadius(8)
         .shadow(color: Color(.black).opacity(0.2), radius: 5, x: 0, y: 5)
-    }
-    
-    var favoriteButton: some View {
-        VStack {
-            Spacer()
-            HStack {
-                Spacer()
-                Button(action: {
-                    viewModel.likeButtonTapped()
-                }) {
-                    Group {
-                        if viewModel.isFavorite {
-                            Image(systemName: "heart.fill")
-                        } else {
-                            Image(systemName: "heart")
-                        }
-                    }
-                    .font(.system(size: 28, weight: .medium))
-                    .foregroundColor(.white)
-                }
-            }
-            .padding(padding)
-        }
-        .padding(padding)
     }
 }
 
