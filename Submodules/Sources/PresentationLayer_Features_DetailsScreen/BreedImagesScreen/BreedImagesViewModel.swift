@@ -3,9 +3,10 @@ import DomainLayer
 import Combine
 import InfrastructureLayer
 
-public class BreedImagesViewModel: ObservableObject {
+@Observable
+public class BreedImagesViewModel {
     public let id = UUID()
-    @Published public var state: ViewState<[BreedImageViewModel]> = .idle(data: [])
+    public var state: ViewState<[BreedImageViewModel]> = .idle(data: [])
 
     private var breedName: String
     private let breedDetailsUseCase: BreedDetailsUseCaseProtocol

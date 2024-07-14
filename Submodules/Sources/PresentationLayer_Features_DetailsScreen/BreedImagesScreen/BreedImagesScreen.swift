@@ -4,11 +4,11 @@ import PresentationLayer_DesignSystem
 
 public struct BreedImagesScreen: View {
     
-    @StateObject var viewModel: BreedImagesViewModel
+    var viewModel: BreedImagesViewModel
     
-    public init( viewModel: @autoclosure @escaping () -> BreedImagesViewModel ) {
-            _viewModel = StateObject(wrappedValue: viewModel())
-        }
+    public init(viewModel: BreedImagesViewModel) {
+        self.viewModel = viewModel
+    }
     
     let tileSize: CGFloat = 100
     let spacing: CGFloat = 20
