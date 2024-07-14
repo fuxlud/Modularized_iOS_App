@@ -5,7 +5,6 @@ let package = Package(
     name: "Submodules",
     platforms: [.iOS(.v18)],
     products: [
-        .library(name: "PresentationLayer_Features_FavoritesScreen", targets: ["PresentationLayer_Features_FavoritesScreen"]),
         .library(name: "DomainLayer", targets: ["DomainLayer"]),
         .library(name: "DataLayer", targets: ["DataLayer"]),
         .library(name: "InfrastructureLayer", targets: ["InfrastructureLayer"]),
