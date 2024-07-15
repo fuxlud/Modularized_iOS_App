@@ -9,7 +9,7 @@ public struct BreedsView: View {
     let spacing: CGFloat = 20
     
     var viewModel: BreedsViewModel
-    @State private var selectedBreedViewModel: BreedImagesViewModel?
+    private var selectedBreedViewModel: BreedImagesViewModel?
     
     public init(viewModel: BreedsViewModel) {
         self.viewModel = viewModel

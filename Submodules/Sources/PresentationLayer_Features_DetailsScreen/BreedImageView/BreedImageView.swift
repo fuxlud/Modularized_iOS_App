@@ -3,7 +3,7 @@ import DomainLayer
 import PresentationLayer_DesignSystem
 
 public struct BreedImageView: View {
-    @State private var viewModel: BreedImageViewModel
+    private var viewModel: BreedImageViewModel
     private let tileSize: CGFloat
     
     public init(viewModel: BreedImageViewModel, tileSize: CGFloat) {

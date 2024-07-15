@@ -4,7 +4,7 @@ import PresentationLayer_DesignSystem
 
 public struct BreedImagesScreen: View {
     
-    @State var viewModel: BreedImagesViewModel
+    var viewModel: BreedImagesViewModel
     
     public init(viewModel: BreedImagesViewModel) {
         self.viewModel = viewModel

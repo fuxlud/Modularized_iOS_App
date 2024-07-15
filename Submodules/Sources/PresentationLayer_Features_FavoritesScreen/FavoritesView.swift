@@ -2,9 +2,10 @@ import SwiftUI
 import DomainLayer
 import PresentationLayer_DesignSystem
 import PresentationLayer_Features_DetailsScreen
+
 public struct FavoritesView: View {
     
-    @State var viewModel: FavoritesViewModel
+    var viewModel: FavoritesViewModel
     
     public init(viewModel: FavoritesViewModel) {
         self.viewModel = viewModel
