@@ -1,8 +1,8 @@
 import Combine
 import SwiftUI
 
-@Observable class RemoteImageLoader {
-
+@Observable 
+class RemoteImageLoader {
     var data: Data = Data()
 
     init(imageURL: URL) {
@@ -15,7 +15,7 @@ import SwiftUI
 }
 
 public struct URLImage: View {
-    var remoteImageLoader: RemoteImageLoader
+    @State var remoteImageLoader: RemoteImageLoader
 
     public init(_ imageUrl: URL) {
         remoteImageLoader = RemoteImageLoader(imageURL: imageUrl)

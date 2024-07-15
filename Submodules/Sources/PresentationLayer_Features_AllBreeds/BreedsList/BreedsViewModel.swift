@@ -5,7 +5,8 @@ import PresentationLayer_DesignSystem
 import PresentationLayer_Features_DetailsScreen
 import InfrastructureLayer
 
-@Observable public class BreedsViewModel {
+@Observable 
+public class BreedsViewModel {
     public let id = UUID()
     public var state: ViewState<[BreedViewModel]> = .idle(data: [])
     

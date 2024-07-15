@@ -1,7 +1,8 @@
 import Foundation
 import DomainLayer
 
-@Observable public class BreedViewModel: Identifiable {
+@Observable 
+public class BreedViewModel: Identifiable {
     private let breed: BreedEntity
     public let id = UUID()
     

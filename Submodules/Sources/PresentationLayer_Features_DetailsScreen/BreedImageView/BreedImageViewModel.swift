@@ -2,7 +2,8 @@ import Foundation
 import DomainLayer
 import DataLayer
 
-@Observable public class BreedImageViewModel: Identifiable {
+@Observable 
+public class BreedImageViewModel: Identifiable {
     var breedDetails: BreedDetailsEntity
     private var favoritingUseCase: FavoritingUseCaseProtocol
     public let id = UUID()

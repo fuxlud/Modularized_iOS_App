@@ -3,7 +3,7 @@ import DomainLayer
 import PresentationLayer_DesignSystem
 
 public struct BreedView: View {
-  var viewModel: BreedViewModel
+  @State var viewModel: BreedViewModel
   
   public init(viewModel: BreedViewModel) {
     self.viewModel = viewModel
