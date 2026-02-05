@@ -15,11 +15,16 @@ public extension RequestTypeProtocol {
     func execute(on router: NetworkRouterProtocol) async throws -> Any {
         let data = try await router.request(request)
         
-        if let responseData = data, // String(data: data!, encoding: .utf8)
-           let decodedData = try? JSONDecoder().decode(ResponseType.self, from: responseData) {
-            return decodedData
+        guard let responseData = data else {
+            throw RequestError.badlyFormattedResponse
+        }
 
-        } else {
+        do {
+            return try JSONDecoder().decode(ResponseType.self, from: responseData)
+        } catch {
+            let responseString = String(data: responseData, encoding: .utf8) ?? "<non-utf8 response>"
+            print("Decoding failed for \(ResponseType.self). Response body:")
+            print(responseString)
             throw RequestError.badlyFormattedResponse
         }
     }
