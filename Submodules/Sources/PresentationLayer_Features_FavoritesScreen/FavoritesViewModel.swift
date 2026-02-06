@@ -1,6 +1,7 @@
 import Combine
 import Foundation
 import DomainLayer
+import DataLayer
 import PresentationLayer_Features_DetailsScreen
 import InfrastructureLayer
 
@@ -73,7 +74,7 @@ import InfrastructureLayer
     }
     
     private func handleError(_ error: Error) {
-        let errorEntity = (error as? ErrorEntity) ?? ErrorEntity.from(error)
+        let errorEntity = ErrorMapper.toErrorEntity(error)
         state = .error(message: errorEntity.description)
     }
     

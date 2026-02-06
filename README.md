@@ -16,9 +16,6 @@ It can be used as a starting point for a project. Simply delete unneeded targets
 ## Tech Backlog
 * Replace Combine publisher with AsyncStream to avoid @preconcurrency
 
-**Now**
-* Centralize network error -> ErrorEntity mapping for consistent UI messages.
-
 **Next**
 * Add in-memory cache for breeds list to avoid refetch on tab switch.
 * Improve image loading with caching + retry.
