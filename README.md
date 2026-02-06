@@ -20,7 +20,6 @@ It can be used as a starting point for a project. Simply delete unneeded targets
 * Add a clear user-facing error for TLS/ATS failures (explain TLS inspection).
 * Remove the unused x-api-key header for dog.ceo (or make it host-specific).
 * Centralize network error -> ErrorEntity mapping for consistent UI messages.
-* Add non-interesting files to .gitignore (breakpoints, user interface state).
 
 **Next**
 * Add in-memory cache for breeds list to avoid refetch on tab switch.
