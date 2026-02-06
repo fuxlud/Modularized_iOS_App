@@ -75,11 +75,8 @@ public class BreedsViewModel {
     
     @MainActor
     private func handleError(_ error: Error) {
-        guard let error = error as? ErrorEntity else {
-            state = .error(message: error.localizedDescription)
-            return
-        }
-        state = .error(message: error.description)
+        let errorEntity = (error as? ErrorEntity) ?? ErrorEntity.from(error)
+        state = .error(message: errorEntity.description)
     }
 
     private func subscribeToFavorites() {
