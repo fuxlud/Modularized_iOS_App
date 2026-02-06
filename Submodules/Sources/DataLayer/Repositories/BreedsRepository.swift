@@ -2,7 +2,7 @@ import Foundation
 import DomainLayer
 import InfrastructureLayer
 
-public struct BreedsRepository: BreedsRepositoryProtocol {
+public struct BreedsRepository: BreedsRepositoryProtocol, Sendable {
     
     private let service: WebService
 

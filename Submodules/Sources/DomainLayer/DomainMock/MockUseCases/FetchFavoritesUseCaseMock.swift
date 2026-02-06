@@ -1,6 +1,6 @@
-import Combine
+@preconcurrency import Combine
 
-public struct FetchFavoritesUseCaseMock: FetchFavoritesUseCaseProtocol {
+public struct FetchFavoritesUseCaseMock: FetchFavoritesUseCaseProtocol, @unchecked Sendable {
   public var itemsPublisher: AnyPublisher<[BreedDetailsEntity], Never>
   
   let breedDetails: [BreedDetailsEntity]

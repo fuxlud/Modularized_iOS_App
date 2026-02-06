@@ -1,6 +1,6 @@
 import Foundation
 
-public struct BreedDetailsEntity: Codable {
+public struct BreedDetailsEntity: Codable, Sendable {
     public let url: URL
     public var isFavorite = false
     

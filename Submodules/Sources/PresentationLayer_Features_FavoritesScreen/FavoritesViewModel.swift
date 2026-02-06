@@ -10,10 +10,13 @@ import InfrastructureLayer
     public var state: ViewState<[BreedImageViewModel]> = .idle(data: [])
     
     private let favoritesUseCase: FetchFavoritesUseCaseProtocol
+    private let favoritingUseCase: FavoritingUseCaseProtocol
     private var cancellables = Set<AnyCancellable>()
     
-    public init(favoritesUseCase: FetchFavoritesUseCaseProtocol) {
+    public init(favoritesUseCase: FetchFavoritesUseCaseProtocol,
+                favoritingUseCase: FavoritingUseCaseProtocol) {
         self.favoritesUseCase = favoritesUseCase
+        self.favoritingUseCase = favoritingUseCase
         subscribeToUpdates()
     }
     
@@ -64,7 +67,7 @@ import InfrastructureLayer
     
     private func fillBreedDetails(_ breedDetails: [BreedDetailsEntity]) {
         let detailsCardViewModels = breedDetails.map {
-            BreedImageViewModel(breedDetails: $0, favoritingUseCase: DIContainer.shared.resolve(type: FavoritingUseCaseProtocol.self)!)
+            BreedImageViewModel(breedDetails: $0, favoritingUseCase: favoritingUseCase)
         }
         state = .idle(data: detailsCardViewModels)
     }
@@ -79,7 +82,7 @@ import InfrastructureLayer
     
     private func updateViewModels(with breedDetails: [BreedDetailsEntity]) {
         let detailsCardViewModels = breedDetails.map {
-            BreedImageViewModel(breedDetails: $0, favoritingUseCase: DIContainer.shared.resolve(type: FavoritingUseCaseProtocol.self)!)
+            BreedImageViewModel(breedDetails: $0, favoritingUseCase: favoritingUseCase)
         }
         state = .idle(data: detailsCardViewModels)
     }

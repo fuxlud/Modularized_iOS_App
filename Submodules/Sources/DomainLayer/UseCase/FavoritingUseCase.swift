@@ -1,13 +1,13 @@
 import Foundation
 
-public protocol FavoritingUseCaseProtocol {
+public protocol FavoritingUseCaseProtocol: Sendable {
     func toggleLiking(breedDetailsEntity: BreedDetailsEntity)
 }
 
-public struct FavoritingUseCase: FavoritingUseCaseProtocol {
-    private let repository: any BreedDetailsRepositoryProtocol
+public struct FavoritingUseCase: FavoritingUseCaseProtocol, Sendable {
+    private let repository: any BreedDetailsRepositoryProtocol & Sendable
 
-    public init(repository: any BreedDetailsRepositoryProtocol) {
+    public init(repository: any BreedDetailsRepositoryProtocol & Sendable) {
         self.repository = repository
     }
     

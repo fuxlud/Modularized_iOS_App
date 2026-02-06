@@ -14,6 +14,9 @@ It can be used as a starting point for a project. Simply delete unneeded targets
 * Reactive State Management of shared state with **Combine**
 
   **(TODO: Add Combine to the first tab)**
+
+## Tech Backlog
+* Replace Combine publisher with AsyncStream to avoid @preconcurrency
   
 ## Modularization
 Few words on the [Benefits of Modularization](https://www.ludafux.com/post/the-benefits-of-modularization) on my blog.
@@ -23,5 +26,4 @@ Few words on the [Consolidated ViewState](https://www.ludafux.com/post/consolida
 
 ## SwiftUI
 Few words on the **.executeOnceOnAppear** on my blog: [The ViewDidLoad Doppelgänger in SwiftUI](https://www.ludafux.com/post/viewdidload_doppelganger). 
-
 

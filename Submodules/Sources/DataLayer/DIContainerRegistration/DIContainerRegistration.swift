@@ -1,6 +1,7 @@
 import DomainLayer
 import InfrastructureLayer
 
+@MainActor
 public struct DIContainerRegistration {
   
   public static func registerComponents() {

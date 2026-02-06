@@ -1,13 +1,13 @@
 import Foundation
 
-public protocol BreedDetailsUseCaseProtocol {
+public protocol BreedDetailsUseCaseProtocol: Sendable {
     func getBreedDetails(breedName: String) async throws -> [BreedDetailsEntity]
 }
 
-public struct BreedDetailsUseCase: BreedDetailsUseCaseProtocol {
-    private let repository: BreedDetailsRepositoryProtocol
+public struct BreedDetailsUseCase: BreedDetailsUseCaseProtocol, Sendable {
+    private let repository: any BreedDetailsRepositoryProtocol & Sendable
     
-    public init(repository: BreedDetailsRepositoryProtocol) {
+    public init(repository: any BreedDetailsRepositoryProtocol & Sendable) {
         self.repository = repository
     }
     

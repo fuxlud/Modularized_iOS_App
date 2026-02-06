@@ -1,9 +1,9 @@
-import Combine
+@preconcurrency import Combine
 import Foundation
 import DomainLayer
 import InfrastructureLayer
 
-public struct BreedDetailsRepository: BreedDetailsRepositoryProtocol {
+public struct BreedDetailsRepository: BreedDetailsRepositoryProtocol, Sendable {
     private let service: WebService
     private let favoritesManager: FavoritesManagerProtocol
     

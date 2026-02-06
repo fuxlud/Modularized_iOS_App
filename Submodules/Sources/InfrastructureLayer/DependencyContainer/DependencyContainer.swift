@@ -1,20 +1,20 @@
-protocol DIContainerProtocol {
-  func register<Component>(type: Component.Type, component: Any)
+@MainActor
+public protocol DIContainerProtocol {
+  func register<Component>(type: Component.Type, component: Component)
   func resolve<Component>(type: Component.Type) -> Component?
 }
 
+@MainActor
 public final class DIContainer: DIContainerProtocol {
   public static let shared = DIContainer()
-  
   private init() {}
+  private var components: [ObjectIdentifier: Any] = [:]
 
-  var components: [String: Any] = [:]
-
-  public func register<Component>(type: Component.Type, component: Any) {
-    components["\(type)"] = component
+  public func register<Component>(type: Component.Type, component: Component) {
+    components[ObjectIdentifier(type)] = component
   }
 
   public func resolve<Component>(type: Component.Type) -> Component? {
-    return components["\(type)"] as? Component
+    components[ObjectIdentifier(type)] as? Component
   }
 }

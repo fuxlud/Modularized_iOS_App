@@ -1,15 +1,15 @@
 import Foundation
-import Combine
+@preconcurrency import Combine
 
-public protocol FetchFavoritesUseCaseProtocol {
+public protocol FetchFavoritesUseCaseProtocol: Sendable {
     func fetchFavorites() async -> [BreedDetailsEntity]
     var itemsPublisher: AnyPublisher<[BreedDetailsEntity], Never> { get }
 }
 
-public struct FetchFavoritesUseCase: FetchFavoritesUseCaseProtocol {
-    private let repository: any BreedDetailsRepositoryProtocol
+public struct FetchFavoritesUseCase: FetchFavoritesUseCaseProtocol, Sendable {
+    private let repository: any BreedDetailsRepositoryProtocol & Sendable
 
-    public init(repository: any BreedDetailsRepositoryProtocol) {
+    public init(repository: any BreedDetailsRepositoryProtocol & Sendable) {
         self.repository = repository
     }
 

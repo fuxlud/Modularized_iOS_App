@@ -6,13 +6,16 @@ import DataLayer
 
 struct ApplicationNameApp: App {
     
+    private let dependencies: AppDependencies
+    
     init() {
         DIContainerRegistration.registerComponents()
+        self.dependencies = AppDependencies.resolve()
     }
     
     var body: some Scene {
         WindowGroup {
-            MainTabBar()
+            MainTabBar(dependencies: dependencies)
         }
     }
 }

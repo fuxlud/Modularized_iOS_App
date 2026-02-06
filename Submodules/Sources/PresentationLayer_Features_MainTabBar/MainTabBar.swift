@@ -8,7 +8,11 @@ import PresentationLayer_Features_FavoritesScreen
 
 public struct MainTabBar: View {
     
-    public init() {}
+    private let dependencies: AppDependencies
+    
+    public init(dependencies: AppDependencies) {
+        self.dependencies = dependencies
+    }
     
     public var body: some View {
         TabView {
@@ -25,13 +29,21 @@ public struct MainTabBar: View {
     }
     
     var allBreedsView: some View {
-        let viewModel = BreedsViewModel(breedsUseCase: DIContainer.shared.resolve(type: BreedsUseCaseProtocol.self)!)
+        let viewModel = BreedsViewModel(
+            breedsUseCase: dependencies.breedsUseCase,
+            breedDetailsUseCase: dependencies.breedDetailsUseCase,
+            favoritesUseCase: dependencies.favoritesUseCase,
+            favoritingUseCase: dependencies.favoritingUseCase
+        )
         return BreedsView(viewModel: viewModel)
     }
     
     var favorites: some View {
 
-        let viewModel = FavoritesViewModel(favoritesUseCase: DIContainer.shared.resolve(type: FetchFavoritesUseCaseProtocol.self)!)
+        let viewModel = FavoritesViewModel(
+            favoritesUseCase: dependencies.favoritesUseCase,
+            favoritingUseCase: dependencies.favoritingUseCase
+        )
         return FavoritesView(viewModel: viewModel)
     }
 }

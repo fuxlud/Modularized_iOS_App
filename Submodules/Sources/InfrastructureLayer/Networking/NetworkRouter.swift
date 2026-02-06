@@ -4,7 +4,7 @@ enum DataRequestError: Error {
     case noURL
 }
 
-public protocol NetworkRouterProtocol {
+public protocol NetworkRouterProtocol: Sendable {
     func request(_ request: RequestProtocol) async throws -> Data?
 }
 

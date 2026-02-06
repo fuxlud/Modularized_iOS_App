@@ -1,30 +1,29 @@
 import Foundation
-import Combine
+@preconcurrency import Combine
 
-public protocol FavoritesManagerProtocol {
+public protocol FavoritesManagerProtocol: Sendable {
     func toggleLiking(breedDetails: BreedDetailsDTO) async
     func isLiked(breedDetails: BreedDetailsDTO) async -> Bool
     func fetchFavorites() async -> Set<BreedDetailsDTO>
     var favoriteBreedsPublisher: AnyPublisher<Set<BreedDetailsDTO>, Never> { get }
 }
 
-public class FavoritesManager: FavoritesManagerProtocol {
+public actor FavoritesManager: FavoritesManagerProtocol {
     
     public static let shared = FavoritesManager()
     
     private var favoriteBreeds: Set<BreedDetailsDTO> = []
     private let persistence: PersistenceProtocol
-    private let favoriteBreedsSubject = CurrentValueSubject<Set<BreedDetailsDTO>, Never>([])
+    private let favoriteBreedsSubject: CurrentValueSubject<Set<BreedDetailsDTO>, Never>
+    nonisolated public let favoriteBreedsPublisher: AnyPublisher<Set<BreedDetailsDTO>, Never>
     
     public init(persistence: PersistenceProtocol = UserDefaults()) {
         self.persistence = persistence
+        self.favoriteBreedsSubject = CurrentValueSubject<Set<BreedDetailsDTO>, Never>([])
+        self.favoriteBreedsPublisher = favoriteBreedsSubject.eraseToAnyPublisher()
         Task {
             await loadFavoritesFromPersistence()
         }
-    }
-    
-    public var favoriteBreedsPublisher: AnyPublisher<Set<BreedDetailsDTO>, Never> {
-        return favoriteBreedsSubject.eraseToAnyPublisher()
     }
     
     public func toggleLiking(breedDetails: BreedDetailsDTO) async {

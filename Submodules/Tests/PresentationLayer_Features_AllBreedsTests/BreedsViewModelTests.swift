@@ -30,7 +30,12 @@ struct BreedsViewModelTests {
     
     @MainActor
     func makeSUT(breedsUseCase: some BreedsUseCaseProtocol) -> BreedsViewModel {
-        let sut = BreedsViewModel(breedsUseCase: breedsUseCase)
+        let sut = BreedsViewModel(
+            breedsUseCase: breedsUseCase,
+            breedDetailsUseCase: BreedDetailsUseCaseMock(),
+            favoritesUseCase: FetchFavoritesUseCaseMock(),
+            favoritingUseCase: FavoritingUseCaseMock()
+        )
         return sut
     }
 }

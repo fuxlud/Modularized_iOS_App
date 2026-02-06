@@ -5,15 +5,27 @@ import PresentationLayer_DesignSystem
 import PresentationLayer_Features_DetailsScreen
 import InfrastructureLayer
 
+@MainActor
 @Observable 
 public class BreedsViewModel {
     public let id = UUID()
     public var state: ViewState<[BreedViewModel]> = .idle(data: [])
     
     private let breedsUseCase: BreedsUseCaseProtocol
+    private let breedDetailsUseCase: BreedDetailsUseCaseProtocol
+    private let favoritesUseCase: FetchFavoritesUseCaseProtocol
+    private let favoritingUseCase: FavoritingUseCaseProtocol
     
-    public init(breedsUseCase: BreedsUseCaseProtocol) {
+    public init(
+        breedsUseCase: BreedsUseCaseProtocol,
+        breedDetailsUseCase: BreedDetailsUseCaseProtocol,
+        favoritesUseCase: FetchFavoritesUseCaseProtocol,
+        favoritingUseCase: FavoritingUseCaseProtocol
+    ) {
         self.breedsUseCase = breedsUseCase
+        self.breedDetailsUseCase = breedDetailsUseCase
+        self.favoritesUseCase = favoritesUseCase
+        self.favoritingUseCase = favoritingUseCase
     }
     
     public enum Action {
@@ -30,9 +42,9 @@ public class BreedsViewModel {
     func fetchBreeds() async {
         do {
             let breeds = try await fetchBreedsRemote()
-            await fillBreeds(breeds)
+            fillBreeds(breeds)
         } catch let error {
-            await handleError(error)
+            handleError(error)
         }
     }
     
@@ -69,13 +81,8 @@ public class BreedsViewModel {
     func detailsScreenViewModel(for breedViewModel: BreedViewModel ) -> BreedImagesViewModel {
         let breedName = breedViewModel.title.lowercased()
         return BreedImagesViewModel(breedName: breedName,
-                                    breedDetailsUseCase: DIContainer.shared.resolve(type: BreedDetailsUseCaseProtocol.self)!,
-                                    favoritesUseCase: DIContainer.shared.resolve(type: FetchFavoritesUseCaseProtocol.self)!)
-    }
-}
-
-extension BreedsViewModel: Equatable {
-    public static func == (lhs: BreedsViewModel, rhs: BreedsViewModel) -> Bool {
-      return lhs.id == rhs.id
+                                    breedDetailsUseCase: breedDetailsUseCase,
+                                    favoritesUseCase: favoritesUseCase,
+                                    favoritingUseCase: favoritingUseCase)
     }
 }

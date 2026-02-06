@@ -1,6 +1,6 @@
 import Foundation
 
-public struct BreedDetailsDTO: Codable {
+public struct BreedDetailsDTO: Codable, Sendable {
     public let url: URL
     public var isFavorite: Bool
     

@@ -1,6 +1,6 @@
 import Foundation
 
-public struct BreedEntity {
+public struct BreedEntity: Sendable {
     public let name: String
     public var breedImages: [BreedDetailsEntity] = []
     

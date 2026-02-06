@@ -3,6 +3,7 @@ import DomainLayer
 import Combine
 import InfrastructureLayer
 
+@MainActor
 @Observable
 public class BreedImagesViewModel {
     public let id = UUID()
@@ -11,16 +12,19 @@ public class BreedImagesViewModel {
     private var breedName: String
     private let breedDetailsUseCase: BreedDetailsUseCaseProtocol
     private let favoritesUseCase: FetchFavoritesUseCaseProtocol
+    private let favoritingUseCase: FavoritingUseCaseProtocol
 
     var items: [BreedImageViewModel] = []
     private var cancellables = Set<AnyCancellable>()
 
     public init(breedName: String,
                 breedDetailsUseCase: BreedDetailsUseCaseProtocol,
-                favoritesUseCase: FetchFavoritesUseCaseProtocol) {
+                favoritesUseCase: FetchFavoritesUseCaseProtocol,
+                favoritingUseCase: FavoritingUseCaseProtocol) {
         self.breedName = breedName
         self.breedDetailsUseCase = breedDetailsUseCase
         self.favoritesUseCase = favoritesUseCase
+        self.favoritingUseCase = favoritingUseCase
         subscribeToUpdates()
     }
     
@@ -77,9 +81,9 @@ public class BreedImagesViewModel {
     func fetchBreedDetails() async {
         do {
             let breedDetails = try await fetchBreedDetailsRemote()
-            await fillBreedDetails(breedDetails)
+            fillBreedDetails(breedDetails)
         } catch let error {
-            await handleError(error)
+            handleError(error)
         }
     }
     
@@ -103,7 +107,7 @@ public class BreedImagesViewModel {
     private func fillBreedDetails(_ breedDetails: [BreedDetailsEntity]) {
         let detailsCardViewModels = breedDetails.map {
             BreedImageViewModel(breedDetails: $0,
-                                favoritingUseCase: DIContainer.shared.resolve(type: FavoritingUseCaseProtocol.self)!) }
+                                favoritingUseCase: favoritingUseCase) }
         state = .idle(data: detailsCardViewModels)
         items = detailsCardViewModels
     }
@@ -115,11 +119,5 @@ public class BreedImagesViewModel {
             return
         }
         state = .error(message: error.description)
-    }
-}
-
-extension BreedImagesViewModel: Equatable {
-    public static func == (lhs: BreedImagesViewModel, rhs: BreedImagesViewModel) -> Bool {
-      return lhs.id == rhs.id
     }
 }
