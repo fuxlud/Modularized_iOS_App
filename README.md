@@ -17,7 +17,6 @@ It can be used as a starting point for a project. Simply delete unneeded targets
 * Replace Combine publisher with AsyncStream to avoid @preconcurrency
 
 **Next**
-* Add in-memory cache for breeds list to avoid refetch on tab switch.
 * Improve image loading with caching + retry.
 * Add loading skeletons for list/grid screens.
 
