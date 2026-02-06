@@ -38,9 +38,6 @@ public struct NetworkRouter: NetworkRouterProtocol {
 
         var urlRequest = URLRequest(url: url)
 
-        let authHeader = ["x-api-key": "e4ddff29844d4ea9af16fbc3ee57128a"] // In a real app would be stored in the Keychain
-
-        urlRequest.allHTTPHeaderFields = authHeader
         urlRequest.httpMethod = request.method.rawValue
         urlRequest.httpBody = request.body
 
