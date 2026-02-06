@@ -34,6 +34,13 @@ public struct BreedsView: View {
                 .padding()
             }
             .navigationTitle("All 🐶 Breeds")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Text("Favorites: \(viewModel.favoriteCount)")
+                        .font(.subheadline)
+                        .padding()
+                }
+            }
             .alert(isPresented: .constant(viewModel.state.error != nil)) {
                 Alert(
                     title: Text("Error"),

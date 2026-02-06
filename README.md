@@ -17,7 +17,6 @@ It can be used as a starting point for a project. Simply delete unneeded targets
 * Replace Combine publisher with AsyncStream to avoid @preconcurrency
 
 **Now**
-* Add Combine to the first tab.
 * Add a clear user-facing error for TLS/ATS failures (explain TLS inspection).
 * Remove the unused x-api-key header for dog.ceo (or make it host-specific).
 * Centralize network error -> ErrorEntity mapping for consistent UI messages.

@@ -1,5 +1,6 @@
 import Foundation
 import SwiftUI
+import Combine
 import DomainLayer
 import PresentationLayer_DesignSystem
 import PresentationLayer_Features_DetailsScreen
@@ -10,11 +11,13 @@ import InfrastructureLayer
 public class BreedsViewModel {
     public let id = UUID()
     public var state: ViewState<[BreedViewModel]> = .idle(data: [])
+    public var favoriteCount: Int = 0
     
     private let breedsUseCase: BreedsUseCaseProtocol
     private let breedDetailsUseCase: BreedDetailsUseCaseProtocol
     private let favoritesUseCase: FetchFavoritesUseCaseProtocol
     private let favoritingUseCase: FavoritingUseCaseProtocol
+    private var cancellables = Set<AnyCancellable>()
     
     public init(
         breedsUseCase: BreedsUseCaseProtocol,
@@ -26,6 +29,7 @@ public class BreedsViewModel {
         self.breedDetailsUseCase = breedDetailsUseCase
         self.favoritesUseCase = favoritesUseCase
         self.favoritingUseCase = favoritingUseCase
+        subscribeToFavorites()
     }
     
     public enum Action {
@@ -76,6 +80,15 @@ public class BreedsViewModel {
             return
         }
         state = .error(message: error.description)
+    }
+
+    private func subscribeToFavorites() {
+        favoritesUseCase.itemsPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] items in
+                self?.favoriteCount = items.count
+            }
+            .store(in: &cancellables)
     }
     
     func detailsScreenViewModel(for breedViewModel: BreedViewModel ) -> BreedImagesViewModel {
