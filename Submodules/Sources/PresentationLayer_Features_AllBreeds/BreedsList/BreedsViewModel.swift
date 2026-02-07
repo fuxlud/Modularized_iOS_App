@@ -2,7 +2,6 @@ import Foundation
 import SwiftUI
 import Combine
 import DomainLayer
-import DataLayer
 import PresentationLayer_DesignSystem
 import PresentationLayer_Features_DetailsScreen
 import InfrastructureLayer
@@ -76,8 +75,11 @@ public class BreedsViewModel {
     
     @MainActor
     private func handleError(_ error: Error) {
-        let errorEntity = ErrorMapper.toErrorEntity(error)
-        state = .error(message: errorEntity.description)
+        guard let error = error as? ErrorEntity else {
+            state = .error(message: error.localizedDescription)
+            return
+        }
+        state = .error(message: error.description)
     }
 
     private func subscribeToFavorites() {

@@ -1,7 +1,6 @@
 import Foundation
 import DomainLayer
 import Combine
-import DataLayer
 import InfrastructureLayer
 
 @MainActor
@@ -115,7 +114,10 @@ public class BreedImagesViewModel {
     
     @MainActor
     private func handleError(_ error: Error) {
-        let errorEntity = ErrorMapper.toErrorEntity(error)
-        state = .error(message: errorEntity.description)
+        guard let error = error as? ErrorEntity else {
+            state = .error(message: error.localizedDescription)
+            return
+        }
+        state = .error(message: error.description)
     }
 }

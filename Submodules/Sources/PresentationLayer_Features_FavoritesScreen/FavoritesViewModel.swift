@@ -1,7 +1,6 @@
 import Combine
 import Foundation
 import DomainLayer
-import DataLayer
 import PresentationLayer_Features_DetailsScreen
 import InfrastructureLayer
 
@@ -74,8 +73,11 @@ import InfrastructureLayer
     }
     
     private func handleError(_ error: Error) {
-        let errorEntity = ErrorMapper.toErrorEntity(error)
-        state = .error(message: errorEntity.description)
+        guard let error = error as? ErrorEntity else {
+            state = .error(message: error.localizedDescription)
+            return
+        }
+        state = .error(message: error.description)
     }
     
     private func updateViewModels(with breedDetails: [BreedDetailsEntity]) {
