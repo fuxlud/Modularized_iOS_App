@@ -12,14 +12,4 @@ It can be used as a starting point for a project. Simply delete unneeded targets
 * Simple yet flexible vanila **Networking Layer** built on Generics
 * Unit Test Coverage with **Swift Testing**
 * Reactive State Management of shared state with **Combine**
-
-## TODO
-* Replace Combine publisher with AsyncStream to avoid @preconcurrency
-* Add loading skeletons for list/grid screens.
-* Unit test BreedDetailsUseCase favorite-merge logic.
-* Unit test FavoritesManager persistence (save/load/toggle).
-* Snapshot tests for BreedsView and BreedImagesScreen.
-* Remove or document unused recipe models in MainApplication/Models.
-* Add a small architecture diagram to README.
-* Add a short perf note in README about async let.
   
