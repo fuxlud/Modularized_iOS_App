@@ -13,9 +13,8 @@
 		384B66FA2C342C3A00E8CE68 /* CardPreviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B66F92C342C3A00E8CE68 /* CardPreviewApp.swift */; };
 		384B66FE2C342C3F00E8CE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B66FD2C342C3F00E8CE68 /* Assets.xcassets */; };
 		384B67012C342C3F00E8CE68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384B67002C342C3F00E8CE68 /* Preview Assets.xcassets */; };
-		38706BD62C38064200BFB70B /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 38706BD52C38064200BFB70B /* Domain */; };
-		38706BD82C38064800BFB70B /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 38706BD72C38064800BFB70B /* DesignSystem */; };
-		38706BDA2C38065700BFB70B /* List in Frameworks */ = {isa = PBXBuildFile; productRef = 38706BD92C38065700BFB70B /* List */; };
+		38706BD62C38064200BFB70B /* DomainLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E32C380D0D00352124 /* DomainLayer */; };
+		38706BDA2C38065700BFB70B /* PresentationLayer_Features_AllBreeds in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328E52C380DD600352124 /* PresentationLayer_Features_AllBreeds */; };
 		38706BDC2C38094E00BFB70B /* DataLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 38706BDB2C38094E00BFB70B /* DataLayer */; };
 		387B06D22C39B2160082EDBF /* PresentationLayer_Features_FavoritesScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 387B06D12C39B2160082EDBF /* PresentationLayer_Features_FavoritesScreen */; };
 		38C328E02C380C6700352124 /* PresentationLayer_DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 38C328DF2C380C6700352124 /* PresentationLayer_DesignSystem */; };
@@ -77,9 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38706BDA2C38065700BFB70B /* List in Frameworks */,
-				38706BD62C38064200BFB70B /* Domain in Frameworks */,
-				38706BD82C38064800BFB70B /* DesignSystem in Frameworks */,
+				38706BDA2C38065700BFB70B /* PresentationLayer_Features_AllBreeds in Frameworks */,
+				38706BD62C38064200BFB70B /* DomainLayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,8 +185,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				19C199CE2C2A01B900F5E184 /* PBXTargetDependency */,
-				19C199D62C2A01DA00F5E184 /* PBXTargetDependency */,
 			);
 			name = MainApplication;
 			packageProductDependencies = (
@@ -219,9 +215,8 @@
 			);
 			name = CardPreviewApp;
 			packageProductDependencies = (
-				38706BD52C38064200BFB70B /* Domain */,
-				38706BD72C38064800BFB70B /* DesignSystem */,
-				38706BD92C38065700BFB70B /* List */,
+				38C328E52C380DD600352124 /* PresentationLayer_Features_AllBreeds */,
+				38C328E32C380D0D00352124 /* DomainLayer */,
 			);
 			productName = RecipeCardPreviewApp;
 			productReference = 384B66F72C342C3900E8CE68 /* CardPreviewApp.app */;
@@ -383,14 +378,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		19C199CE2C2A01B900F5E184 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 19C199CD2C2A01B900F5E184 /* Domain */;
-		};
-		19C199D62C2A01DA00F5E184 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 19C199D52C2A01DA00F5E184 /* DesignSystem */;
-		};
 		384B67082C342C4000E8CE68 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 384B66F62C342C3900E8CE68 /* CardPreviewApp */;
@@ -766,26 +753,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		19C199CD2C2A01B900F5E184 /* Domain */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Domain;
-		};
-		19C199D52C2A01DA00F5E184 /* DesignSystem */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DesignSystem;
-		};
-		38706BD52C38064200BFB70B /* Domain */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Domain;
-		};
-		38706BD72C38064800BFB70B /* DesignSystem */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DesignSystem;
-		};
-		38706BD92C38065700BFB70B /* List */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = List;
-		};
 		38706BDB2C38094E00BFB70B /* DataLayer */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DataLayer;

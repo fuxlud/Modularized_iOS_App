@@ -33,14 +33,16 @@ let package = Package(
         ),
         .target(
             name: "PresentationLayer_DesignSystem",
-            dependencies: []
+            dependencies: [],
+            path: "Sources/PresentationLayer/DesignSystem/DesignSystem"
         ),
         .target(
             name: "PresentationLayer_Features_AllBreeds",
             dependencies: ["DataLayer",
                            "DomainLayer",
                            "PresentationLayer_DesignSystem",
-                           "PresentationLayer_Features_DetailsScreen"] //DetailsScreen should be moved to coordinator. Data moved to dependeci container
+                           "PresentationLayer_Features_DetailsScreen"], //DetailsScreen should be moved to coordinator. Data moved to dependeci container
+            path: "Sources/PresentationLayer/Features/AllBreeds"
         ),
         .target(
             name: "PresentationLayer_Features_MainTabBar",
@@ -48,18 +50,22 @@ let package = Package(
                            "DomainLayer",
                            "PresentationLayer_DesignSystem",
                            "PresentationLayer_Features_DetailsScreen",
-                           "PresentationLayer_Features_AllBreeds"] //DetailsScreen should be moved to coordinator. Data moved to dependeci container
+                           "PresentationLayer_Features_AllBreeds",
+                           "PresentationLayer_Features_FavoritesScreen"], //DetailsScreen should be moved to coordinator. Data moved to dependeci container
+            path: "Sources/PresentationLayer/Features/MainTabBar"
         ),
         .target(
             name: "PresentationLayer_Features_FavoritesScreen",
             dependencies: ["DataLayer",
                            "DomainLayer",
                            "PresentationLayer_DesignSystem",
-                           "PresentationLayer_Features_DetailsScreen"]
+                           "PresentationLayer_Features_DetailsScreen"],
+            path: "Sources/PresentationLayer/Features/FavoritesScreen"
         ),
         .target(
             name: "PresentationLayer_Features_DetailsScreen",
-            dependencies: ["DomainLayer", "PresentationLayer_DesignSystem", "DataLayer"]
+            dependencies: ["DomainLayer", "PresentationLayer_DesignSystem", "DataLayer"],
+            path: "Sources/PresentationLayer/Features/DetailsScreen"
         ),
         .testTarget(
             name: "NetworkingTests",
