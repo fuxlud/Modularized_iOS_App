@@ -12,11 +12,11 @@ flowchart TB
   end
 
   subgraph Presentation
-    DesignSystem["PresentationLayer_DesignSystem"]
-    AllBreeds["PresentationLayer_Features_AllBreeds"]
-    Details["PresentationLayer_Features_DetailsScreen"]
-    Favorites["PresentationLayer_Features_FavoritesScreen"]
-    MainTab["PresentationLayer_Features_MainTabBar"]
+    DesignSystem["DesignSystem"]
+    AllBreeds["Features_AllBreeds"]
+    Details["Features_DetailsScreen"]
+    Favorites["Features_FavoritesScreen"]
+    MainTab["Features_MainTabBar"]
   end
 
   subgraph Domain
@@ -236,10 +236,3 @@ stateDiagram-v2
   loading --> error : failure
   error --> loading : retry
 ```
-
-## Viewing The Diagrams
-
-- GitHub renders Mermaid directly in Markdown. Open this file in your repo on GitHub.
-- Mermaid Live Editor: paste any code block to render and export. https://mermaid.live/
-- VS Code: install a Mermaid preview extension (for example, "Mermaid Preview") and open this file.
-- Obsidian: supports Mermaid in Markdown out of the box.
